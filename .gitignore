@@ -1,5 +1,6 @@
 Bin/
-Project/*
+Project/Windows/ShaftEngine/*
+*.vs/
 !Project/Windows/ShaftEngine.sln
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj.filters
