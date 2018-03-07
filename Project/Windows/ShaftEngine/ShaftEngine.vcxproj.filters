@@ -13,10 +13,63 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\System">
+      <UniqueIdentifier>{333c2c36-4141-4600-979f-210137f739b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\Windows">
+      <UniqueIdentifier>{c8bb90f4-fa4e-4cd6-8d63-a89eec0f34a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\BasePlatform">
+      <UniqueIdentifier>{2a740aca-6567-4d17-8948-8c09e2375296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\Misc">
+      <UniqueIdentifier>{1c2e6de3-95ae-4be9-955b-73ea9a3e6fb9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\System\Windows\GLFWWindowHandle.cpp">
+      <Filter>Source Files\System\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\System\EngineFactory.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\System\Engine.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\System\Windows\WindowsWindowHandle.h">
+      <Filter>Source Files\System\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\Windows\GLFWWindowHandle.h">
+      <Filter>Source Files\System\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\Core.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\BasePlatform\BaseWindowHandle.h">
+      <Filter>Source Files\System\BasePlatform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\EngineFactory.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\Misc\EngineConfig.h">
+      <Filter>Source Files\System\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\Windows\WindowsTypes.h">
+      <Filter>Source Files\System\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\BasePlatform\BaseTypes.h">
+      <Filter>Source Files\System\BasePlatform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\Platform.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\Engine.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

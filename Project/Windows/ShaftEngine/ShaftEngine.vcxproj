@@ -160,6 +160,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp" />
+    <ClCompile Include="..\..\..\Source\System\Engine.cpp" />
+    <ClCompile Include="..\..\..\Source\System\EngineFactory.cpp" />
+    <ClCompile Include="..\..\..\Source\System\Windows\GLFWWindowHandle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\System\BasePlatform\BaseWindowHandle.h" />
+    <ClInclude Include="..\..\..\Source\System\BasePlatform\BaseTypes.h" />
+    <ClInclude Include="..\..\..\Source\System\Core.h" />
+    <ClInclude Include="..\..\..\Source\System\Engine.h" />
+    <ClInclude Include="..\..\..\Source\System\EngineFactory.h" />
+    <ClInclude Include="..\..\..\Source\System\Misc\EngineConfig.h" />
+    <ClInclude Include="..\..\..\Source\System\Platform.h" />
+    <ClInclude Include="..\..\..\Source\System\Windows\GLFWWindowHandle.h" />
+    <ClInclude Include="..\..\..\Source\System\Windows\WindowsTypes.h" />
+    <ClInclude Include="..\..\..\Source\System\Windows\WindowsWindowHandle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
