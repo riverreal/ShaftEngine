@@ -32,8 +32,8 @@
 	#include "Windows\WindowsWindowHandle.h"
 #endif
 
-
 //Transfer types and make global
+
 typedef Shaft::PlatformTypes::uint8		uin8;
 typedef Shaft::PlatformTypes::uint16	uint16;
 typedef Shaft::PlatformTypes::uint32	uint32;

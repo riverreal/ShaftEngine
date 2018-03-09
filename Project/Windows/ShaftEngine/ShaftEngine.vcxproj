@@ -160,11 +160,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp" />
+    <ClCompile Include="..\..\..\Source\System\Application.cpp" />
     <ClCompile Include="..\..\..\Source\System\Engine.cpp" />
     <ClCompile Include="..\..\..\Source\System\EngineFactory.cpp" />
     <ClCompile Include="..\..\..\Source\System\Windows\GLFWWindowHandle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Source\System\Application.h" />
     <ClInclude Include="..\..\..\Source\System\BasePlatform\BaseWindowHandle.h" />
     <ClInclude Include="..\..\..\Source\System\BasePlatform\BaseTypes.h" />
     <ClInclude Include="..\..\..\Source\System\Core.h" />

@@ -39,6 +39,9 @@
     <ClCompile Include="..\..\..\Source\System\Engine.cpp">
       <Filter>Source Files\System</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\System\Application.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\System\Windows\WindowsWindowHandle.h">
@@ -69,6 +72,9 @@
       <Filter>Source Files\System</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\System\Engine.h">
+      <Filter>Source Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\System\Application.h">
       <Filter>Source Files\System</Filter>
     </ClInclude>
   </ItemGroup>

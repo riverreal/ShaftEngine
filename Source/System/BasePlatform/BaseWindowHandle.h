@@ -10,6 +10,8 @@ namespace Shaft
 		virtual ~BaseWindowHandle() {};
 		virtual void Initialize(std::string appName) = 0;
 		virtual bool CloseWindow() = 0;
+		virtual void PollEvents() = 0;
+		virtual void Destroy() = 0;
 
 	protected:
 #ifdef WINDOW_TYPE_GLFW 1

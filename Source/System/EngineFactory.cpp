@@ -2,6 +2,7 @@
 #include "Misc\EngineConfig.h"
 #include "Platform.h"
 #include "Engine.h"
+#include "BasePlatform\BaseWindowHandle.h"
 
 using namespace Shaft;
 
@@ -20,14 +21,22 @@ EngineFactory::~EngineFactory()
 {
 }
 
-Engine* Shaft::EngineFactory::CreateEngine(const EngineConfig & config)
+std::unique_ptr<Engine> EngineFactory::CreateEngine(const EngineConfig & config)
 {
 	ResolveBuildTarget(config);
 
-	return new Engine();
+	std::unique_ptr<Engine> engine(new Engine());
+	
+	if (m_buildTarget == TargetOS::Windows)
+	{
+		std::unique_ptr<BaseWindowHandle> windowHandle(new GLFWWindowHandle());
+		engine->CreateWindow(std::move(windowHandle));
+	}
+
+	return engine;
 }
 
-void Shaft::EngineFactory::ResolveBuildTarget(const EngineConfig& config)
+void EngineFactory::ResolveBuildTarget(const EngineConfig& config)
 {
 	//Only allow compatible build targets
 	switch (m_devTarget)

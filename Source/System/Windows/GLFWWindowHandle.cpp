@@ -1,5 +1,10 @@
 #include "GLFWWindowHandle.h"
 
+Shaft::GLFWWindowHandle::~GLFWWindowHandle()
+{
+	Destroy();
+}
+
 void Shaft::GLFWWindowHandle::Initialize(std::string appName)
 {
 	glfwInit();
@@ -11,4 +16,16 @@ void Shaft::GLFWWindowHandle::Initialize(std::string appName)
 bool Shaft::GLFWWindowHandle::CloseWindow()
 {
 	return glfwWindowShouldClose(m_windowHandle);
+}
+
+void Shaft::GLFWWindowHandle::PollEvents()
+{
+	glfwPollEvents();
+}
+
+void Shaft::GLFWWindowHandle::Destroy()
+{
+	glfwDestroyWindow(m_windowHandle);
+	glfwTerminate();
+	std::cout << "Window destroyed" << std::endl;
 }
