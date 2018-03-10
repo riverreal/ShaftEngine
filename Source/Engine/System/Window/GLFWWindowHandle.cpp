@@ -1,16 +1,22 @@
 #include "GLFWWindowHandle.h"
+#include "../Misc/EngineConfig.h"
+
+Shaft::GLFWWindowHandle::GLFWWindowHandle(const WindowConfig& config)
+	:m_config(config)
+{
+}
 
 Shaft::GLFWWindowHandle::~GLFWWindowHandle()
 {
 	Destroy();
 }
 
-void Shaft::GLFWWindowHandle::Initialize(std::string appName)
+void Shaft::GLFWWindowHandle::Initialize()
 {
 	glfwInit();
 	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
-	m_windowHandle = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, appName.c_str(), nullptr, nullptr);
+	glfwWindowHint(GLFW_RESIZABLE, m_config.isResizeable);
+	m_windowHandle = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, m_config.appInfo.appName.c_str(), nullptr, nullptr);
 }
 
 bool Shaft::GLFWWindowHandle::CloseWindow()

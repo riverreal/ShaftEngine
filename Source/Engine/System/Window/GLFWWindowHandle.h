@@ -5,13 +5,19 @@
 
 namespace Shaft 
 {
-	class GLFWWindowHandle : public BaseWindowHandle
+	struct WindowConfig;
+
+	class GLFWWindowHandle : public WindowHandle
 	{
 	public:
+		GLFWWindowHandle(const WindowConfig& config);
 		~GLFWWindowHandle();
-		virtual void Initialize(std::string appName) override;
+		virtual void Initialize() override;
 		virtual bool CloseWindow() override;
 		virtual void PollEvents() override;
 		virtual void Destroy() override;
+
+	private:
+		const WindowConfig& m_config;
 	};
 }

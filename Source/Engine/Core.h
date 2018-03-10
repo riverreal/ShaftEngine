@@ -24,6 +24,8 @@ const int SCREEN_HEIGHT = 720;
 #define WINDOW_TYPE_GLFW 1
 #endif
 
+#include <vulkan/vulkan.h>
+
 #ifdef WINDOW_TYPE_GLFW
 #include<GLFW\glfw3.h>
 #endif // WINDOW_TYPE_GLFW
@@ -31,3 +33,5 @@ const int SCREEN_HEIGHT = 720;
 #ifdef WINDOW_TYPE_WINAPI
 #include <Windows.h>
 #endif // WINDOW_TYPE_WINAPI
+
+#include "System/Platform/Platform.h"

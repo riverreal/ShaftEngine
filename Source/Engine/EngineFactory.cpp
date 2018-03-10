@@ -4,6 +4,7 @@
 #include "System/Misc/EngineConfig.h"
 #include "System/Platform/Platform.h"
 #include "System/Window/WindowIncludes.h"
+#include "Graphics/Renderer/RendererIncludes.h"
 
 using namespace Shaft;
 
@@ -26,12 +27,20 @@ std::unique_ptr<Engine> EngineFactory::CreateEngine(const EngineConfig & config)
 {
 	ResolveBuildTarget(config);
 
-	std::unique_ptr<Engine> engine(new Engine());
+	std::unique_ptr<Engine> engine(new Engine(config));
 	
+	//--------Window-----------------------------
 	if (m_buildTarget == TargetOS::Windows)
 	{
-		std::unique_ptr<BaseWindowHandle> windowHandle(new GLFWWindowHandle());
-		engine->CreateWindow(std::move(windowHandle));
+		std::unique_ptr<WindowHandle> windowHandle(new GLFWWindowHandle(config.windowConfig));
+		engine->SetWindow(std::move(windowHandle));
+	}
+
+	//--------Renderer---------------------------
+	if (config.renderConfig.rendererType == Vulkan)
+	{
+		std::unique_ptr<Renderer> renderer(new VulkanRenderer(config.renderConfig));
+		engine->SetRenderer(std::move(renderer));
 	}
 
 	return engine;

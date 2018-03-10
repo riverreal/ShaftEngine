@@ -3,19 +3,26 @@
 #include "Core.h"
 
 namespace Shaft {
-	class BaseWindowHandle;
+	class WindowHandle;
+	class Renderer;
+	struct EngineConfig;
 
 	class Engine
 	{
 	public:
-		Engine();
+		Engine(const EngineConfig& config);
 		~Engine();
-		
-		void CreateWindow(std::unique_ptr<BaseWindowHandle> windowHandle);
+		//Has to be called after window and renderer are set
 		void Initialize();
-		BaseWindowHandle& GetWindow();
+		void SetWindow(std::unique_ptr<WindowHandle> windowHandle);
+		void SetRenderer(std::unique_ptr<Renderer> renderer);
+		
+		WindowHandle& GetWindow();
+		Renderer& GetRenderer();
 
 	private:
-		std::unique_ptr<BaseWindowHandle> m_window;
+		std::unique_ptr<WindowHandle> m_window;
+		std::unique_ptr<Renderer> m_renderer;
+		const EngineConfig& m_engineConfig;
 	};
 }

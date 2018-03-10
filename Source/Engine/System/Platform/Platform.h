@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Core.h"
-
 #ifndef PLATFORM_WINDOWS
 	#define PLATFORM_WINDOWS 0
 #endif
@@ -18,18 +16,12 @@
 	#define PLATFORM_ANDROID 0
 #endif
 
-#if		PLATFORM_WINDOWS
+#if	PLATFORM_WINDOWS
 	#include "WindowsTypes.h"
 #elif	PLATFORM_MACOS
 #elif	PLATFORM_IOS
 #elif	PLATFORM_LINUX
 #elif	PLATFORM_ANDROID
-#endif
-
-#ifdef WINDOW_TYPE_GLFW
-	#include "../Window/GLFWWindowHandle.h"
-#elif WINDOW_TYPE_WINAPI
-	#include "../Window/WindowsWindowHandle.h"
 #endif
 
 //Transfer types and make global

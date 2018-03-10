@@ -4,20 +4,26 @@
 
 namespace Shaft
 {
-	class BaseWindowHandle
+	class WindowHandle
 	{
 	public:
-		virtual ~BaseWindowHandle() {};
-		virtual void Initialize(std::string appName) = 0;
+		virtual ~WindowHandle() {};
+		virtual void Initialize() = 0;
 		virtual bool CloseWindow() = 0;
 		virtual void PollEvents() = 0;
 		virtual void Destroy() = 0;
+
+#ifdef WINDOW_TYPE_GLFW 1
+		GLFWwindow* GetWindow() { return m_windowHandle; }
+#elif WINDOW_TYPE_WINAPI
+		HWND GetWindow() { return m_windowHandle; }
+#endif
 
 	protected:
 #ifdef WINDOW_TYPE_GLFW 1
 		GLFWwindow* m_windowHandle;
 #elif WINDOW_TYPE_WINAPI
-		HWND m_window;
+		HWND m_windowHandle;
 #endif
 
 	};
