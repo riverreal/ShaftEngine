@@ -1,8 +1,9 @@
 #include "EngineFactory.h"
-#include "Misc\EngineConfig.h"
-#include "Platform.h"
+
 #include "Engine.h"
-#include "BasePlatform\BaseWindowHandle.h"
+#include "System/Misc/EngineConfig.h"
+#include "System/Platform/Platform.h"
+#include "System/Window/WindowIncludes.h"
 
 using namespace Shaft;
 

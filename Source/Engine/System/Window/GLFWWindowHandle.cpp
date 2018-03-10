@@ -27,5 +27,4 @@ void Shaft::GLFWWindowHandle::Destroy()
 {
 	glfwDestroyWindow(m_windowHandle);
 	glfwTerminate();
-	std::cout << "Window destroyed" << std::endl;
 }

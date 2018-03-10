@@ -159,24 +159,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Source\Application.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\Engine.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\EngineFactory.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.cpp" />
     <ClCompile Include="..\..\..\Source\main.cpp" />
-    <ClCompile Include="..\..\..\Source\System\Application.cpp" />
-    <ClCompile Include="..\..\..\Source\System\Engine.cpp" />
-    <ClCompile Include="..\..\..\Source\System\EngineFactory.cpp" />
-    <ClCompile Include="..\..\..\Source\System\Windows\GLFWWindowHandle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\System\Application.h" />
-    <ClInclude Include="..\..\..\Source\System\BasePlatform\BaseWindowHandle.h" />
-    <ClInclude Include="..\..\..\Source\System\BasePlatform\BaseTypes.h" />
-    <ClInclude Include="..\..\..\Source\System\Core.h" />
-    <ClInclude Include="..\..\..\Source\System\Engine.h" />
-    <ClInclude Include="..\..\..\Source\System\EngineFactory.h" />
-    <ClInclude Include="..\..\..\Source\System\Misc\EngineConfig.h" />
-    <ClInclude Include="..\..\..\Source\System\Platform.h" />
-    <ClInclude Include="..\..\..\Source\System\Windows\GLFWWindowHandle.h" />
-    <ClInclude Include="..\..\..\Source\System\Windows\WindowsTypes.h" />
-    <ClInclude Include="..\..\..\Source\System\Windows\WindowsWindowHandle.h" />
+    <ClInclude Include="..\..\..\Source\Application.h" />
+    <ClInclude Include="..\..\..\Source\Engine\Core.h" />
+    <ClInclude Include="..\..\..\Source\Engine\Engine.h" />
+    <ClInclude Include="..\..\..\Source\Engine\EngineFactory.h" />
+    <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\EngineConfig.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Platform\BaseTypes.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Platform\Platform.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Platform\WindowsTypes.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowHandle.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Window\WinAPIWindowHandle.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowIncludes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\FragmentShader.frag" />
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\VertexShader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,4 @@
-#include "System\Application.h"
+#include "Application.h"
 
 using namespace Shaft;
 

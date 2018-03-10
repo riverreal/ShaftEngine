@@ -1,5 +1,5 @@
 #include "Engine.h"
-#include "BasePlatform\BaseWindowHandle.h"
+#include "System/Window/WindowHandle.h"
 
 using namespace Shaft;
 

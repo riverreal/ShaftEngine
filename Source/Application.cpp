@@ -1,8 +1,8 @@
 #include "Application.h"
-#include "EngineFactory.h"
-#include "Misc\EngineConfig.h"
-#include "Engine.h"
-#include "BasePlatform\BaseWindowHandle.h"
+#include "Engine/EngineFactory.h"
+#include "Engine/System/Misc/EngineConfig.h"
+#include "Engine/Engine.h"
+#include "Engine/System/Window/WindowHandle.h"
 
 using namespace Shaft;
 
@@ -24,6 +24,7 @@ void Application::Initialize()
 	m_engine = engineFactory.CreateEngine(engineConfig);
 
 	m_engine->Initialize();
+	
 }
 
 void Shaft::Application::Run()

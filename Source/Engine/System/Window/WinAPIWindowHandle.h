@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Core.h"
-#include "../BasePlatform/BaseWindowHandle.h"
+#include "../../Core.h"
+#include "WindowHandle.h"
 
 namespace Shaft {
 	/*

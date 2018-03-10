@@ -19,7 +19,7 @@
 #endif
 
 #if		PLATFORM_WINDOWS
-	#include "Windows\WindowsTypes.h"
+	#include "WindowsTypes.h"
 #elif	PLATFORM_MACOS
 #elif	PLATFORM_IOS
 #elif	PLATFORM_LINUX
@@ -27,9 +27,9 @@
 #endif
 
 #ifdef WINDOW_TYPE_GLFW
-	#include "Windows\GLFWWindowHandle.h"
+	#include "../Window/GLFWWindowHandle.h"
 #elif WINDOW_TYPE_WINAPI
-	#include "Windows\WindowsWindowHandle.h"
+	#include "../Window/WindowsWindowHandle.h"
 #endif
 
 //Transfer types and make global

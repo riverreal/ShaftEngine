@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../BasePlatform/BaseTypes.h"
+#include "BaseTypes.h"
 
 namespace Shaft {
-	struct WindowsTypes : BaseTypes
+	struct WindowsTypes : public BaseTypes
 	{
 		//Platform specific type changes
 	};
