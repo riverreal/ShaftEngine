@@ -34,4 +34,7 @@ const int SCREEN_HEIGHT = 720;
 #include <Windows.h>
 #endif // WINDOW_TYPE_WINAPI
 
+#undef min
+#undef max
+
 #include "System/Platform/Platform.h"
