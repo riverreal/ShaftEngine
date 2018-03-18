@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="bimg">
+      <UniqueIdentifier>{a6bb50a8-e79a-463f-aa51-6fec65c6972c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bimg\include">
+      <UniqueIdentifier>{3621fff3-31d9-485c-a7e6-4b9ba9dcf1f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bimg\src">
+      <UniqueIdentifier>{57f0a68c-f984-44eb-89c7-c0b0b476d571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bimg\include\bimg">
+      <UniqueIdentifier>{47f13614-b5e3-4176-bc5a-9d26d3f154da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Dependencies\bimg\src\image_decode.cpp">
+      <Filter>bimg\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Dependencies\bimg\include\bimg\bimg.h">
+      <Filter>bimg\include\bimg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bimg\include\bimg\decode.h">
+      <Filter>bimg\include\bimg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bimg\include\bimg\encode.h">
+      <Filter>bimg\include\bimg</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

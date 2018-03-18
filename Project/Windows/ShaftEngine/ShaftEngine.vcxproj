@@ -187,6 +187,20 @@
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\FragmentShader.frag" />
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\VertexShader.vert" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libs\bgfx\bgfx.vcxproj">
+      <Project>{d23f29d1-429b-4121-abf8-411114d8bb08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\bimg\bimg.vcxproj">
+      <Project>{611cd704-f574-4a36-9c94-30246fa8b7a3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\bimg_decode\bimg_decode.vcxproj">
+      <Project>{1c9b4b7e-dbfa-4a59-a078-26f7b8b4fc93}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\bx\bx.vcxproj">
+      <Project>{3aebb6ba-7f39-477e-8c5b-0091a730c0ea}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
