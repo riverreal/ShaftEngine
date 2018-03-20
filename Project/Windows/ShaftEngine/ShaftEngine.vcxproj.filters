@@ -37,9 +37,6 @@
     <Filter Include="Source Files\Engine\System\Window">
       <UniqueIdentifier>{6650626c-ed9b-4f7d-93ab-509f2999c698}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine\Graphics\Renderer\Vulkan">
-      <UniqueIdentifier>{7550c668-981a-4fe6-9af2-cbb5993b7c9f}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp">
@@ -57,8 +54,8 @@
     <ClCompile Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.cpp">
       <Filter>Source Files\Engine\System\Window</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Source\Engine\Graphics\Renderer\VulkanRenderer.cpp">
-      <Filter>Source Files\Engine\Graphics\Renderer\Vulkan</Filter>
+    <ClCompile Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.cpp">
+      <Filter>Source Files\Engine\Graphics\Renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,12 +97,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowIncludes.h">
       <Filter>Source Files\Engine\System\Window</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\VulkanRenderer.h">
-      <Filter>Source Files\Engine\Graphics\Renderer\Vulkan</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\RendererIncludes.h">
-      <Filter>Source Files\Engine\Graphics\Renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

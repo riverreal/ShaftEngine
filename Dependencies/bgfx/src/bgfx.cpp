@@ -2773,6 +2773,7 @@ namespace bgfx
 		if (NULL != _allocator)
 		{
 			g_allocator = _allocator;
+			
 		}
 		else
 		{

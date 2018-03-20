@@ -45,9 +45,6 @@
     <ClCompile Include="..\..\..\..\Dependencies\bx\src\allocator.cpp">
       <Filter>bx\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Dependencies\bx\src\amalgamated.cpp">
-      <Filter>bx\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\Dependencies\bx\src\bx.cpp">
       <Filter>bx\src</Filter>
     </ClCompile>

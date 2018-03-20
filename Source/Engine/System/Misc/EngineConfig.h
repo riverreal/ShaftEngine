@@ -7,9 +7,43 @@ namespace Shaft
 	enum RendererType
 	{
 		Vulkan,
-		DirectX,
-		OpenGL
+		Direct3D12,
+		Direct3D11,
+		OpenGL,
+		OpenGLES,
+		Metal
 	};
+
+	static bgfx::RendererType::Enum ConvertRendererTypeToBGFX(RendererType type)
+	{
+		if (type == Vulkan)
+		{
+			return bgfx::RendererType::Enum::Vulkan;
+		}
+		else if (type == Direct3D12)
+		{
+			return bgfx::RendererType::Enum::Direct3D12;
+		}
+		else if (type == Direct3D11)
+		{
+			return bgfx::RendererType::Enum::Direct3D11;
+		}
+		else if (type == OpenGL)
+		{
+			return bgfx::RendererType::Enum::OpenGL;
+		}
+		else if (type == OpenGLES)
+		{
+			return bgfx::RendererType::Enum::OpenGLES;
+		}
+		else if (type == Metal)
+		{
+			return bgfx::RendererType::Enum::Metal;
+		}
+		
+		//Just in case
+		return bgfx::RendererType::Enum::Direct3D11;
+	}
 
 	enum TargetOS
 	{
@@ -45,10 +79,14 @@ namespace Shaft
 	{
 		RendererConfig()
 			:engineName("DefaultEngine"),
-			rendererType(Vulkan),
-			isValidationEnabled(true)
+			rendererType(Direct3D11),
+			isValidationEnabled(true),
+			width(DEFAULT_SCREEN_WIDTH),
+			height(DEFAULT_SCREEN_HEIGHT)
 		{}
 
+		uint32 width;
+		uint32 height;
 		std::string engineName;
 		bool isValidationEnabled;
 		RendererType rendererType;
@@ -59,9 +97,13 @@ namespace Shaft
 	struct WindowConfig
 	{
 		WindowConfig() 
-			:isResizeable(false)
+			:isResizeable(false),
+			width(DEFAULT_SCREEN_WIDTH),
+			height(DEFAULT_SCREEN_HEIGHT)
 		{}
 
+		uint32 width;
+		uint32 height;
 		bool isResizeable;
 		AppInfo appInfo;
 	};

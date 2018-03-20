@@ -26,8 +26,8 @@ void Shaft::Engine::SetRenderer(std::unique_ptr<Renderer> renderer)
 
 void Shaft::Engine::Initialize()
 {
+	m_renderer->Initialize();
 	m_window->Initialize();
-	m_renderer->Initialize(GetWindow());
 }
 
 WindowHandle& Engine::GetWindow()

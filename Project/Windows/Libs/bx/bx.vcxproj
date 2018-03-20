@@ -20,7 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Dependencies\bx\src\allocator.cpp" />
-    <ClCompile Include="..\..\..\..\Dependencies\bx\src\amalgamated.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bx\src\bx.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bx\src\commandline.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bx\src\crtnone.cpp" />
@@ -211,7 +210,7 @@
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bx\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
+      <AdditionalOptions>/wd4201 /wd4324 /Ob2  %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -227,7 +226,7 @@
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bx\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
+      <AdditionalOptions>/wd4201 /wd4324 /Ob2  %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -245,7 +244,7 @@
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bx\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
+      <AdditionalOptions>/wd4201 /wd4324 /Ob2  %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -265,7 +264,7 @@
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bx\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
+      <AdditionalOptions>/wd4201 /wd4324 /Ob2  %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

@@ -13,6 +13,21 @@
     <Filter Include="include\bgfx\c99">
       <UniqueIdentifier>{aecefb0d-869a-4ce1-84dc-3ca1455f406a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\imgui">
+      <UniqueIdentifier>{8f9743c9-daa6-4609-bf2f-cf6025d09b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty">
+      <UniqueIdentifier>{63af1c0c-57bf-42fa-8df3-d1a1e0111792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\ocornut-imgui">
+      <UniqueIdentifier>{b25971dc-69b8-498a-a579-1995d236d512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\ib-compress">
+      <UniqueIdentifier>{308be3dc-d0e6-4361-b5a9-c7ebaea33218}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\ocornut-imgui\widgets">
+      <UniqueIdentifier>{58a2cb86-4a2e-40a3-bd28-0720df2678eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\amalgamated.cpp">
@@ -86,6 +101,30 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\vertexdecl.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\imgui\imgui.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\imgui\scintilla.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\bgfx_utils.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui.cpp">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_demo.cpp">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_draw.cpp">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbuffercompression.cpp">
+      <Filter>3rdparty\ib-compress</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbufferdecompression.cpp">
+      <Filter>3rdparty\ib-compress</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +238,129 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx\c99\platform.h">
       <Filter>include\bgfx\c99</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\droidsans.ttf.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_color.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_cubemap.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_image.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_image_swizz.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_latlong.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_texture.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_ocornut_imgui.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\icons_font_awesome.ttf.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\icons_kenney.ttf.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\imgui.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\roboto_regular.ttf.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\robotomono_regular.ttf.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\scintilla.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_color.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_cubemap.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_image.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_latlong.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_texture.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_ocornut_imgui.bin.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx_utils.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imconfig.h">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui.h">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_internal.h">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_user.h">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\stb_rect_pack.h">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\stb_textedit.h">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\stb_truetype.h">
+      <Filter>3rdparty\ocornut-imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\color_picker.h">
+      <Filter>3rdparty\ocornut-imgui\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\color_wheel.h">
+      <Filter>3rdparty\ocornut-imgui\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\dock.h">
+      <Filter>3rdparty\ocornut-imgui\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\file_list.h">
+      <Filter>3rdparty\ocornut-imgui\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\gizmo.h">
+      <Filter>3rdparty\ocornut-imgui\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\memory_editor.h">
+      <Filter>3rdparty\ocornut-imgui\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\range_slider.h">
+      <Filter>3rdparty\ocornut-imgui\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbuffercompression.h">
+      <Filter>3rdparty\ib-compress</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbuffercompressionformat.h">
+      <Filter>3rdparty\ib-compress</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbufferdecompression.h">
+      <Filter>3rdparty\ib-compress</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexcompressionconstants.h">
+      <Filter>3rdparty\ib-compress</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\readbitstream.h">
+      <Filter>3rdparty\ib-compress</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\writebitstream.h">
+      <Filter>3rdparty\ib-compress</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

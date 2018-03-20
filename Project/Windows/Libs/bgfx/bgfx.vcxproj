@@ -19,6 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbuffercompression.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbufferdecompression.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\bgfx_utils.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\imgui\scintilla.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\amalgamated.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\bgfx.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\debug_renderdoc.cpp" />
@@ -45,12 +53,53 @@
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\vertexdecl.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbuffercompression.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbuffercompressionformat.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexbufferdecompression.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\indexcompressionconstants.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\readbitstream.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ib-compress\writebitstream.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imconfig.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_user.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\stb_rect_pack.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\stb_textedit.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\stb_truetype.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\color_picker.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\color_wheel.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\dock.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\file_list.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\gizmo.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\memory_editor.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\widgets\range_slider.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx\bgfx.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx\c99\bgfx.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx\c99\platform.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx\defines.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx\embedded_shader.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx\platform.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx_utils.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\droidsans.ttf.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_color.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_cubemap.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_image.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_image_swizz.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_latlong.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_texture.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_ocornut_imgui.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\icons_font_awesome.ttf.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\icons_kenney.ttf.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\imgui.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\robotomono_regular.ttf.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\roboto_regular.ttf.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\scintilla.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_color.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_cubemap.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_image.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_latlong.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_texture.bin.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_ocornut_imgui.bin.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\src\bgfx_p.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\src\charset.h" />
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\src\config.h" />
@@ -165,7 +214,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos;..\..\..\..\Dependencies\bgfx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\include;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos;..\..\..\..\Dependencies\bgfx\include\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -181,7 +230,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos;..\..\..\..\Dependencies\bgfx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\include;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos;..\..\..\..\Dependencies\bgfx\include\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -199,7 +248,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos;..\..\..\..\Dependencies\bgfx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\include;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos;..\..\..\..\Dependencies\bgfx\include\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -219,7 +268,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos;..\..\..\..\Dependencies\bgfx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\include;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos;..\..\..\..\Dependencies\bgfx\include\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
     </ClCompile>
     <Link>

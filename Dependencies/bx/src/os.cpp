@@ -19,6 +19,7 @@
 #endif // BX_CRT_MSVC
 
 #if BX_PLATFORM_WINDOWS || BX_PLATFORM_WINRT
+#pragma comment(lib, "psapi.lib")
 #	include <windows.h>
 #	include <psapi.h>
 #elif  BX_PLATFORM_ANDROID    \

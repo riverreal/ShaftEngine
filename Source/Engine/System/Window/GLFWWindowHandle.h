@@ -18,6 +18,10 @@ namespace Shaft
 		virtual void Destroy() override;
 
 	private:
+		void* glfwNativeWindowHandle();
+		void SetBGFXWindow();
+		
+	private:
 		const WindowConfig& m_config;
 	};
 }
