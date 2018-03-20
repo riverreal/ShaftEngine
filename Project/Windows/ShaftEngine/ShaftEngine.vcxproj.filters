@@ -1,110 +1,174 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
+    <Filter Include="src">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Source Files\Engine">
+    <Filter Include="src\Engine">
       <UniqueIdentifier>{305982e6-4a61-41ba-8f6d-d0e4d5addae7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine\Graphics">
+    <Filter Include="src\Engine\Graphics">
       <UniqueIdentifier>{371af10c-de6f-40cf-8c9f-6a0cdd1aa6b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine\System">
-      <UniqueIdentifier>{bf1ae2e7-0585-4c20-9f19-5190199a20ee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Engine\Graphics\Renderer">
+    <Filter Include="src\Engine\Graphics\Renderer">
       <UniqueIdentifier>{b2ae1059-052b-448d-82c4-987b06e697b6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine\Graphics\Shaders">
+    <Filter Include="src\Engine\Graphics\Shaders">
       <UniqueIdentifier>{853c8f99-c7bf-4dec-becb-829e8936ef90}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine\System\Misc">
+    <Filter Include="src\Engine\System">
+      <UniqueIdentifier>{bf1ae2e7-0585-4c20-9f19-5190199a20ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\System\Misc">
       <UniqueIdentifier>{9aeef194-a2d4-41ba-841c-c6a1409462d5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine\System\Platform">
+    <Filter Include="src\Engine\System\Platform">
       <UniqueIdentifier>{d1d35fd5-6ec7-41b6-a3c0-bfcc6864abe9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine\System\Window">
+    <Filter Include="src\Engine\System\Window">
       <UniqueIdentifier>{6650626c-ed9b-4f7d-93ab-509f2999c698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty">
+      <UniqueIdentifier>{6a7be958-7a1d-4d5e-9051-e4dfbbaa84e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\imgui">
+      <UniqueIdentifier>{de752524-0362-4aab-8376-8ce6c22c1c22}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp">
-      <Filter>Source Files\Engine</Filter>
+      <Filter>src\Engine</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\EngineFactory.cpp">
-      <Filter>Source Files\Engine</Filter>
+      <Filter>src\Engine</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.cpp">
-      <Filter>Source Files\Engine\System\Window</Filter>
+      <Filter>src\Engine\System\Window</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.cpp">
-      <Filter>Source Files\Engine\Graphics\Renderer</Filter>
+      <Filter>src\Engine\Graphics\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\bgfx\include\imgui\imgui.cpp">
+      <Filter>3rdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\bgfx\include\imgui\scintilla.cpp">
+      <Filter>3rdparty\imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
-      <Filter>Source Files</Filter>
+      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Core.h">
-      <Filter>Source Files\Engine</Filter>
+      <Filter>src\Engine</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Engine.h">
-      <Filter>Source Files\Engine</Filter>
+      <Filter>src\Engine</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\EngineFactory.h">
-      <Filter>Source Files\Engine</Filter>
+      <Filter>src\Engine</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.h">
-      <Filter>Source Files\Engine\Graphics\Renderer</Filter>
+      <Filter>src\Engine\Graphics\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\EngineConfig.h">
-      <Filter>Source Files\Engine\System\Misc</Filter>
+      <Filter>src\Engine\System\Misc</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\BaseTypes.h">
-      <Filter>Source Files\Engine\System\Platform</Filter>
+      <Filter>src\Engine\System\Platform</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\Platform.h">
-      <Filter>Source Files\Engine\System\Platform</Filter>
+      <Filter>src\Engine\System\Platform</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowHandle.h">
-      <Filter>Source Files\Engine\System\Window</Filter>
+      <Filter>src\Engine\System\Window</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\WindowsTypes.h">
-      <Filter>Source Files\Engine\System\Platform</Filter>
+      <Filter>src\Engine\System\Platform</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.h">
-      <Filter>Source Files\Engine\System\Window</Filter>
+      <Filter>src\Engine\System\Window</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WinAPIWindowHandle.h">
-      <Filter>Source Files\Engine\System\Window</Filter>
+      <Filter>src\Engine\System\Window</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowIncludes.h">
-      <Filter>Source Files\Engine\System\Window</Filter>
+      <Filter>src\Engine\System\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\droidsans.ttf.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_color.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_cubemap.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_image.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_image_swizz.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_latlong.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_texture.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\fs_ocornut_imgui.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\icons_font_awesome.ttf.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\icons_kenney.ttf.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\imgui.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\roboto_regular.ttf.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\robotomono_regular.ttf.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\scintilla.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_color.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_cubemap.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_image.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_latlong.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_texture.bin.h">
+      <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_ocornut_imgui.bin.h">
+      <Filter>3rdparty\imgui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\FragmentShader.frag">
-      <Filter>Source Files\Engine\Graphics\Shaders</Filter>
+      <Filter>src\Engine\Graphics\Shaders</Filter>
     </None>
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\VertexShader.vert">
-      <Filter>Source Files\Engine\Graphics\Shaders</Filter>
+      <Filter>src\Engine\Graphics\Shaders</Filter>
     </None>
   </ItemGroup>
 </Project>
