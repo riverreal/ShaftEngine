@@ -1,7 +1,10 @@
 #include "GLFWWindowHandle.h"
-#include "../Misc/EngineConfig.h"
 #include <GLFW/glfw3native.h>
 #include <bgfx/platform.h>
+#include "../Misc/EngineConfig.h"
+#include "../Input/Input.h"
+
+Shaft::Input* Shaft::GLFWWindowHandle::sm_input;
 
 Shaft::GLFWWindowHandle::GLFWWindowHandle(const WindowConfig& config)
 	:m_config(config)
@@ -41,7 +44,16 @@ void Shaft::GLFWWindowHandle::Destroy()
 	glfwTerminate();
 }
 
-void * Shaft::GLFWWindowHandle::glfwNativeWindowHandle()
+void Shaft::GLFWWindowHandle::BindInput(Input* input)
+{
+	sm_input = input;
+
+	//Set callbacks
+	glfwSetMouseButtonCallback(m_windowHandle, MouseButtonCB);
+	glfwSetCursorPosCallback(m_windowHandle, CursorPositionCB);
+}
+
+void * Shaft::GLFWWindowHandle::GlfwNativeWindowHandle()
 {
 #	if BX_PLATFORM_LINUX || BX_PLATFORM_BSD
 	return (void*)(uintptr_t)glfwGetX11Window(m_windowHandle);
@@ -62,9 +74,30 @@ void Shaft::GLFWWindowHandle::SetBGFXWindow()
 #	elif BX_PLATFORM_WINDOWS
 	pd.ndt = NULL;
 #	endif // BX_PLATFORM_WINDOWS
-	pd.nwh = glfwNativeWindowHandle();
+	pd.nwh = GlfwNativeWindowHandle();
 	pd.context = NULL;
 	pd.backBuffer = NULL;
 	pd.backBufferDS = NULL;
 	bgfx::setPlatformData(pd);
+}
+
+void Shaft::GLFWWindowHandle::CursorPositionCB(GLFWwindow * window, double mouseX, double mouseY)
+{
+	sm_input->GetMouseState().mouseX = (int32)mouseX;
+	sm_input->GetMouseState().mouseY = (int32)mouseY;
+}
+
+void Shaft::GLFWWindowHandle::MouseButtonCB(GLFWwindow * window, int32 button, int32 action, int32 mods)
+{
+	MouseState::MouseButton mButton = MouseState::Middle;
+	if (button == GLFW_MOUSE_BUTTON_LEFT)
+	{
+		mButton = MouseState::Left;
+	}
+	else if (button == GLFW_MOUSE_BUTTON_RIGHT)
+	{
+		mButton = MouseState::Right;
+	}
+	
+	sm_input->GetMouseState().buttons[mButton] = action == GLFW_PRESS;
 }

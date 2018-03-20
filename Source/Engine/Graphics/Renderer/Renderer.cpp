@@ -1,7 +1,6 @@
 #include "Renderer.h"
 #include "../../Core.h"
 #include "../../System/Misc/EngineConfig.h"
-#include <imgui/imgui.h>
 
 using namespace Shaft;
 
@@ -33,25 +32,18 @@ void Renderer::Initialize()
 	bgfx::setDebug(m_debugFlags);
 
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x000000ff, 1.0f, 0);
-	
-	imguiCreate();
 }
 
 void Renderer::Draw()
 {
-	//imguiEndFrame();
 	bgfx::setViewRect(0, 0, 0, m_width, m_height);
 
 	bgfx::touch(0);
-	
-	bgfx::dbgTextClear();
-	bgfx::dbgTextPrintf(0, 1, 0x0f, "Test text using bgfx");
-	
+
 	bgfx::frame();
 }
 
 void Renderer::Destroy()
 {
-	imguiDestroy();
 	bgfx::shutdown();
 }

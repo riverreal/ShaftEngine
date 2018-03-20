@@ -24,10 +24,25 @@ void Shaft::Engine::SetRenderer(std::unique_ptr<Renderer> renderer)
 	m_renderer = std::move(renderer);
 }
 
+#if SHAFT_EDITOR_ENABLED
+void Shaft::Engine::SetEditor(std::unique_ptr<ShaftEditor> editor)
+{
+	m_editor = std::move(editor);
+}
+ShaftEditor& Shaft::Engine::GetEditor()
+{
+	return *m_editor.get();
+}
+#endif
 void Shaft::Engine::Initialize()
 {
 	m_window->Initialize();
+	m_window->BindInput(&m_input);
 	m_renderer->Initialize();
+#if SHAFT_EDITOR_ENABLED
+	m_editor->Init();
+	m_editor->BindInput(&m_input);
+#endif
 }
 
 WindowHandle& Engine::GetWindow()
@@ -35,7 +50,12 @@ WindowHandle& Engine::GetWindow()
 	return *m_window.get();
 }
 
-Renderer & Shaft::Engine::GetRenderer()
+Renderer& Shaft::Engine::GetRenderer()
 {
 	return *m_renderer.get();
+}
+
+Input& Shaft::Engine::GetInput()
+{
+	return m_input;
 }

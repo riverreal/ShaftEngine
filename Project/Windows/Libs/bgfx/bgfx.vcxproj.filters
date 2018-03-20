@@ -13,9 +13,6 @@
     <Filter Include="include\bgfx\c99">
       <UniqueIdentifier>{aecefb0d-869a-4ce1-84dc-3ca1455f406a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include\imgui">
-      <UniqueIdentifier>{8f9743c9-daa6-4609-bf2f-cf6025d09b44}</UniqueIdentifier>
-    </Filter>
     <Filter Include="3rdparty">
       <UniqueIdentifier>{63af1c0c-57bf-42fa-8df3-d1a1e0111792}</UniqueIdentifier>
     </Filter>
@@ -101,12 +98,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\vertexdecl.cpp">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\imgui\imgui.cpp">
-      <Filter>include\imgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\imgui\scintilla.cpp">
-      <Filter>include\imgui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\bgfx_utils.cpp">
       <Filter>include</Filter>
@@ -238,66 +229,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx\c99\platform.h">
       <Filter>include\bgfx\c99</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\droidsans.ttf.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_color.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_cubemap.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_image.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_image_swizz.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_latlong.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_imgui_texture.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\fs_ocornut_imgui.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\icons_font_awesome.ttf.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\icons_kenney.ttf.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\imgui.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\roboto_regular.ttf.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\robotomono_regular.ttf.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\scintilla.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_color.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_cubemap.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_image.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_latlong.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_texture.bin.h">
-      <Filter>include\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\imgui\vs_ocornut_imgui.bin.h">
-      <Filter>include\imgui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Dependencies\bgfx\include\bgfx_utils.h">
       <Filter>include</Filter>

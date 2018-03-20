@@ -1,6 +1,5 @@
 #include "Application.h"
 #include "Engine/EngineFactory.h"
-#include "Engine/System/Misc/EngineConfig.h"
 #include "Engine/Engine.h"
 #include "Engine/System/Window/WindowHandle.h"
 #include "Engine/Graphics/Renderer/Renderer.h"
@@ -17,23 +16,20 @@ Application::~Application()
 
 void Application::Initialize()
 {
-	EngineConfig engineConfig;
-	engineConfig.buildTarget = Windows;
-	engineConfig.renderConfig.rendererType = Direct3D11;
 	
-	engineConfig.windowConfig.isResizeable = false;
-
-	engineConfig.appInfo.appName = "Shaft Engine Test";
-	engineConfig.appInfo.appVersion = Version(0, 0, 1);
-	engineConfig.renderConfig.appInfo = engineConfig.windowConfig.appInfo = engineConfig.appInfo;
-	engineConfig.renderConfig.isValidationEnabled = true;
-	
-	engineConfig.renderConfig.engineName = "Shaft Engine";
-	engineConfig.engineVersion = engineConfig.renderConfig.engineVersion = Version(0, 0, 1);
+	m_engineConfig.buildTarget = Windows;
+	m_engineConfig.renderConfig.rendererType = Direct3D11;
+	m_engineConfig.windowConfig.isResizeable = false;
+	m_engineConfig.appInfo.appName = "Shaft Engine Test";
+	m_engineConfig.appInfo.appVersion = Version(0, 0, 1);
+	m_engineConfig.renderConfig.appInfo = m_engineConfig.windowConfig.appInfo = m_engineConfig.appInfo;
+	m_engineConfig.renderConfig.isValidationEnabled = true;
+	m_engineConfig.renderConfig.engineName = "Shaft Engine";
+	m_engineConfig.engineVersion = m_engineConfig.renderConfig.engineVersion = Version(0, 0, 1);
 
 	EngineFactory engineFactory;
-	m_engine = engineFactory.CreateEngine(engineConfig);
 
+	m_engine = engineFactory.CreateEngine(m_engineConfig);
 	m_engine->Initialize();
 }
 
@@ -42,6 +38,11 @@ void Shaft::Application::Run()
 	while (!m_engine->GetWindow().CloseWindow())
 	{
 		m_engine->GetWindow().PollEvents();
+
+#if SHAFT_EDITOR_ENABLED
+		m_engine->GetEditor().Draw();
+#endif
+
 		m_engine->GetRenderer().Draw();
 	}
 }

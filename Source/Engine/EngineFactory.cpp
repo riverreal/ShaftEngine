@@ -27,15 +27,20 @@ std::unique_ptr<Engine> EngineFactory::CreateEngine(const EngineConfig & config)
 {
 	ResolveBuildTarget(config);
 
-	std::unique_ptr<Engine> engine(new Engine(config));
+	std::unique_ptr<Engine> engine = std::make_unique<Engine>(config);
 	
 	//--------Renderer---------------------------
-	std::unique_ptr<Renderer> renderer(new Renderer(config.renderConfig));
+	std::unique_ptr<Renderer> renderer = std::make_unique<Renderer>(config.renderConfig);
 	engine->SetRenderer(std::move(renderer));
 
 	//--------Window-----------------------------
-	std::unique_ptr<WindowHandle> windowHandle(new GLFWWindowHandle(config.windowConfig));
+	std::unique_ptr<WindowHandle> windowHandle = std::make_unique<GLFWWindowHandle>(config.windowConfig);
 	engine->SetWindow(std::move(windowHandle));
+
+#if SHAFT_EDITOR_ENABLED
+	std::unique_ptr<ShaftEditor> editor = std::make_unique<ShaftEditor>(config);
+	engine->SetEditor(std::move(editor));
+#endif
 
 	return engine;
 }

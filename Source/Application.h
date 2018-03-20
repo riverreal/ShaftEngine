@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Engine/Core.h"
+#include "Engine/System/Misc/EngineConfig.h"
 
 namespace Shaft {
 	class Engine;
@@ -15,5 +16,6 @@ namespace Shaft {
 
 	private:
 		std::unique_ptr<Engine> m_engine;
+		EngineConfig m_engineConfig;
 	};
 }

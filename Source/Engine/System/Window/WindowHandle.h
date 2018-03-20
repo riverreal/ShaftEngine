@@ -4,6 +4,8 @@
 
 namespace Shaft
 {
+	class Input;
+
 	class WindowHandle
 	{
 	public:
@@ -12,6 +14,7 @@ namespace Shaft
 		virtual bool CloseWindow() = 0;
 		virtual void PollEvents() = 0;
 		virtual void Destroy() = 0;
+		virtual void BindInput(Input* input) = 0;
 
 #ifdef WINDOW_TYPE_GLFW 1
 		GLFWwindow* GetWindow() { return m_windowHandle; }

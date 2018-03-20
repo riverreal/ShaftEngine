@@ -35,6 +35,12 @@
     <Filter Include="3rdparty\imgui">
       <UniqueIdentifier>{de752524-0362-4aab-8376-8ce6c22c1c22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Engine\System\Input">
+      <UniqueIdentifier>{45cd4ab4-967b-4410-9b74-c3831a6638a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Editor">
+      <UniqueIdentifier>{bbe8581d-4af8-409f-8eee-35ca9b90de9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp">
@@ -60,6 +66,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Dependencies\bgfx\include\imgui\scintilla.cpp">
       <Filter>3rdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\Input\Input.cpp">
+      <Filter>src\Engine\System\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\Editor\ShaftEditor.cpp">
+      <Filter>src\Engine\Editor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +173,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_ocornut_imgui.bin.h">
       <Filter>3rdparty\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Input\Input.h">
+      <Filter>src\Engine\System\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Input\MouseState.h">
+      <Filter>src\Engine\System\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\Editor\ShaftEditor.h">
+      <Filter>src\Engine\Editor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

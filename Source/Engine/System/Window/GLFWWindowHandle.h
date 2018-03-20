@@ -16,12 +16,18 @@ namespace Shaft
 		virtual bool CloseWindow() override;
 		virtual void PollEvents() override;
 		virtual void Destroy() override;
+		virtual void BindInput(Input* input) override;
 
 	private:
-		void* glfwNativeWindowHandle();
+		void* GlfwNativeWindowHandle();
 		void SetBGFXWindow();
+
+		static void CursorPositionCB(GLFWwindow* window, double mouseX, double mouseY);
+		static void MouseButtonCB(GLFWwindow* window, int32 button, int32 action, int32 mods);
 		
 	private:
+		static Input* sm_input;
 		const WindowConfig& m_config;
 	};
+	
 }

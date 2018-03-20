@@ -1,5 +1,6 @@
 #pragma once
 
+#define SHAFT_EDITOR_ENABLED true
 #define DEFAULT_SCREEN_WIDTH 1280
 #define DEFAULT_SCREEN_HEIGHT 720
 
