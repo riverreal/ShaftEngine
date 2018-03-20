@@ -2,7 +2,6 @@
 #include "../../Core.h"
 #include "../../System/Misc/EngineConfig.h"
 #include <imgui/imgui.h>
-#include "bx/allocator.h"
 
 using namespace Shaft;
 
@@ -23,15 +22,14 @@ Renderer::~Renderer()
 
 void Renderer::Initialize()
 {
-	
 	auto bgfxRenderRype = ConvertRendererTypeToBGFX(m_config.rendererType);
 	m_debugFlags = BGFX_DEBUG_TEXT | BGFX_DEBUG_STATS;
 	m_resetFlags = BGFX_RESET_VSYNC;
-	static bx::DefaultAllocator allc;
-	if (!bgfx::init(bgfxRenderRype, 0, NULL, NULL, &allc))
+	if (!bgfx::init(bgfxRenderRype, 0))
 	{
 		std::cout << "Could not initialize bgfx" << std::endl;
 		throw std::runtime_error("bgfx init failed");
+		return;
 	}
 	bgfx::reset(m_config.width, m_config.height, m_resetFlags);
 	bgfx::setDebug(m_debugFlags);
