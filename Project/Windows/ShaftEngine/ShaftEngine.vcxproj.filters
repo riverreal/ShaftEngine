@@ -73,6 +73,9 @@
     <ClCompile Include="..\..\..\Source\Engine\Editor\ShaftEditor.cpp">
       <Filter>src\Engine\Editor</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\Actor.cpp">
+      <Filter>src\Engine\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
@@ -182,6 +185,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Editor\ShaftEditor.h">
       <Filter>src\Engine\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Actor.h">
+      <Filter>src\Engine\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

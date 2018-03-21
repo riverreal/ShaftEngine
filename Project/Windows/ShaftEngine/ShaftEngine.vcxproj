@@ -172,6 +172,7 @@
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\EngineFactory.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\System\Actor.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Input\Input.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.cpp" />
     <ClCompile Include="..\..\..\Source\main.cpp" />
@@ -203,6 +204,7 @@
     <ClInclude Include="..\..\..\Source\Engine\Engine.h" />
     <ClInclude Include="..\..\..\Source\Engine\EngineFactory.h" />
     <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Actor.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\Input.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\MouseState.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\EngineConfig.h" />
