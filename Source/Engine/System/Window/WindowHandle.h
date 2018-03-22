@@ -16,14 +16,14 @@ namespace Shaft
 		virtual void Destroy() = 0;
 		virtual void BindInput(Input* input) = 0;
 
-#ifdef WINDOW_TYPE_GLFW 1
+#if WINDOW_TYPE_GLFW
 		GLFWwindow* GetWindow() { return m_windowHandle; }
 #elif WINDOW_TYPE_WINAPI
 		HWND GetWindow() { return m_windowHandle; }
 #endif
 
 	protected:
-#ifdef WINDOW_TYPE_GLFW 1
+#if WINDOW_TYPE_GLFW
 		GLFWwindow* m_windowHandle;
 #elif WINDOW_TYPE_WINAPI
 		HWND m_windowHandle;
