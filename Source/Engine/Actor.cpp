@@ -2,8 +2,9 @@
 
 using namespace Shaft;
 
-Shaft::Actor::Actor()
-	:m_parent(nullptr)
+Shaft::Actor::Actor(EngineEntity entity)
+	:m_parent(nullptr),
+	m_entity(entity)
 {
 }
 
@@ -34,4 +35,9 @@ const std::vector<Actor*>& Shaft::Actor::GetChilren() const
 void Shaft::Actor::SetParent(Actor * parent)
 {
 	m_parent = parent;
+}
+
+EngineEntity& Shaft::Actor::GetEntity()
+{
+	return m_entity;
 }

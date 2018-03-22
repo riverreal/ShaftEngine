@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;C:\Users\Riverreal\Documents\ShaftEngine\Source\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;C:\Users\Riverreal\Documents\ShaftEngine\Source\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;C:\Users\Riverreal\Documents\ShaftEngine\Source\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -151,7 +151,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;C:\Users\Riverreal\Documents\ShaftEngine\Source\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -168,12 +168,11 @@
     <ClCompile Include="..\..\..\Dependencies\bgfx\include\imgui\imgui.cpp" />
     <ClCompile Include="..\..\..\Dependencies\bgfx\include\imgui\scintilla.cpp" />
     <ClCompile Include="..\..\..\Source\Application.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\Actor.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Editor\ShaftEditor.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\EngineFactory.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.cpp" />
-    <ClCompile Include="..\..\..\Source\Engine\System\Actor.cpp" />
-    <ClCompile Include="..\..\..\Source\Engine\System\Components\Transform.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Input\Input.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.cpp" />
     <ClCompile Include="..\..\..\Source\main.cpp" />
@@ -200,25 +199,27 @@
     <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_imgui_texture.bin.h" />
     <ClInclude Include="..\..\..\Dependencies\bgfx\include\imgui\vs_ocornut_imgui.bin.h" />
     <ClInclude Include="..\..\..\Source\Application.h" />
-    <ClInclude Include="..\..\..\Source\Engine\Core.h" />
+    <ClInclude Include="..\..\..\Source\Engine\Actor.h" />
     <ClInclude Include="..\..\..\Source\Engine\Editor\ShaftEditor.h" />
     <ClInclude Include="..\..\..\Source\Engine\Engine.h" />
     <ClInclude Include="..\..\..\Source\Engine\EngineFactory.h" />
     <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.h" />
-    <ClInclude Include="..\..\..\Source\Engine\System\Actor.h" />
-    <ClInclude Include="..\..\..\Source\Engine\System\Components\IComponent.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\Components.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\Input.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\KeyState.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\MouseState.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\EngineConfig.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\Vector.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\BaseTypes.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\Platform.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\WindowsTypes.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\ShaftTypes.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowHandle.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WinAPIWindowHandle.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowIncludes.h" />
+    <ClInclude Include="..\..\..\Source\Include\Shaft\Core.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\FragmentShader.frag" />

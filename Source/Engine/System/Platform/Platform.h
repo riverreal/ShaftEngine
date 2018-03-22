@@ -26,7 +26,7 @@
 
 //Transfer types and make global
 
-typedef Shaft::PlatformTypes::uint8		uin8;
+typedef Shaft::PlatformTypes::uint8		uint8;
 typedef Shaft::PlatformTypes::uint16	uint16;
 typedef Shaft::PlatformTypes::uint32	uint32;
 typedef Shaft::PlatformTypes::uint64	uint64;
@@ -36,12 +36,12 @@ typedef Shaft::PlatformTypes::uint16f	uint16f;
 typedef Shaft::PlatformTypes::uint32f	uint32f;
 typedef Shaft::PlatformTypes::uint64f	uint64f;
 
-typedef Shaft::PlatformTypes::int8		in8;
+typedef Shaft::PlatformTypes::int8		int8;
 typedef Shaft::PlatformTypes::int16		int16;
 typedef Shaft::PlatformTypes::int32		int32;
 typedef Shaft::PlatformTypes::int64		int64;
 
-typedef Shaft::PlatformTypes::int8f		in8f;
+typedef Shaft::PlatformTypes::int8f		int8f;
 typedef Shaft::PlatformTypes::int16f	int16f;
 typedef Shaft::PlatformTypes::int32f	int32f;
 typedef Shaft::PlatformTypes::int64f	int64f;

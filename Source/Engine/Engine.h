@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core.h"
+#include <Shaft/Core.h>
 #include "System/Input/Input.h"
 
 #if SHAFT_EDITOR_ENABLED

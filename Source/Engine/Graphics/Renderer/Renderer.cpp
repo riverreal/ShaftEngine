@@ -1,5 +1,4 @@
 #include "Renderer.h"
-#include "../../Core.h"
 #include "../../System/Misc/EngineConfig.h"
 
 using namespace Shaft;

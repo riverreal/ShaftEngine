@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core.h"
+#include <Shaft/Core.h>
 
 #if SHAFT_EDITOR_ENABLED
 namespace Shaft

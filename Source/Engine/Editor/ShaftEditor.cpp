@@ -1,9 +1,9 @@
 #include "ShaftEditor.h"
-#include <imgui/imgui.h>
 #include "../System/Input/Input.h"
 #include "../System/Misc/EngineConfig.h"
 
 #if SHAFT_EDITOR_ENABLED
+#include <imgui/imgui.h>
 
 using namespace Shaft;
 

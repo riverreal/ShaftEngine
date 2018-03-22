@@ -44,6 +44,12 @@
     <Filter Include="src\Engine\System\Components">
       <UniqueIdentifier>{246d4f24-30de-46ec-be88-20ffd0084c86}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Include">
+      <UniqueIdentifier>{3252891a-063e-4c04-9cef-9eb609f75269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Include\Shaft">
+      <UniqueIdentifier>{2f47a29a-10be-41c8-be1a-1f1bbd9a643b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp">
@@ -76,19 +82,13 @@
     <ClCompile Include="..\..\..\Source\Engine\Editor\ShaftEditor.cpp">
       <Filter>src\Engine\Editor</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Source\Engine\System\Actor.cpp">
-      <Filter>src\Engine\System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Source\Engine\System\Components\Transform.cpp">
-      <Filter>src\Engine\System\Components</Filter>
+    <ClCompile Include="..\..\..\Source\Engine\Actor.cpp">
+      <Filter>src\Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Source\Engine\Core.h">
-      <Filter>src\Engine</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Engine.h">
       <Filter>src\Engine</Filter>
@@ -192,14 +192,23 @@
     <ClInclude Include="..\..\..\Source\Engine\Editor\ShaftEditor.h">
       <Filter>src\Engine\Editor</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Source\Engine\System\Actor.h">
-      <Filter>src\Engine\System</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Source\Engine\System\Components\IComponent.h">
-      <Filter>src\Engine\System\Components</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h">
       <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\Vector.h">
+      <Filter>src\Engine\System\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\ShaftTypes.h">
+      <Filter>src\Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\Components.h">
+      <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\Actor.h">
+      <Filter>src\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Include\Shaft\Core.h">
+      <Filter>src\Include\Shaft</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Input\KeyState.h">
       <Filter>src\Engine\System\Input</Filter>

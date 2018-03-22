@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Engine/Core.h"
+#include <Shaft/Core.h>
 #include "Engine/System/Misc/EngineConfig.h"
 
 namespace Shaft {

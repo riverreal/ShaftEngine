@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../Core.h"
+#include <Shaft/Core.h>
 #include "WindowHandle.h"
 
 namespace Shaft {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../Core.h"
+#include <Shaft/Core.h>
 
 namespace Shaft {
 	struct RendererConfig;
@@ -10,9 +10,9 @@ namespace Shaft {
 	public:
 		Renderer(const RendererConfig& renderConfig);
 		~Renderer();
-		virtual void Initialize();
-		virtual void Draw();
-		virtual void Destroy();
+		void Initialize();
+		void Draw();
+		void Destroy();
 
 	private:
 		const RendererConfig& m_config;
