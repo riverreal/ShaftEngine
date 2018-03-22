@@ -201,6 +201,9 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h">
       <Filter>src\Engine\System\Components</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Input\KeyState.h">
+      <Filter>src\Engine\System\Input</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\FragmentShader.frag">
