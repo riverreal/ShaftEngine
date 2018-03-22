@@ -8,6 +8,7 @@ Project/Windows/Libs/bgfx/*
 Project/Windows/Libs/bimg/*
 Project/Windows/Libs/bimg_decode/*
 Project/Windows/Libs/bx/*
+Project/Windows/Libs/rttr/*
 *.vs/
 !Project/Windows/ShaftEngine.sln
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj

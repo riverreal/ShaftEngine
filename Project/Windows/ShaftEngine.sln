@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bimg_decode", "Libs\bimg_de
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bgfx", "Libs\bgfx\bgfx.vcxproj", "{D23F29D1-429B-4121-ABF8-411114D8BB08}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rttr_core", "Libs\rttr\rttr_core.vcxproj", "{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -63,6 +65,14 @@ Global
 		{D23F29D1-429B-4121-ABF8-411114D8BB08}.Release|x64.Build.0 = Release|x64
 		{D23F29D1-429B-4121-ABF8-411114D8BB08}.Release|x86.ActiveCfg = Release|Win32
 		{D23F29D1-429B-4121-ABF8-411114D8BB08}.Release|x86.Build.0 = Release|Win32
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}.Debug|x64.ActiveCfg = Debug|x64
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}.Debug|x64.Build.0 = Debug|x64
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}.Debug|x86.ActiveCfg = Debug|Win32
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}.Debug|x86.Build.0 = Debug|Win32
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}.Release|x64.ActiveCfg = Release|x64
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}.Release|x64.Build.0 = Release|x64
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}.Release|x86.ActiveCfg = Release|Win32
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +82,7 @@ Global
 		{611CD704-F574-4A36-9C94-30246FA8B7A3} = {EF693256-5526-4AB1-AA4E-B1E778A4919C}
 		{1C9B4B7E-DBFA-4A59-A078-26F7B8B4FC93} = {EF693256-5526-4AB1-AA4E-B1E778A4919C}
 		{D23F29D1-429B-4121-ABF8-411114D8BB08} = {EF693256-5526-4AB1-AA4E-B1E778A4919C}
+		{D2B00D4D-C29F-3993-B383-EB175EEB8C5D} = {EF693256-5526-4AB1-AA4E-B1E778A4919C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E24BE170-76C5-43CD-A285-0709EF4AB627}
