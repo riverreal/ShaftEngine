@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;C:\Users\Riverreal\Documents\ShaftEngine\Dependencies\rttr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;C:\Users\Riverreal\Documents\ShaftEngine\Dependencies\rttr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;C:\Users\Riverreal\Documents\ShaftEngine\Dependencies\rttr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -151,7 +151,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;C:\Users\Riverreal\Documents\ShaftEngine\Dependencies\rttr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\$(PlatformTarget)\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
