@@ -85,6 +85,9 @@
     <ClCompile Include="..\..\..\Source\Engine\Actor.cpp">
       <Filter>src\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\World.cpp">
+      <Filter>src\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
@@ -212,6 +215,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Input\KeyState.h">
       <Filter>src\Engine\System\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\World.h">
+      <Filter>src\Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
