@@ -5,6 +5,18 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="3rdparty">
+      <UniqueIdentifier>{6a7be958-7a1d-4d5e-9051-e4dfbbaa84e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\imgui">
+      <UniqueIdentifier>{de752524-0362-4aab-8376-8ce6c22c1c22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Include">
+      <UniqueIdentifier>{3252891a-063e-4c04-9cef-9eb609f75269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Include\Shaft">
+      <UniqueIdentifier>{2f47a29a-10be-41c8-be1a-1f1bbd9a643b}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Engine">
       <UniqueIdentifier>{305982e6-4a61-41ba-8f6d-d0e4d5addae7}</UniqueIdentifier>
     </Filter>
@@ -29,26 +41,14 @@
     <Filter Include="src\Engine\System\Window">
       <UniqueIdentifier>{6650626c-ed9b-4f7d-93ab-509f2999c698}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3rdparty">
-      <UniqueIdentifier>{6a7be958-7a1d-4d5e-9051-e4dfbbaa84e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="3rdparty\imgui">
-      <UniqueIdentifier>{de752524-0362-4aab-8376-8ce6c22c1c22}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Engine\System\Input">
       <UniqueIdentifier>{45cd4ab4-967b-4410-9b74-c3831a6638a8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Engine\Editor">
-      <UniqueIdentifier>{bbe8581d-4af8-409f-8eee-35ca9b90de9f}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Engine\System\Components">
       <UniqueIdentifier>{246d4f24-30de-46ec-be88-20ffd0084c86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Include">
-      <UniqueIdentifier>{3252891a-063e-4c04-9cef-9eb609f75269}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Include\Shaft">
-      <UniqueIdentifier>{2f47a29a-10be-41c8-be1a-1f1bbd9a643b}</UniqueIdentifier>
+    <Filter Include="src\Engine\Editor">
+      <UniqueIdentifier>{bbe8581d-4af8-409f-8eee-35ca9b90de9f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
