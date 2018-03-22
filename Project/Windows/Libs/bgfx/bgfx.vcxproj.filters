@@ -27,9 +27,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\amalgamated.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\bgfx.cpp">
       <Filter>src</Filter>
     </ClCompile>

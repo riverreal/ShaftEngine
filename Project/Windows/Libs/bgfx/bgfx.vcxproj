@@ -25,7 +25,6 @@
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_demo.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\3rdparty\ocornut-imgui\imgui_draw.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\include\bgfx_utils.cpp" />
-    <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\amalgamated.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\bgfx.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\debug_renderdoc.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\bgfx\src\dxgi.cpp" />
