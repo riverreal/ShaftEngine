@@ -41,6 +41,9 @@
     <Filter Include="src\Engine\Editor">
       <UniqueIdentifier>{bbe8581d-4af8-409f-8eee-35ca9b90de9f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Engine\System\Components">
+      <UniqueIdentifier>{246d4f24-30de-46ec-be88-20ffd0084c86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp">
@@ -75,6 +78,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\System\Actor.cpp">
       <Filter>src\Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\Components\Transform.cpp">
+      <Filter>src\Engine\System\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +194,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Actor.h">
       <Filter>src\Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\IComponent.h">
+      <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h">
+      <Filter>src\Engine\System\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
