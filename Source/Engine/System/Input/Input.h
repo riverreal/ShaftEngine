@@ -2,6 +2,7 @@
 
 #include "../../Core.h"
 #include "MouseState.h"
+#include "KeyState.h"
 
 namespace Shaft
 {
@@ -12,10 +13,12 @@ namespace Shaft
 		~Input();
 
 		MouseState& GetMouseState();
+		KeyState& GetKeyState();
 
 	private:
 
 	private:
 		MouseState m_mouseState;
+		KeyState m_keyState;
 	};
 }
