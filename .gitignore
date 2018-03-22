@@ -2,8 +2,8 @@ Bin/
 Project/Windows/ShaftEngine/*
 Project/Windows/Debug
 Project/Windows/Release
-Project/Windows/Debug
 Project/Windows/x64
+Project/Windows/Win32
 Project/Windows/Libs/bgfx/*
 Project/Windows/Libs/bimg/*
 Project/Windows/Libs/bimg_decode/*
@@ -15,3 +15,4 @@ Project/Windows/Libs/rttr/*
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj.filters
 !Project/Windows/Libs/*/*.vcxproj
 !Project/Windows/Libs/*/*.vcxproj.filters
+
