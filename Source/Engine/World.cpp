@@ -52,5 +52,10 @@ void Shaft::World::RemoveActor(Actor* actor)
 
 void Shaft::World::RemoveAllActors()
 {
+	for (auto& actor : m_actors)
+	{
+		actor.actor.get()->GetEntity().destroy();
+	}
+
 	m_actors.clear();
 }
