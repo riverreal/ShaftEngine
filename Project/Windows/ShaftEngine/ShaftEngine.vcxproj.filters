@@ -50,6 +50,9 @@
     <Filter Include="src\Engine\Editor">
       <UniqueIdentifier>{bbe8581d-4af8-409f-8eee-35ca9b90de9f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Engine\Meta">
+      <UniqueIdentifier>{4b73dbae-5d45-42be-bcaf-e93b06eb283c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\main.cpp">
@@ -218,6 +221,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\World.h">
       <Filter>src\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\ReflectionRegistration.h">
+      <Filter>src\Engine\System\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Include\Shaft\Reflection.h">
+      <Filter>src\Include\Shaft</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\Meta\EngineMeta.h">
+      <Filter>src\Engine\Meta</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

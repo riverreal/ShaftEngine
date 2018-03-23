@@ -205,12 +205,14 @@
     <ClInclude Include="..\..\..\Source\Engine\Engine.h" />
     <ClInclude Include="..\..\..\Source\Engine\EngineFactory.h" />
     <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.h" />
+    <ClInclude Include="..\..\..\Source\Engine\Meta\EngineMeta.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Components.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\Input.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\KeyState.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\MouseState.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\EngineConfig.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\ReflectionRegistration.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\Vector.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\BaseTypes.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\Platform.h" />
@@ -222,6 +224,7 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowIncludes.h" />
     <ClInclude Include="..\..\..\Source\Engine\World.h" />
     <ClInclude Include="..\..\..\Source\Include\Shaft\Core.h" />
+    <ClInclude Include="..\..\..\Source\Include\Shaft\Reflection.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\FragmentShader.frag" />
