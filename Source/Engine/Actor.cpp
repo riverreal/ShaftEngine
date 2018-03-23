@@ -1,18 +1,18 @@
 #include "Actor.h"
-#include <rttr/registration>
+#include "World.h"
 
 using namespace Shaft;
 
 Shaft::Actor::Actor(EngineEntity entity, World* world)
 	:m_parent(nullptr),
 	m_entity(entity),
-	m_world(world)
+	m_world(world),
+	m_name("MyActor")
 {
 }
 
 Shaft::Actor::~Actor()
 {
-	std::cout << "Destroy Actor: " << m_name << std::endl;
 }
 
 void Shaft::Actor::SetName(const std::string& name)
@@ -27,7 +27,24 @@ const std::string & Shaft::Actor::GetName() const
 
 void Shaft::Actor::AddChild(Actor * child)
 {
+	child->SetParent(this);
 	m_children.push_back(child);
+}
+
+void Shaft::Actor::RemoveChild(Actor * child)
+{
+	auto toRemove = std::find_if(m_children.begin(), m_children.end(), [&](Actor* actor) {
+		return actor->GetEntity().id().id() == child->GetEntity().id().id();
+	});
+
+	if (toRemove == m_children.end())
+	{
+		std::cout << "Could not find child to remove" << std::endl;
+	}
+	else
+	{
+		m_children.erase(toRemove);
+	}
 }
 
 const std::vector<Actor*>& Shaft::Actor::GetChilren() const
@@ -35,12 +52,25 @@ const std::vector<Actor*>& Shaft::Actor::GetChilren() const
 	return m_children;
 }
 
-void Shaft::Actor::SetParent(Actor * parent)
+Actor * Shaft::Actor::GetParent()
 {
-	m_parent = parent;
+	return m_parent;
 }
 
-World * Shaft::Actor::GetWorld()
+void Shaft::Actor::SetParent(Actor* parent)
+{
+	if (m_parent != nullptr)
+	{
+		
+	}
+}
+
+void Shaft::Actor::Destroy()
+{
+	m_world->RemoveActor(this);
+}
+
+World* Shaft::Actor::GetWorld()
 {
 	return m_world;
 }
@@ -50,8 +80,32 @@ EngineEntity& Shaft::Actor::GetEntity()
 	return m_entity;
 }
 
-RTTR_REGISTRATION
+Actor* Shaft::Actor::GetRoot()
 {
-	rttr::registration::class_<Actor>("Actor")
-		.property("name", &Actor::GetName, &Actor::SetName);
+	return GetRooRec(this);
+}
+
+bool Shaft::Actor::GetActive()
+{
+	return m_active;
+}
+
+void Shaft::Actor::SetActive(bool active)
+{
+	m_active = active;
+}
+
+void Shaft::Actor::SetParentPtr(Actor* parent)
+{
+	m_parent = parent;
+}
+
+Actor* Shaft::Actor::GetRooRec(Actor* target)
+{
+	auto parent = target->GetParent();
+	if (parent == nullptr)
+	{
+		return target;
+	}
+	return GetRooRec(parent);
 }

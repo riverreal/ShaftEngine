@@ -5,27 +5,39 @@
 
 namespace Shaft
 {
+	struct IDActor {
+		uint64 id;
+		std::unique_ptr<Actor> actor;
+	};
+
 	class World
 	{
 	public:
 		World();
 		~World();
 
-		const std::vector<std::unique_ptr<Actor>>& GetActors();
+		const std::vector<IDActor>& GetActors();
 
 		template <typename T>
 		T* CreateActor();
-		
+		void RemoveActor(Actor* actor);
+
+		void RemoveAllActors();
+
 	private:
-		std::vector<std::unique_ptr<Actor>> m_actors;
+		std::vector<IDActor> m_actors;
 		EngineEntityManager m_entities;
 	};
 
 	template <typename T>
 	T* World::CreateActor()
 	{
-		//Actor* actor = new T(m_entities.create());
-		m_actors.push_back(std::make_unique<T>(m_entities.create(), this));
-		return m_actors.back().get();
+		IDActor idActor;
+		idActor.actor = std::make_unique<T>(m_entities.create(), this);
+		idActor.id = idActor.actor.get()->GetEntity().id().id();
+		m_actors.push_back(std::move(idActor));
+		//m_actors.emplace_back(std::move(idActor));
+
+		return m_actors.back().actor.get();
 	}
 }

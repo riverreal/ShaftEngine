@@ -1,8 +1,7 @@
 #pragma once
 
 #include <Shaft/Core.h>
-#include <rttr/type>
-#include <rttr/registration_friend>
+#include <Shaft/Reflection.h>
 
 namespace Shaft
 {
@@ -10,26 +9,35 @@ namespace Shaft
 
 	class Actor
 	{
+		REFLECTABLE(Actor)
 	public:
 		Actor(EngineEntity entity, World* world);
 		~Actor();
 		void SetName(const std::string& name);
 		const std::string& GetName() const;
 		void AddChild(Actor* child);
+		//For deparent purposes
+		void RemoveChild(Actor* child);
 		const std::vector<Actor*>& GetChilren() const;
+		Actor* GetParent();
 		void SetParent(Actor* parent);
-
+		void Destroy();
 		World* GetWorld();
 		EngineEntity& GetEntity();
-		
+		Actor* GetRoot();
+		bool GetActive();
+		void SetActive(bool active);
+
+	private:
+		void SetParentPtr(Actor* parent);
+		Actor* GetRooRec(Actor* target);
+
 	protected:
 		World* m_world;
 		EngineEntity m_entity;
 		Actor* m_parent;
 		std::vector<Actor*> m_children;
 		std::string m_name;
-
-		RTTR_ENABLE()
-		RTTR_REGISTRATION_FRIEND
+		bool m_active;
 	};
 }
