@@ -3,6 +3,7 @@
 #include "Engine/Engine.h"
 #include "Engine/System/Window/WindowHandle.h"
 #include "Engine/Graphics/Renderer/Renderer.h"
+#include "Engine/World.h"
 
 using namespace Shaft;
 
@@ -38,6 +39,9 @@ void Shaft::Application::Run()
 	while (!m_engine->GetWindow().CloseWindow())
 	{
 		m_engine->GetWindow().PollEvents();
+
+		//TODO: delta time
+		m_engine->GetWorld().Update(0);
 
 #if SHAFT_EDITOR_ENABLED
 		m_engine->GetEditor().Draw();

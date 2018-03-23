@@ -1,14 +1,21 @@
 #include "World.h"
+#include "System/Components/ComponentSystems/SystemsManager.h"
 
 using namespace Shaft;
 
 Shaft::World::World()
+	:m_systemsManager(std::make_unique<SystemsManager>(&m_entities))
 {
 	m_actors.reserve(ACTOR_RESERVE_COUNT);
 }
 
 Shaft::World::~World()
 {
+}
+
+void Shaft::World::Update(float deltaTime)
+{
+	m_systemsManager->UpdateSystems(deltaTime);
 }
 
 const std::vector<IDActor>& Shaft::World::GetActors()

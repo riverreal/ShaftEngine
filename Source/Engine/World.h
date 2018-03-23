@@ -5,6 +5,8 @@
 
 namespace Shaft
 {
+	class SystemsManager;
+
 	struct IDActor {
 		uint64 id;
 		std::unique_ptr<Actor> actor;
@@ -16,8 +18,9 @@ namespace Shaft
 		World();
 		~World();
 
-		const std::vector<IDActor>& GetActors();
+		void Update(float deltaTime);
 
+		const std::vector<IDActor>& GetActors();
 		template <typename T>
 		T* CreateActor();
 		void RemoveActor(Actor* actor);
@@ -27,6 +30,7 @@ namespace Shaft
 	private:
 		std::vector<IDActor> m_actors;
 		EngineEntityManager m_entities;
+		std::unique_ptr<SystemsManager> m_systemsManager;
 	};
 
 	template <typename T>
