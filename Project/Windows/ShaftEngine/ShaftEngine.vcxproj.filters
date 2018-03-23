@@ -94,6 +94,12 @@
     <ClCompile Include="..\..\..\Source\Engine\Graphics\ShapeBuilder.cpp">
       <Filter>src\Engine\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\MeshManager.cpp">
+      <Filter>src\Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\Misc\Vertex.cpp">
+      <Filter>src\Engine\System\Misc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
@@ -239,6 +245,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Graphics\ShapeBuilder.h">
       <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\MeshManager.h">
+      <Filter>src\Engine\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

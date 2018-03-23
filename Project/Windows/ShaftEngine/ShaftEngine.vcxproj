@@ -175,6 +175,8 @@
     <ClCompile Include="..\..\..\Source\Engine\Graphics\ShapeBuilder.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Input\Input.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\System\MeshManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\System\Misc\Vertex.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\World.cpp" />
     <ClCompile Include="..\..\..\Source\main.cpp" />
@@ -213,6 +215,7 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Input\Input.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\KeyState.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\MouseState.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\MeshManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\EngineConfig.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\ReflectionRegistration.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\Vector.h" />
