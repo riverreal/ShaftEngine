@@ -91,6 +91,9 @@
     <ClCompile Include="..\..\..\Source\Engine\World.cpp">
       <Filter>src\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\Graphics\ShapeBuilder.cpp">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
@@ -230,6 +233,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Meta\EngineMeta.h">
       <Filter>src\Engine\Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\Vertex.h">
+      <Filter>src\Engine\System\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\Graphics\ShapeBuilder.h">
+      <Filter>src\Engine\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

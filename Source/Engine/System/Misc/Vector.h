@@ -4,6 +4,24 @@
 
 namespace Shaft
 {
+	struct Vec2f
+	{
+		Vec2f()
+			:x(0.0f), y(0.0f)
+		{};
+
+		Vec2f(float x, float y)
+			:x(x), y(y)
+		{};
+
+		Vec2f(float xy)
+			:x(xy), y(xy)
+		{};
+
+		float x;
+		float y;
+	};
+
 	struct Vec3f
 	{
 		Vec3f()
@@ -17,6 +35,53 @@ namespace Shaft
 		Vec3f(float xyz)
 			:x(xyz), y(xyz), z(xyz)
 		{};
+
+		Vec3f FastNormalize() const
+		{
+			float lengSqr = x * x + y * y + z * z;
+
+			int leng = *(int*)&lengSqr;
+
+			if (leng == 0)
+			{
+				return 0.0f;
+			}
+			else
+			{
+				float xhalf = 0.5f * lengSqr;
+				leng = 0x5f375a86 - (leng >> 1);
+				lengSqr = *(float*)&leng;
+				lengSqr = lengSqr * (1.5f - xhalf * lengSqr * lengSqr);
+			}
+
+			Vec3f normalized(x, y, z);
+
+			normalized.x *= lengSqr;
+			normalized.y *= lengSqr;
+			normalized.z *= lengSqr;
+
+			return normalized;
+		}
+
+		Vec3f Cross(const Vec3f& v) const
+		{
+			Vec3f result;
+			result.x = y * v.z - v.y * z;
+			result.y = v.x * z - x * v.z;
+			result.z = x * v.y - v.x * y;
+
+			return result;
+		}
+
+		float Dot(const Vec3f& d) const
+		{
+			float product = 0;
+			product += x * d.x;
+			product += y * d.y;
+			product += z * d.z;
+
+			return product;
+		}
 
 		float x;
 		float y;
