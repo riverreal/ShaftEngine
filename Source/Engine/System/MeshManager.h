@@ -24,6 +24,9 @@ namespace Shaft
 
 		//Create a static mesh type
 		uint32 CreateMeshType(MeshData mData, std::string meshName);
+		std::vector<MeshType>& GetMeshTypes();
+	private:
+		void DestroyAllBuffers();
 
 	private:
 		std::vector<MeshType> m_meshTypes;

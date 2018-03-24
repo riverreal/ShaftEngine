@@ -1,5 +1,15 @@
 #include "Renderer.h"
 #include "../../System/Misc/EngineConfig.h"
+#include "../Engine/World.h"
+#include "../Engine/System/ResourceManager.h"
+#include "../Engine/System/MeshManager.h"
+#include <bx/math.h>
+#include <glm/gtc/quaternion.hpp>
+#include <glm/gtx/quaternion.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtx/transform.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 using namespace Shaft;
 
@@ -17,8 +27,10 @@ Renderer::~Renderer()
 	Destroy();
 }
 
-void Renderer::Initialize()
+void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 {
+	m_world = world;
+	m_resourceManager = resourceManager;
 	auto bgfxRenderRype = ConvertRendererTypeToBGFX(m_config.rendererType);
 	m_debugFlags = BGFX_DEBUG_TEXT;
 	m_resetFlags = BGFX_RESET_VSYNC;
@@ -35,9 +47,48 @@ void Renderer::Initialize()
 
 void Renderer::Draw()
 {
+	
+	float at[3] = { 0.0f, 0.0f, 0.0f };
+	float eye[3] = { 0.0f, 0.0f, -35.0f };
+ 	float view[16];
+	bx::mtxLookAt(view, eye, at);
+
+	float proj[16];
+	bx::mtxProj(proj, 60.0f, float(m_width) / float(m_height), 0.1f, 1000.0f, bgfx::getCaps()->homogeneousDepth);
+
+	bgfx::setViewTransform(0, view, proj);
 	bgfx::setViewRect(0, 0, 0, m_width, m_height);
 
 	bgfx::touch(0);
+	
+	for (auto& idActor : m_world->GetActors())
+	{
+		auto actor = idActor.actor.get();
+		auto meshComp = actor->GetEntity().component<MeshComponent>();
+		auto transform = actor->GetEntity().component<Transform>();
+		if (meshComp != nullptr && transform != nullptr)
+		{
+			float* mat = glm::value_ptr(transform->localMatrix);
+			bgfx::setTransform(mat);
+
+			auto meshType = m_resourceManager->GetMeshManager().GetMeshTypes()[meshComp->meshId];
+			if (!meshType.created)
+			{
+				continue;
+			}
+			bgfx::setVertexBuffer(0, meshType.vb);
+			bgfx::setIndexBuffer(meshType.ib);
+
+			bgfx::setState(0
+				| BGFX_STATE_WRITE_RGB | BGFX_STATE_WRITE_A
+				| BGFX_STATE_WRITE_Z | BGFX_STATE_DEPTH_TEST_LESS
+				| BGFX_STATE_CULL_CW | BGFX_STATE_MSAA
+				| BGFX_STATE_PT_TRISTRIP
+			);
+
+			//bgfx::submit(0, );
+		}
+	}
 
 	bgfx::frame();
 }

@@ -1,8 +1,10 @@
 #include "MeshManager.h"
 
+using namespace Shaft;
+
 Shaft::MeshManager::MeshManager(uint32 reserveCount)
 	:m_meshTypes(reserveCount),
-	m_idCounter(1)
+	m_idCounter(0)
 {
 	//Register vertex stream declarations
 	Vertex::Init();
@@ -10,6 +12,7 @@ Shaft::MeshManager::MeshManager(uint32 reserveCount)
 
 Shaft::MeshManager::~MeshManager()
 {
+	DestroyAllBuffers();
 }
 
 uint32 Shaft::MeshManager::CreateMeshType(MeshData mData, std::string meshName)
@@ -42,4 +45,18 @@ uint32 Shaft::MeshManager::CreateMeshType(MeshData mData, std::string meshName)
 
 	m_idCounter += 1;
 	return meshType.id;
+}
+
+std::vector<MeshType>& Shaft::MeshManager::GetMeshTypes()
+{
+	return m_meshTypes;
+}
+
+void Shaft::MeshManager::DestroyAllBuffers()
+{
+	for (auto& meshType : m_meshTypes)
+	{
+		bgfx::destroy(meshType.vb);
+		bgfx::destroy(meshType.ib);
+	}
 }

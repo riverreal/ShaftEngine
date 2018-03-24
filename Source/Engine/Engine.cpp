@@ -2,6 +2,7 @@
 #include "System/Window/WindowHandle.h"
 #include "Graphics/Renderer/Renderer.h"
 #include "System/Misc/EngineConfig.h"
+#include "System/ResourceManager.h"
 #include "World.h"
 
 using namespace Shaft;
@@ -39,9 +40,13 @@ void Shaft::Engine::Initialize()
 {
 	m_window->Initialize();
 	m_window->BindInput(&m_input);
-	m_renderer->Initialize();
 
 	m_world = std::make_unique<World>();
+
+	m_resourceManager = std::make_unique<ResourceManager>();
+	m_resourceManager->Initialize();
+
+	m_renderer->Initialize(m_world.get(), m_resourceManager.get());
 
 #if SHAFT_EDITOR_ENABLED
 	m_editor->Init();
@@ -67,4 +72,10 @@ Input& Shaft::Engine::GetInput()
 World & Shaft::Engine::GetWorld()
 {
 	return *m_world.get();
+}
+
+ResourceManager & Shaft::Engine::GetResourceManager()
+{
+	// TODO: insert return statement here
+	return *m_resourceManager.get();
 }

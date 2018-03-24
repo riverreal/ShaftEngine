@@ -127,6 +127,9 @@
     <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\SystemsManager.cpp">
       <Filter>src\Engine\System\Components\ComponentSystems</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\ResourceManager.cpp">
+      <Filter>src\Engine\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
@@ -716,6 +719,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Components\IComponent.h">
       <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\MeshComponent.h">
+      <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\ResourceManager.h">
+      <Filter>src\Engine\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

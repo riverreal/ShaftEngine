@@ -11,6 +11,7 @@ namespace Shaft {
 	class WindowHandle;
 	class Renderer;
 	class World;
+	class ResourceManager;
 	struct EngineConfig;
 
 	class Engine
@@ -32,11 +33,13 @@ namespace Shaft {
 		Renderer& GetRenderer();
 		Input& GetInput();
 		World& GetWorld();
+		ResourceManager& GetResourceManager();
 
 	private:
 		std::unique_ptr<WindowHandle> m_window;
 		std::unique_ptr<Renderer> m_renderer;
 		std::unique_ptr<World> m_world;
+		std::unique_ptr<ResourceManager> m_resourceManager;
 		Input m_input;
 		const EngineConfig& m_engineConfig;
 

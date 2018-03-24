@@ -180,6 +180,7 @@
     <ClCompile Include="..\..\..\Source\Engine\System\Input\Input.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\MeshManager.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Misc\Vertex.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\System\ResourceManager.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\World.cpp" />
     <ClCompile Include="..\..\..\Source\main.cpp" />
@@ -361,6 +362,7 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Components\ComponentSystems\SystemsManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\ComponentSystems\TransformSystem.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\IComponent.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\MeshComponent.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\Input.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\KeyState.h" />
@@ -373,6 +375,7 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\BaseTypes.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\Platform.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\WindowsTypes.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\ResourceManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\ShaftTypes.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowHandle.h" />

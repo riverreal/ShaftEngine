@@ -4,6 +4,7 @@
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/matrix.hpp>
 #include <glm/gtx/transform.hpp>
 #include "IComponent.h"
 
@@ -19,7 +20,7 @@ namespace Shaft
 		Vec3f position;
 		glm::quat rotation;
 		Vec3f scale;
-		glm::mat4 localMatrix;
+		glm::tmat4x4<float, glm::highp> localMatrix;
 		bool dynamic;
 	};
 }
