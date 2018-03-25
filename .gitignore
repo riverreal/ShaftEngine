@@ -9,10 +9,10 @@ Project/Windows/Libs/bimg/*
 Project/Windows/Libs/bimg_decode/*
 Project/Windows/Libs/bx/*
 Project/Windows/Libs/rttr/*
+Project/Windows/Libs/brtshaderc/*
 *.vs/
 !Project/Windows/ShaftEngine.sln
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj.filters
 !Project/Windows/Libs/*/*.vcxproj
 !Project/Windows/Libs/*/*.vcxproj.filters
-

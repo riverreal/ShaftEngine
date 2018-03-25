@@ -1,4 +1,4 @@
-#include "Renderer.h"
+﻿#include "Renderer.h"
 #include "../../System/Misc/EngineConfig.h"
 #include "../Engine/World.h"
 #include "../Engine/System/ResourceManager.h"
@@ -7,9 +7,11 @@
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/matrix.hpp>
 #include <glm/gtx/transform.hpp>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <brtshaderc\brtshaderc.h>
 
 using namespace Shaft;
 
@@ -43,11 +45,16 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 	bgfx::setDebug(m_debugFlags);
 
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x000000ff, 1.0f, 0);
+
+	const bgfx::Memory* memVsh = shaderc::compileShader(shaderc::ST_VERTEX, "../../../Source/Engine/Graphics/Shaders/vs_test.sc", "../../../Dependencies/bgfx/src");
+	bgfx::ShaderHandle vsh = bgfx::createShader(memVsh);
+	const bgfx::Memory* memFsh = shaderc::compileShader(shaderc::ST_FRAGMENT, "../../../Source/Engine/Graphics/Shaders/fs_test.sc", "../../../Dependencies/bgfx/src");
+	bgfx::ShaderHandle fsh = bgfx::createShader(memFsh);
+	testProgram = bgfx::createProgram(vsh, fsh, true);
 }
 
 void Renderer::Draw()
 {
-	
 	float at[3] = { 0.0f, 0.0f, 0.0f };
 	float eye[3] = { 0.0f, 0.0f, -35.0f };
  	float view[16];
@@ -86,7 +93,7 @@ void Renderer::Draw()
 				| BGFX_STATE_PT_TRISTRIP
 			);
 
-			//bgfx::submit(0, );
+			bgfx::submit(0, testProgram);
 		}
 	}
 

@@ -728,12 +728,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\FragmentShader.frag">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
-    </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\VertexShader.vert">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
-    </None>
     <None Include="..\..\..\Dependencies\glm\glm\gtx\associated_min_max.inl">
       <Filter>3rdparty\glm\gtx</Filter>
     </None>
@@ -1066,6 +1060,15 @@
     </None>
     <None Include="..\..\..\Dependencies\glm\glm\detail\type_vec4_simd.inl">
       <Filter>3rdparty\glm\detail</Filter>
+    </None>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\fs_test.sc">
+      <Filter>src\Engine\Graphics\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\vs_test.sc">
+      <Filter>src\Engine\Graphics\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\varying.def.sc">
+      <Filter>src\Engine\Graphics\Shaders</Filter>
     </None>
   </ItemGroup>
 </Project>

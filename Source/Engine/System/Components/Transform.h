@@ -12,7 +12,6 @@ namespace Shaft
 {
 	struct Transform : IComponent
 	{
-	public:
 		Transform()
 			:position(0), rotation(1,0,0,0), scale(1), localMatrix(1.0f), dynamic(true)
 		{}
