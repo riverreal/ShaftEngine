@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Shaft/Core.h>
+#include <bx/pixelformat.h>
 
 namespace Shaft
 {
@@ -131,6 +132,19 @@ namespace Shaft
 			uint8 b8 = static_cast<uint8>(b * 255.0f);
 			uint8 a8 = static_cast<uint8>(a * 255.0f);
 			return ((r8 << 24) & 0xff + (g8<<16) & 0xff + (b8 << 8) & 0xff + a8 & 0xff);
+		}
+
+		static uint32 GetNormalRGBA8(float x, float y = 0.0f, float z = 0.0f, float w = 0.0f)
+		{
+			const float src[] = {
+				x * 0.5f + 0.5f,
+				y * 0.5f + 0.5f,
+				z * 0.5f + 0.5f,
+				w * 0.5f + 0.5f,
+			};
+			uint32 dst;
+			bx::packRgba8(&dst, src);
+			return dst;
 		}
 
 		float r;

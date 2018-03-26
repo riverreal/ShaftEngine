@@ -2,16 +2,15 @@
 
 using namespace Shaft;
 
-MeshData Shaft::PrimitiveMeshBuilder::CreateCube(float width, float height, float depth)
+MeshData Shaft::ShapeBuilder::CreateCube(float width, float height, float depth)
 {
 	MeshData meshData;
-
-	Vertex v[24];
-
+	
 	float w2 = 0.5*width;
 	float h2 = 0.5f*height;
 	float d2 = 0.5f*depth;
 
+	Vertex v[24];
 	v[0] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
 	v[1] = Vertex(-w2, +h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
 	v[2] = Vertex(+w2, +h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
@@ -62,13 +61,13 @@ MeshData Shaft::PrimitiveMeshBuilder::CreateCube(float width, float height, floa
 
 	i[30] = 20; i[31] = 21; i[32] = 22;
 	i[33] = 20; i[34] = 22; i[35] = 23;
-
+	
 	meshData.indices.assign(&i[0], &i[36]);
 
 	return meshData;
 }
 
-MeshData Shaft::PrimitiveMeshBuilder::CreateSphere(float radius, uint32 sliceCount, uint32 stackCount)
+MeshData Shaft::ShapeBuilder::CreateSphere(float radius, uint32 sliceCount, uint32 stackCount)
 {
 	MeshData meshData;
 
@@ -93,20 +92,25 @@ MeshData Shaft::PrimitiveMeshBuilder::CreateSphere(float radius, uint32 sliceCou
 
 			Vertex v;
 
-			v.position.x = radius * sinf(phi)*cosf(theta);
-			v.position.y = radius * cosf(phi);
-			v.position.z = radius * sinf(phi)*sinf(theta);
+			Vec3f pos;
+			pos.x = v.posX = radius * sinf(phi)*cosf(theta);
+			pos.y = v.posY = radius * cosf(phi);
+			pos.z = v.posZ = radius * sinf(phi)*sinf(theta);
 
-			v.tangentU.x = -radius * sinf(phi) * sinf(theta);
-			v.tangentU.y = 0.0f;
-			v.tangentU.z = +radius * sinf(phi)*cosf(theta);
+			Vec3f tangent;
+			tangent.x = -radius * sinf(phi) * sinf(theta);
+			tangent.y = 0.0f;
+			tangent.z = +radius * sinf(phi)*cosf(theta);
+			tangent = tangent.FastNormalize();
 
-			v.tangentU = v.tangentU.FastNormalize();
+			Vec3f normal;
+			normal = pos.FastNormalize();
 
-			v.normal = v.position.FastNormalize();
+			v.SetTangent(tangent.x, tangent.y, tangent.z);
+			v.SetNormal(normal.x, normal.y, normal.z);
 
-			v.tex.x = theta / D_PI;
-			v.tex.y = phi / D_PI;
+			v.texU = theta / D_PI;
+			v.texV = phi / D_PI;
 
 			meshData.vertices.push_back(v);
 		}
@@ -151,7 +155,7 @@ MeshData Shaft::PrimitiveMeshBuilder::CreateSphere(float radius, uint32 sliceCou
 	return meshData;
 }
 
-MeshData Shaft::PrimitiveMeshBuilder::CreateCylinder(float bottomRadius, float topRadius, float height, uint32 sliceCount, uint32 stackCount)
+MeshData Shaft::ShapeBuilder::CreateCylinder(float bottomRadius, float topRadius, float height, uint32 sliceCount, uint32 stackCount)
 {
 	MeshData meshData;
 
@@ -179,18 +183,20 @@ MeshData Shaft::PrimitiveMeshBuilder::CreateCylinder(float bottomRadius, float t
 			float c = cosf(j*dTheta);
 			float s = sinf(j*dTheta);
 
-			vertex.position = Vec3f(r*c, y, r*s);
+			vertex.SetPorsition(r*c, y, r*s);
 
-			vertex.tex.x = (float)j / sliceCount;
-			vertex.tex.y = 1.0f - (float)i / stackCount;
+			vertex.texU = (float)j / sliceCount;
+			vertex.texV = 1.0f - (float)i / stackCount;
 
 			// This is unit length.
-			vertex.tangentU = Vec3f(-s, 0.0f, c);
+			Vec3f tangent = {-s, 0.0f, c};
+			vertex.SetTangent(-s, 0.0f, c);
 
 			float dr = bottomRadius - topRadius;
 			Vec3f bitangent(dr*c, -height, dr*s);
 
-			vertex.normal = (vertex.tangentU.Cross(bitangent)).FastNormalize();
+			Vec3f normal = (tangent.Cross(bitangent)).FastNormalize();
+			vertex.SetNormal(normal.x, normal.y, normal.z);
 
 			meshData.vertices.push_back(vertex);
 		}
@@ -219,7 +225,7 @@ MeshData Shaft::PrimitiveMeshBuilder::CreateCylinder(float bottomRadius, float t
 	return meshData;
 }
 
-MeshData Shaft::PrimitiveMeshBuilder::CreateQuad()
+MeshData Shaft::ShapeBuilder::CreateQuad()
 {
 	MeshData meshData;
 
@@ -261,7 +267,7 @@ MeshData Shaft::PrimitiveMeshBuilder::CreateQuad()
 	return meshData;
 }
 
-MeshData Shaft::PrimitiveMeshBuilder::CreatePlane(float width, float depth, uint32 m, uint32 n)
+MeshData Shaft::ShapeBuilder::CreatePlane(float width, float depth, uint32 m, uint32 n)
 {
 	MeshData meshData;
 
@@ -285,12 +291,12 @@ MeshData Shaft::PrimitiveMeshBuilder::CreatePlane(float width, float depth, uint
 		{
 			float x = -halfWidth + j * dx;
 
-			meshData.vertices[i*n + j].position = Vec3f(x, 0.0f, z);
-			meshData.vertices[i*n + j].normal = Vec3f(0.0f, 1.0f, 0.0f);
-			meshData.vertices[i*n + j].tangentU = Vec3f(1.0f, 0.0f, 0.0f);
+			meshData.vertices[i*n + j].SetPorsition(x, 0.0f, z);
+			meshData.vertices[i*n + j].SetNormal(0.0f, 1.0f, 0.0f);
+			meshData.vertices[i*n + j].SetTangent(1.0f, 0.0f, 0.0f);
 
-			meshData.vertices[i*n + j].tex.x = j * du;
-			meshData.vertices[i*n + j].tex.y = i * dv;
+			meshData.vertices[i*n + j].texU = j * du;
+			meshData.vertices[i*n + j].texV = i * dv;
 		}
 	}
 
@@ -315,7 +321,7 @@ MeshData Shaft::PrimitiveMeshBuilder::CreatePlane(float width, float depth, uint
 	return meshData;
 }
 
-void Shaft::PrimitiveMeshBuilder::Subdivide(MeshData& inOut)
+void Shaft::ShapeBuilder::Subdivide(MeshData& inOut)
 {
 	MeshData inputCopy = inOut;
 
@@ -342,20 +348,20 @@ void Shaft::PrimitiveMeshBuilder::Subdivide(MeshData& inOut)
 
 		Vertex m0, m1, m2;
 
-		m0.position = Vec3f(
-			0.5f*(v0.position.x + v1.position.x),
-			0.5f*(v0.position.y + v1.position.y),
-			0.5f*(v0.position.z + v1.position.z));
+		m0.SetPorsition(
+			0.5f*(v0.posX + v1.posX),
+			0.5f*(v0.posY + v1.posY),
+			0.5f*(v0.posZ + v1.posZ));
 
-		m1.position = Vec3f(
-			0.5f*(v1.position.x + v2.position.x),
-			0.5f*(v1.position.y + v2.position.y),
-			0.5f*(v1.position.z + v2.position.z));
+		m1.SetPorsition(
+			0.5f*(v1.posX + v2.posX),
+			0.5f*(v1.posY + v2.posY),
+			0.5f*(v1.posZ + v2.posZ));
 
-		m2.position = Vec3f(
-			0.5f*(v0.position.x + v2.position.x),
-			0.5f*(v0.position.y + v2.position.y),
-			0.5f*(v0.position.z + v2.position.z));
+		m2.SetPorsition(
+			0.5f*(v0.posX + v2.posX),
+			0.5f*(v0.posY + v2.posY),
+			0.5f*(v0.posZ + v2.posZ));
 
 
 		inOut.vertices.push_back(v0);
@@ -383,7 +389,7 @@ void Shaft::PrimitiveMeshBuilder::Subdivide(MeshData& inOut)
 	}
 }
 
-void Shaft::PrimitiveMeshBuilder::BuildCylinderTopCap(MeshData& inOut, float bottomRadius, float topRadius, float height, uint32 sliceCount, uint32 stackCount)
+void Shaft::ShapeBuilder::BuildCylinderTopCap(MeshData& inOut, float bottomRadius, float topRadius, float height, uint32 sliceCount, uint32 stackCount)
 {
 	uint32 baseIndex = (uint32)inOut.vertices.size();
 
@@ -418,7 +424,7 @@ void Shaft::PrimitiveMeshBuilder::BuildCylinderTopCap(MeshData& inOut, float bot
 	}
 }
 
-void Shaft::PrimitiveMeshBuilder::BuildCylinderBottomCap(MeshData& inOut, float bottomRadius, float topRadius, float height, uint32 sliceCount, uint32 stackCount)
+void Shaft::ShapeBuilder::BuildCylinderBottomCap(MeshData& inOut, float bottomRadius, float topRadius, float height, uint32 sliceCount, uint32 stackCount)
 {
 	uint32 baseIndex = (uint32)inOut.vertices.size();
 	float y = -0.5f*height;

@@ -4,7 +4,7 @@
 
 namespace Shaft
 {
-	class PrimitiveMeshBuilder
+	class ShapeBuilder
 	{
 	public:
 		static MeshData CreateCube(float width, float height, float depth);

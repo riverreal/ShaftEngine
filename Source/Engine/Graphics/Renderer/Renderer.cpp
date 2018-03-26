@@ -11,7 +11,7 @@
 #include <glm/gtx/transform.hpp>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <brtshaderc\brtshaderc.h>
+#include <brtshaderc/brtshaderc.h>
 
 using namespace Shaft;
 
@@ -56,7 +56,7 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 void Renderer::Draw()
 {
 	float at[3] = { 0.0f, 0.0f, 0.0f };
-	float eye[3] = { 0.0f, 0.0f, -35.0f };
+	float eye[3] = { 0.0f, 0.0f, -10.0f };
  	float view[16];
 	bx::mtxLookAt(view, eye, at);
 
@@ -83,6 +83,7 @@ void Renderer::Draw()
 			{
 				continue;
 			}
+			
 			bgfx::setVertexBuffer(0, meshType.vb);
 			bgfx::setIndexBuffer(meshType.ib);
 
@@ -102,5 +103,6 @@ void Renderer::Draw()
 
 void Renderer::Destroy()
 {
+	bgfx::destroy(testProgram);
 	bgfx::shutdown();
 }

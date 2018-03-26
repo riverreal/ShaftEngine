@@ -12,19 +12,26 @@ namespace Shaft
 			float tx, float ty, float tz,
 			float u, float v);
 
+		void SetPorsition(float px, float py, float pz);
+		void SetNormal(float nx, float ny, float nz);
+		void SetTangent(float tx, float ty, float tz);
+
 		//Declares vertex stream
 		static void Init();
 
-		Vec3f position;
-		Vec3f normal;
-		Vec2f tex;
-		Vec3f tangentU;
+		float posX;
+		float posY;
+		float posZ;
+		uint32 normal;
+		uint32 tangent;
+		int16 texU;
+		int16 texV;
 		static bgfx::VertexDecl declaration;
 	};
 
 	struct MeshData
 	{
 		std::vector<Vertex> vertices;
-		std::vector<uint32> indices;
+		std::vector<uint16> indices;
 	};
 }
