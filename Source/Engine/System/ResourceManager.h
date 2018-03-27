@@ -5,6 +5,7 @@
 namespace Shaft
 {
 	class MeshManager;
+	class ShaderManager;
 
 	class ResourceManager
 	{
@@ -15,8 +16,10 @@ namespace Shaft
 		void Initialize();
 
 		MeshManager& GetMeshManager();
+		ShaderManager& GetShaderManager();
 
 	private:
 		std::unique_ptr<MeshManager> m_meshManager;
+		std::unique_ptr<ShaderManager> m_shaderManager;
 	};
 }

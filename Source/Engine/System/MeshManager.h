@@ -2,15 +2,12 @@
 
 #include <Shaft/Core.h>
 #include "Misc/Vertex.h"
+#include "ResourceType.h"
 
 namespace Shaft
 {
-	struct MeshType
+	struct MeshType : ResourceType
 	{
-		MeshType() :created(false),id(0), duplicationRef(""){}
-		uint32 id;
-		bool created;
-		std::string duplicationRef;
 		bgfx::VertexBufferHandle vb;
 		bgfx::IndexBufferHandle ib;
 		MeshData meshData;

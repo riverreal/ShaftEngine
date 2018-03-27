@@ -130,6 +130,9 @@
     <ClCompile Include="..\..\..\Source\Engine\System\ResourceManager.cpp">
       <Filter>src\Engine\System</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\ShaderManager.cpp">
+      <Filter>src\Engine\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
@@ -724,6 +727,12 @@
       <Filter>src\Engine\System\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\ResourceManager.h">
+      <Filter>src\Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\ShaderManager.h">
+      <Filter>src\Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\ResourceType.h">
       <Filter>src\Engine\System</Filter>
     </ClInclude>
   </ItemGroup>
