@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;$(SolutionDir)..\..\Source\Include;$(SolutionDir)..\..\Dependencies\brtshaderc\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;$(SolutionDir)..\..\Source\Include;$(SolutionDir)..\..\Dependencies\brtshaderc\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;$(SolutionDir)..\..\Source\Include;$(SolutionDir)..\..\Dependencies\brtshaderc\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -151,7 +151,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glm\;$(SolutionDir)..\..\Dependencies\glfw\include\;$(SolutionDir)..\..\Dependencies\bx\include\compat\msvc;$(SolutionDir)..\..\Dependencies\bx\include;$(SolutionDir)..\..\Dependencies\bimg\include;$(SolutionDir)..\..\Dependencies\bgfx\include;$(SolutionDir)..\..\Dependencies\bgfx\3rdparty;$(SolutionDir)..\..\Dependencies\rttr\include;$(SolutionDir)..\..\Dependencies\entityx\include;$(SolutionDir)..\..\Source\Include;$(SolutionDir)..\..\Dependencies\brtshaderc\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>

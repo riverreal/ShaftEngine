@@ -193,7 +193,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\include;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty\khronos</AdditionalIncludeDirectories>
       <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -209,7 +209,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\include;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty\khronos</AdditionalIncludeDirectories>
       <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -227,7 +227,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\include;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty\khronos</AdditionalIncludeDirectories>
       <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -247,7 +247,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;__STDC_CONSTANT_MACROS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\..\Dependencies\bx\include;..\..\..\..\Dependencies\bimg\include;..\..\..\..\Dependencies\bgfx\include;..\..\..\..\Dependencies\bgfx\3rdparty;..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;..\..\..\..\Dependencies\bgfx\3rdparty\khronos</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty\dxsdk\include;$(ProjectDir)..\..\..\..\Dependencies\bgfx\3rdparty\khronos</AdditionalIncludeDirectories>
       <AdditionalOptions>/wd4201 /wd4324 /Ob2</AdditionalOptions>
     </ClCompile>
     <Link>

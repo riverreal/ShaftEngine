@@ -92,7 +92,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\assimp\include;..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;..\..\..\..\Dependencies\assimp\contrib\zlib;..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -108,7 +108,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\assimp\include;..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;..\..\..\..\Dependencies\assimp\contrib\zlib;..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -125,7 +125,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\assimp\include;..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;..\..\..\..\Dependencies\assimp\contrib\zlib;..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -144,7 +144,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\..\Dependencies\assimp\include;..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;..\..\..\..\Dependencies\assimp\contrib\zlib;..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
