@@ -507,6 +507,9 @@
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\vs_test.sc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Libs\assimp\assimp.vcxproj">
+      <Project>{46404063-c93f-448a-9371-3c02b311a03e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Libs\bgfx\bgfx.vcxproj">
       <Project>{d23f29d1-429b-4121-abf8-411114d8bb08}</Project>
     </ProjectReference>
