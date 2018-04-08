@@ -11,10 +11,15 @@ Project/Windows/Libs/bx/*
 Project/Windows/Libs/rttr/*
 Project/Windows/Libs/brtshaderc/*
 Project/Windows/Libs/assimp/*
+Project/Windows/Libs/glfw/*
+Project/Windows/DebugApp/*
+!Project/Windows/DebugApp/*.vcxproj
+!Project/Windows/DebugApp/*.vcxproj.filters
 *.vs/
 !Project/Windows/ShaftEngine.sln
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj.filters
 !Project/Windows/Libs/*/*.vcxproj
 !Project/Windows/Libs/*/*.vcxproj.filters
+
 

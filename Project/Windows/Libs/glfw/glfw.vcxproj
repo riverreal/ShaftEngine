@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\getopt.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\glad\glad.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\KHR\khrplatform.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\linmath.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\mingw\dinput.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\mingw\xinput.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\mingw\_mingw_dxhelper.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\nuklear.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\nuklear_glfw_gl2.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\stb_image_write.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\tinycthread.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\vs2008\stdint.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\vulkan\vk_platform.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\vulkan\vulkan.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\deps\vulkan\vulkan_core.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\include\GLFW\glfw3.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\include\GLFW\glfw3native.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\src\egl_context.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\src\internal.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\src\mappings.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\src\nsgl_context.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\src\osmesa_context.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\src\wgl_context.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\src\win32_joystick.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\glfw\src\win32_platform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\deps\getopt.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\deps\glad.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\deps\tinycthread.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\context.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\egl_context.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\init.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\input.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\monitor.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\osmesa_context.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\vulkan.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\wgl_context.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\win32_init.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\win32_joystick.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\win32_monitor.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\win32_thread.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\win32_time.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\win32_window.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\glfw\src\window.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{8B537B7F-195C-4795-B637-2D38173983F3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>glfw</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_GLFW_WIN32;_CRT_SECURE_NO_WARNINGSWIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glfw\include\;$(SolutionDir)..\..\Dependencies\glfw\deps\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_GLFW_WIN32;_CRT_SECURE_NO_WARNINGS_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glfw\include\;$(SolutionDir)..\..\Dependencies\glfw\deps\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_GLFW_WIN32;_CRT_SECURE_NO_WARNINGSWIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glfw\include\;$(SolutionDir)..\..\Dependencies\glfw\deps\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_GLFW_WIN32;_CRT_SECURE_NO_WARNINGSNDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\Dependencies\glfw\include\;$(SolutionDir)..\..\Dependencies\glfw\deps\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

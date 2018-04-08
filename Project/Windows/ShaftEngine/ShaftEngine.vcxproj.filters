@@ -71,14 +71,11 @@
     <Filter Include="3rdparty\glm\detail">
       <UniqueIdentifier>{6365cff3-75c1-47d5-99e5-94fceb72702b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3rdparty\glfw">
+      <UniqueIdentifier>{a8e6e01d-b2bc-4e24-829e-5b638fb499bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Source\Application.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp">
       <Filter>src\Engine</Filter>
     </ClCompile>
@@ -136,11 +133,14 @@
     <ClCompile Include="..\..\..\Source\Engine\Graphics\ModelBuilder.cpp">
       <Filter>src\Engine\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\DebugApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\Application.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Engine.h">
       <Filter>src\Engine</Filter>
     </ClInclude>
@@ -740,6 +740,24 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Graphics\ModelBuilder.h">
       <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Include\Shaft\Application.h">
+      <Filter>src\Include\Shaft</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Include\Shaft\DebugApp.h">
+      <Filter>src\Include\Shaft</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\glfw\x86\include\GLFW\glfw3.h">
+      <Filter>3rdparty\glfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\glfw\x86\include\GLFW\glfw3native.h">
+      <Filter>3rdparty\glfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\glfw\x64\include\GLFW\glfw3.h">
+      <Filter>3rdparty\glfw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\glfw\x64\include\GLFW\glfw3native.h">
+      <Filter>3rdparty\glfw</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

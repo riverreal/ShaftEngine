@@ -1,4 +1,4 @@
-#include <Shaft/Application.h>
+#include <Shaft/DebugApp.h>
 #include "Engine/EngineFactory.h"
 #include "Engine/Engine.h"
 #include "Engine/System/Window/WindowHandle.h"
@@ -7,15 +7,15 @@
 
 using namespace Shaft;
 
-Application::Application()
+DebugApp::DebugApp()
 {
 }
 
-Application::~Application()
+DebugApp::~DebugApp()
 {
 }
 
-void Application::Initialize()
+void DebugApp::Initialize()
 {
 	
 	m_engineConfig.buildTarget = Windows;
@@ -33,10 +33,10 @@ void Application::Initialize()
 	m_engine = engineFactory.CreateEngine(m_engineConfig);
 	m_engine->Initialize();
 
-	AppInit();
+	//AppInit();
 }
 
-void Shaft::Application::Run()
+void Shaft::DebugApp::Run()
 {
 	while (!m_engine->GetWindow().CloseWindow())
 	{
@@ -45,7 +45,7 @@ void Shaft::Application::Run()
 		//TODO: delta time
 		m_engine->GetWorld().Update(0);
 
-		AppRun();
+		//AppRun();
 
 #if SHAFT_EDITOR_ENABLED
 		m_engine->GetEditor().Draw();
