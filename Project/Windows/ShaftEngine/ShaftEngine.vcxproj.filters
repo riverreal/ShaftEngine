@@ -133,6 +133,9 @@
     <ClCompile Include="..\..\..\Source\Engine\System\ShaderManager.cpp">
       <Filter>src\Engine\System</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\Graphics\ModelBuilder.cpp">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Application.h">
@@ -734,6 +737,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\ResourceType.h">
       <Filter>src\Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\Graphics\ModelBuilder.h">
+      <Filter>src\Engine\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
