@@ -23,6 +23,11 @@ const std::vector<IDActor>& Shaft::World::GetActors()
 	return m_actors;
 }
 
+Shaft::Actor* Shaft::World::CreateActor()
+{
+	return CreateActor<Actor>();
+}
+
 void Shaft::World::RemoveActor(Actor* actor)
 {
 	//Remove children first

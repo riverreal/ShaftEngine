@@ -29,6 +29,9 @@ namespace Shaft
 		void SetActive(bool active);
 		Transform* GetTransform();
 
+		template <typename C, typename ... Args>
+		C* AddComponent(Args && ... args);
+
 	private:
 		void SetParentPtr(Actor* parent);
 		Actor* GetRootRec(Actor* target);
@@ -42,4 +45,10 @@ namespace Shaft
 		bool m_active;
 		Transform* m_transform;
 	};
+
+	template<typename C, typename ...Args>
+	inline C * Actor::AddComponent(Args && ... args)
+	{
+		return m_entity.assign<C>(std::forward<Args>(args)...);
+	}
 }

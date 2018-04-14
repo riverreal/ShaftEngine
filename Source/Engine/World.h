@@ -21,6 +21,8 @@ namespace Shaft
 		void Update(float deltaTime);
 
 		const std::vector<IDActor>& GetActors();
+		Actor* CreateActor();
+
 		template <typename T>
 		T* CreateActor();
 		void RemoveActor(Actor* actor);
