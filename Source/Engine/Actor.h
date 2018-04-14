@@ -27,10 +27,11 @@ namespace Shaft
 		Actor* GetRoot();
 		bool GetActive();
 		void SetActive(bool active);
+		Transform* GetTransform();
 
 	private:
 		void SetParentPtr(Actor* parent);
-		Actor* GetRooRec(Actor* target);
+		Actor* GetRootRec(Actor* target);
 
 	protected:
 		World* m_world;
@@ -39,5 +40,6 @@ namespace Shaft
 		std::vector<Actor*> m_children;
 		std::string m_name;
 		bool m_active;
+		Transform* m_transform;
 	};
 }

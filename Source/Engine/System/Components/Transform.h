@@ -1,11 +1,6 @@
 #pragma once
 
 #include <Shaft/Core.h>
-#include <glm/gtc/quaternion.hpp>
-#include <glm/gtx/quaternion.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/matrix.hpp>
-#include <glm/gtx/transform.hpp>
 #include "IComponent.h"
 
 namespace Shaft
@@ -13,13 +8,46 @@ namespace Shaft
 	struct Transform : IComponent
 	{
 		Transform()
-			:position(0), rotation(1,0,0,0), scale(1), localMatrix(1.0f), dynamic(true)
+			:position(0), rotation(1,0,0,0), scale(1), localMatrix(1.0f), dynamic(true), isDirty(true)
 		{}
 
-		Vec3f position;
-		glm::quat rotation;
-		Vec3f scale;
-		glm::tmat4x4<float, glm::highp> localMatrix;
+		const Vec3f& GetPosition() const
+		{
+			return position;
+		}
+		void SetPosition(const Vec3f& pos)
+		{
+			position = pos;
+			isDirty = true;
+		}
+
+		const Quaternion& GetRotation() const
+		{
+			return rotation;
+		}
+		void SetRotation(const Quaternion& quat)
+		{
+			rotation = quat;
+			isDirty = true;
+		}
+
+		const Vec3f& GetScale() const
+		{
+			return scale;
+		}
+		void SetScale(const Vec3f& sca)
+		{
+			scale = sca;
+			isDirty = true;
+		}
+
+		Matrix localMatrix;
 		bool dynamic;
+		bool isDirty;
+
+	private:
+		Vec3f position;
+		Quaternion rotation;
+		Vec3f scale;
 	};
 }

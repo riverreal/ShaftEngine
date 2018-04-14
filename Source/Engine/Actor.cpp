@@ -9,6 +9,7 @@ Shaft::Actor::Actor(EngineEntity entity, World* world)
 	m_world(world),
 	m_name("MyActor")
 {
+	m_transform = entity.assign<Transform>();
 }
 
 Shaft::Actor::~Actor()
@@ -82,7 +83,7 @@ EngineEntity& Shaft::Actor::GetEntity()
 
 Actor* Shaft::Actor::GetRoot()
 {
-	return GetRooRec(this);
+	return GetRootRec(this);
 }
 
 bool Shaft::Actor::GetActive()
@@ -95,17 +96,22 @@ void Shaft::Actor::SetActive(bool active)
 	m_active = active;
 }
 
+Transform * Shaft::Actor::GetTransform()
+{
+	return m_transform;
+}
+
 void Shaft::Actor::SetParentPtr(Actor* parent)
 {
 	m_parent = parent;
 }
 
-Actor* Shaft::Actor::GetRooRec(Actor* target)
+Actor* Shaft::Actor::GetRootRec(Actor* target)
 {
 	auto parent = target->GetParent();
 	if (parent == nullptr)
 	{
 		return target;
 	}
-	return GetRooRec(parent);
+	return GetRootRec(parent);
 }

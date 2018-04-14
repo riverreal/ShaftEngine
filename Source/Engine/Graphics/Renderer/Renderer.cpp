@@ -75,7 +75,8 @@ void Renderer::Draw()
 		auto transform = actor->GetEntity().component<Transform>();
 		if (meshComp != nullptr && transform != nullptr)
 		{
-			float* mat = glm::value_ptr(transform->localMatrix);
+			glm::mat4 mat4 = transform->localMatrix.GetMat();
+			float* mat = glm::value_ptr(mat4);
 			bgfx::setTransform(mat);
 
 			auto meshType = m_resourceManager->GetMeshManager().GetMeshTypes()[meshComp->meshId];

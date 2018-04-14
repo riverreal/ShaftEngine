@@ -759,6 +759,12 @@
     <ClInclude Include="..\..\..\Dependencies\glfw\x64\include\GLFW\glfw3native.h">
       <Filter>3rdparty\glfw</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\Quaternion.h">
+      <Filter>src\Engine\System\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\Matrix.h">
+      <Filter>src\Engine\System\Misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Dependencies\glm\glm\gtx\associated_min_max.inl">

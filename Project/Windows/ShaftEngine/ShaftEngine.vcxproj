@@ -370,6 +370,8 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Components\IComponent.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\MeshComponent.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\Matrix.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\Quaternion.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\ResourceType.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\ShaderManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\Input.h" />

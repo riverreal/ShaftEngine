@@ -79,8 +79,8 @@ MeshData Shaft::ShapeBuilder::CreateSphere(float radius, uint32 sliceCount, uint
 
 	meshData.vertices.push_back(topVertex);
 
-	float phiStep = D_PI / stackCount;
-	float thetaStep = 2.0f*D_PI / sliceCount;
+	float phiStep = PI / stackCount;
+	float thetaStep = 2.0f*PI / sliceCount;
 
 	for (uint32 i = 1; i <= stackCount - 1; ++i)
 	{
@@ -109,8 +109,8 @@ MeshData Shaft::ShapeBuilder::CreateSphere(float radius, uint32 sliceCount, uint
 			v.SetTangent(tangent.x, tangent.y, tangent.z);
 			v.SetNormal(normal.x, normal.y, normal.z);
 
-			v.texU = theta / D_PI;
-			v.texV = phi / D_PI;
+			v.texU = theta / PI;
+			v.texV = phi / PI;
 
 			meshData.vertices.push_back(v);
 		}
@@ -175,7 +175,7 @@ MeshData Shaft::ShapeBuilder::CreateCylinder(float bottomRadius, float topRadius
 		float r = bottomRadius + i * radiusStep;
 
 		// vertices of ring
-		float dTheta = 2.0f*D_PI / sliceCount;
+		float dTheta = 2.0f*PI / sliceCount;
 		for (uint32 j = 0; j <= sliceCount; ++j)
 		{
 			Vertex vertex;
@@ -394,7 +394,7 @@ void Shaft::ShapeBuilder::BuildCylinderTopCap(MeshData& inOut, float bottomRadiu
 	uint32 baseIndex = (uint32)inOut.vertices.size();
 
 	float y = 0.5f*height;
-	float dTheta = 2.0f*D_PI / sliceCount;
+	float dTheta = 2.0f*PI / sliceCount;
 
 	// Duplicate cap ring vertices because the texture coordinates and normals differ.
 	for (uint32 i = 0; i <= sliceCount; ++i)
@@ -430,7 +430,7 @@ void Shaft::ShapeBuilder::BuildCylinderBottomCap(MeshData& inOut, float bottomRa
 	float y = -0.5f*height;
 
 	// vertices of ring
-	float dTheta = 2.0f*D_PI / sliceCount;
+	float dTheta = 2.0f*PI / sliceCount;
 	for (uint32 i = 0; i <= sliceCount; ++i)
 	{
 		float x = bottomRadius * cosf(i*dTheta);
