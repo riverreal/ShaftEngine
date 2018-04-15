@@ -8,7 +8,9 @@ namespace Shaft
 	struct Transform : IComponent
 	{
 		Transform()
-			:position(0), rotation(1,0,0,0), scale(1), localMatrix(1.0f), dynamic(true), isDirty(true)
+			:position(0), rotation(0,0,0,1), scale(1), 
+			localMatrix(1.0f), worldMatrix(1.0f), worldBuilt(false),
+			dynamic(true), isDirty(true), parent(nullptr)
 		{}
 
 		const Vec3f& GetPosition() const
@@ -41,13 +43,28 @@ namespace Shaft
 			isDirty = true;
 		}
 
+		void SetParent(Transform* transf)
+		{
+			parent = transf;
+			worldBuilt = false;
+			isDirty = true;
+		}
+
+		Transform* GetParent()
+		{
+			return parent;
+		}
+
 		Matrix localMatrix;
+		Matrix worldMatrix;
 		bool dynamic;
 		bool isDirty;
+		bool worldBuilt;
 
 	private:
 		Vec3f position;
 		Quaternion rotation;
 		Vec3f scale;
+		Transform* parent;
 	};
 }

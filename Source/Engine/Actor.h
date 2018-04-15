@@ -16,8 +16,6 @@ namespace Shaft
 		void SetName(const std::string& name);
 		const std::string& GetName() const;
 		void AddChild(Actor* child);
-		//For deparent purposes
-		void RemoveChild(Actor* child);
 		const std::vector<Actor*>& GetChilren() const;
 		Actor* GetParent();
 		void SetParent(Actor* parent);
@@ -33,6 +31,8 @@ namespace Shaft
 		C* AddComponent(Args && ... args);
 
 	private:
+		//For deparent purposes
+		void RemoveChild(Actor* child);
 		void SetParentPtr(Actor* parent);
 		Actor* GetRootRec(Actor* target);
 

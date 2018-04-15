@@ -15,6 +15,8 @@ namespace Shaft
 
 	private:
 		void UpdateMatrix();
+		void LocalMatrixPass();
+		void WorldMatrixPass();
 
 	private:
 		EngineEntityManager* m_entityManager;

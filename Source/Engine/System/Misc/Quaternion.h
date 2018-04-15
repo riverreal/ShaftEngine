@@ -38,7 +38,7 @@ namespace Shaft
 
 		static Quaternion Identity()
 		{
-			return Quaternion(1, 0, 0, 0);
+			return Quaternion(0, 0, 0, 1);
 		}
 
 		float x;

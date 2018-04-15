@@ -28,8 +28,12 @@ const std::string & Shaft::Actor::GetName() const
 
 void Shaft::Actor::AddChild(Actor * child)
 {
-	child->SetParent(this);
-	m_children.push_back(child);
+	if (child == this)
+	{
+		return;
+	}
+
+	child->SetParent(this);	
 }
 
 void Shaft::Actor::RemoveChild(Actor * child)
@@ -44,6 +48,9 @@ void Shaft::Actor::RemoveChild(Actor * child)
 	}
 	else
 	{
+		auto i = std::distance(m_children.begin(), toRemove);
+		m_children[i]->GetTransform()->SetParent(nullptr);
+		m_children[i]->SetParentPtr(nullptr);
 		m_children.erase(toRemove);
 	}
 }
@@ -60,10 +67,27 @@ Actor * Shaft::Actor::GetParent()
 
 void Shaft::Actor::SetParent(Actor* parent)
 {
+	if (parent == this)
+	{
+		return;
+	}
+
+	//First deparent if parent exists
 	if (m_parent != nullptr)
 	{
-		
+		m_parent->RemoveChild(this);
 	}
+
+	//Deparent
+	if (parent == nullptr)
+	{
+		SetParentPtr(parent);
+		return;
+	}
+
+	GetTransform()->SetParent(parent->GetTransform());
+	SetParentPtr(parent);
+	parent->m_children.push_back(this);
 }
 
 void Shaft::Actor::Destroy()

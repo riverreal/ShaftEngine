@@ -8,7 +8,7 @@ namespace Shaft
 	class SystemsManager;
 
 	struct IDActor {
-		uint64 id;
+		uint32 id;
 		std::unique_ptr<Actor> actor;
 	};
 
