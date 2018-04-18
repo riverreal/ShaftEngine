@@ -184,6 +184,7 @@
     <ClCompile Include="..\..\..\Source\Engine\System\Misc\Vertex.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\ResourceManager.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\ShaderManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\System\Timer.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\World.cpp" />
   </ItemGroup>
@@ -372,6 +373,7 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\Matrix.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\Quaternion.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\STween.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\ResourceType.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\ShaderManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Input\Input.h" />
@@ -387,6 +389,7 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Platform\WindowsTypes.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\ResourceManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\ShaftTypes.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Timer.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\GLFWWindowHandle.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WindowHandle.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Window\WinAPIWindowHandle.h" />

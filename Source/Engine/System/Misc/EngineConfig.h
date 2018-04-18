@@ -75,6 +75,19 @@ namespace Shaft
 		Version appVersion;
 	};
 
+	struct FPSConfig
+	{
+		FPSConfig()
+			:fps(60),
+			capFPS(true),
+			vsync(true)
+		{}
+
+		uint32 fps;
+		bool capFPS;
+		bool vsync;
+	};
+
 	struct RendererConfig
 	{
 		RendererConfig()
@@ -92,6 +105,7 @@ namespace Shaft
 		RendererType rendererType;
 		AppInfo appInfo;
 		Version engineVersion;
+		FPSConfig fpsConfig;
 	};
 
 	struct WindowConfig

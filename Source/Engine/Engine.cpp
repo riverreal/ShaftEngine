@@ -7,7 +7,7 @@
 
 using namespace Shaft;
 
-Engine::Engine(const EngineConfig& config)
+Engine::Engine(EngineConfig& config)
 	:m_engineConfig(config)
 {
 }
@@ -69,6 +69,11 @@ Input& Shaft::Engine::GetInput()
 	return m_input;
 }
 
+Timer & Shaft::Engine::GetTimer()
+{
+	return m_timer;
+}
+
 World & Shaft::Engine::GetWorld()
 {
 	return *m_world.get();
@@ -76,6 +81,5 @@ World & Shaft::Engine::GetWorld()
 
 ResourceManager & Shaft::Engine::GetResourceManager()
 {
-	// TODO: insert return statement here
 	return *m_resourceManager.get();
 }

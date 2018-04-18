@@ -2,6 +2,8 @@
 
 #include <Shaft/Core.h>
 #include "System/Input/Input.h"
+#include "System/Timer.h"
+#include "System/Misc/EngineConfig.h"
 
 #if SHAFT_EDITOR_ENABLED
 #include "Editor/ShaftEditor.h"
@@ -12,12 +14,11 @@ namespace Shaft {
 	class Renderer;
 	class World;
 	class ResourceManager;
-	struct EngineConfig;
 
 	class Engine
 	{
 	public:
-		Engine(const EngineConfig& config);
+		Engine(EngineConfig& config);
 		~Engine();
 		//Has to be called after window and renderer are set
 		void Initialize();
@@ -32,6 +33,7 @@ namespace Shaft {
 		WindowHandle& GetWindow();
 		Renderer& GetRenderer();
 		Input& GetInput();
+		Timer& GetTimer();
 		World& GetWorld();
 		ResourceManager& GetResourceManager();
 
@@ -41,7 +43,8 @@ namespace Shaft {
 		std::unique_ptr<World> m_world;
 		std::unique_ptr<ResourceManager> m_resourceManager;
 		Input m_input;
-		const EngineConfig& m_engineConfig;
+		Timer m_timer;
+		EngineConfig& m_engineConfig;
 
 #if SHAFT_EDITOR_ENABLED
 		std::unique_ptr<ShaftEditor> m_editor;

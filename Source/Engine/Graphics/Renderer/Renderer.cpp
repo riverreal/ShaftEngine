@@ -35,7 +35,8 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 	m_resourceManager = resourceManager;
 	auto bgfxRenderRype = ConvertRendererTypeToBGFX(m_config.rendererType);
 	m_debugFlags = BGFX_DEBUG_TEXT;
-	m_resetFlags = BGFX_RESET_VSYNC;
+	uint32 vsyncFlag = m_config.fpsConfig.vsync ? BGFX_RESET_VSYNC : 0;
+	m_resetFlags = vsyncFlag;
 	if (!bgfx::init(bgfxRenderRype, 0))
 	{
 		throw std::runtime_error("bgfx init failed");

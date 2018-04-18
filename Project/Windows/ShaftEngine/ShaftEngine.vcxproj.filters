@@ -139,6 +139,9 @@
     <ClCompile Include="..\..\..\Source\DebugApp.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\Timer.cpp">
+      <Filter>src\Engine\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Engine\Engine.h">
@@ -764,6 +767,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\Matrix.h">
       <Filter>src\Engine\System\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Misc\STween.h">
+      <Filter>src\Engine\System\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Timer.h">
+      <Filter>src\Engine\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

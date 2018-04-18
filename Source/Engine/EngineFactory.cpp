@@ -23,7 +23,7 @@ EngineFactory::~EngineFactory()
 {
 }
 
-std::unique_ptr<Engine> EngineFactory::CreateEngine(const EngineConfig & config)
+std::unique_ptr<Engine> EngineFactory::CreateEngine(EngineConfig & config)
 {
 	ResolveBuildTarget(config);
 

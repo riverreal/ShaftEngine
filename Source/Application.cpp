@@ -4,6 +4,7 @@
 #include "Engine/System/Window/WindowHandle.h"
 #include "Engine/Graphics/Renderer/Renderer.h"
 #include "Engine/World.h"
+#include <thread>
 
 using namespace Shaft;
 
@@ -17,7 +18,6 @@ Application::~Application()
 
 void Application::Initialize()
 {
-	
 	m_engineConfig.buildTarget = Windows;
 	m_engineConfig.renderConfig.rendererType = Direct3D11;
 	m_engineConfig.windowConfig.isResizeable = false;
@@ -34,16 +34,21 @@ void Application::Initialize()
 	m_engine->Initialize();
 
 	AppInit();
+
+	m_engine->GetTimer().TimeStart();
 }
 
 void Shaft::Application::Run()
 {
+	FPSConfig& fpsConfig = m_engineConfig.renderConfig.fpsConfig;
+
 	while (!m_engine->GetWindow().CloseWindow())
 	{
+		float dt = m_engine->GetTimer().GetDeltaTime();
+		m_engine->GetTimer().Tick();
 		m_engine->GetWindow().PollEvents();
 
-		//TODO: delta time
-		m_engine->GetWorld().Update(0);
+		m_engine->GetWorld().Update(dt);
 
 		AppRun();
 
@@ -51,6 +56,16 @@ void Shaft::Application::Run()
 		m_engine->GetEditor().Draw();
 #endif
 
+		//Draw will automatically set correct frame time if vsync is on
 		m_engine->GetRenderer().Draw();
+
+		if (!fpsConfig.vsync && fpsConfig.capFPS)
+		{
+			auto sleepMS = static_cast<int32>(1000.0f / (float)fpsConfig.fps - dt * 1000.0f);
+			if (sleepMS > 0)
+			{
+				std::this_thread::sleep_for(std::chrono::milliseconds(sleepMS));
+			}
+		}
 	}
 }

@@ -13,7 +13,7 @@ namespace Shaft {
 		EngineFactory();
 		~EngineFactory();
 
-		std::unique_ptr<Engine> CreateEngine(const EngineConfig& config);
+		std::unique_ptr<Engine> CreateEngine(EngineConfig& config);
 	private:
 		void ResolveBuildTarget(const EngineConfig& config);
 
