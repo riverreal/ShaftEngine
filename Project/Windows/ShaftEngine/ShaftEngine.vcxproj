@@ -512,7 +512,12 @@
     <None Include="..\..\..\Dependencies\glm\glm\gtx\vector_angle.inl" />
     <None Include="..\..\..\Dependencies\glm\glm\gtx\vector_query.inl" />
     <None Include="..\..\..\Dependencies\glm\glm\gtx\wrap.inl" />
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\DefaultFK.sh" />
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\DefaultVaryingDef.sc" />
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\fs_test.sc" />
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\InputDefiner.sh" />
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\UberFS.sc" />
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\UberVS.sc" />
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\varying.def.sc" />
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\vs_test.sc" />
   </ItemGroup>

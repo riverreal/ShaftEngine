@@ -47,11 +47,12 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x000000ff, 1.0f, 0);
 
-	const bgfx::Memory* memVsh = shaderc::compileShader(shaderc::ST_VERTEX, "../../../Source/Engine/Graphics/Shaders/vs_test.sc", "../../../Dependencies/bgfx/src");
+	const bgfx::Memory* memVsh = shaderc::compileShader(shaderc::ST_VERTEX, "../../../Source/Engine/Graphics/Shaders/UberVS.sc", "../../../Dependencies/bgfx/src");
 	bgfx::ShaderHandle vsh = bgfx::createShader(memVsh);
-	const bgfx::Memory* memFsh = shaderc::compileShader(shaderc::ST_FRAGMENT, "../../../Source/Engine/Graphics/Shaders/fs_test.sc", "../../../Dependencies/bgfx/src");
+	const bgfx::Memory* memFsh = shaderc::compileShader(shaderc::ST_FRAGMENT, "../../../Source/Engine/Graphics/Shaders/UberFS.sc", "../../../Dependencies/bgfx/src");
 	bgfx::ShaderHandle fsh = bgfx::createShader(memFsh);
 	testProgram = bgfx::createProgram(vsh, fsh, true);
+	m_color = bgfx::createUniform("u_color", bgfx::UniformType::Vec4);
 }
 
 void Renderer::Draw()
@@ -79,7 +80,8 @@ void Renderer::Draw()
 			glm::mat4 mat4 = transform->worldMatrix.GetMat();
 			float* mat = glm::value_ptr(mat4);
 			bgfx::setTransform(mat);
-
+			float color[4] = { 1.0f, 0.0f, 0.0f, 1.0f };
+			bgfx::setUniform(m_color, &color);
 			auto meshType = m_resourceManager->GetMeshManager().GetMeshTypes()[meshComp->meshId];
 			if (!meshType.created)
 			{
@@ -106,5 +108,6 @@ void Renderer::Draw()
 void Renderer::Destroy()
 {
 	bgfx::destroy(testProgram);
+	bgfx::destroy(m_color);
 	bgfx::shutdown();
 }

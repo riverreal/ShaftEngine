@@ -1118,5 +1118,20 @@
     <None Include="..\..\..\Source\Engine\Graphics\Shaders\varying.def.sc">
       <Filter>src\Engine\Graphics\Shaders</Filter>
     </None>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\DefaultFK.sh">
+      <Filter>src\Engine\Graphics\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\DefaultVaryingDef.sc">
+      <Filter>src\Engine\Graphics\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\InputDefiner.sh">
+      <Filter>src\Engine\Graphics\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\UberFS.sc">
+      <Filter>src\Engine\Graphics\Shaders</Filter>
+    </None>
+    <None Include="..\..\..\Source\Engine\Graphics\Shaders\UberVS.sc">
+      <Filter>src\Engine\Graphics\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
