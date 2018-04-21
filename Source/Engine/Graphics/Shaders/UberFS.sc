@@ -5,12 +5,8 @@ $input v_wpos, v_view, v_normal, v_tangent, v_bitangent, v_texcoord0
 void main()
 {
 	vec4 finalColor = vec4(1.0, 1.0, 1.0, 1.0);
-#if USE_COLOR == 1
-	finalColor = u_color;
-#endif
-
-#if USE_ALBEDO == 1
-	finalColor *= t_albedo;
+#if USE_CONST_VEC_00 == 1
+	finalColor = u_constVec00;
 #endif
 
 #if LIGHTING_ON == 1

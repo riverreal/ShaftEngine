@@ -6,6 +6,7 @@
 #include "Engine/System/ResourceManager.h"
 #include "Engine/System/MeshManager.h"
 #include "Engine/Graphics/ShapeBuilder.h"
+#include "Engine/Graphics/ModelBuilder.h"
 #include "Engine/World.h"
 #include <thread>
 
@@ -39,7 +40,7 @@ void DebugApp::Initialize()
 	m_engine->Initialize();
 
 	m_cube = m_engine->GetWorld().CreateActor();
-	auto meshID = m_engine->GetResourceManager().GetMeshManager().CreateMeshType(ShapeBuilder::CreateCube(1, 1, 1), "Cube");
+	auto meshID = m_engine->GetResourceManager().GetMeshManager().CreateMeshType(ShapeBuilder::CreateSphere(0.5f, 10, 10), "Sphere");
 	m_cube->AddComponent<MeshComponent>(meshID);
 
 	auto sphere = m_engine->GetWorld().CreateActor();

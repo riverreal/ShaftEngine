@@ -52,7 +52,7 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 	const bgfx::Memory* memFsh = shaderc::compileShader(shaderc::ST_FRAGMENT, "../../../Source/Engine/Graphics/Shaders/UberFS.sc", "../../../Dependencies/bgfx/src");
 	bgfx::ShaderHandle fsh = bgfx::createShader(memFsh);
 	testProgram = bgfx::createProgram(vsh, fsh, true);
-	m_color = bgfx::createUniform("u_color", bgfx::UniformType::Vec4);
+	m_color = bgfx::createUniform("u_constVec00", bgfx::UniformType::Vec4);
 }
 
 void Renderer::Draw()
@@ -80,7 +80,7 @@ void Renderer::Draw()
 			glm::mat4 mat4 = transform->worldMatrix.GetMat();
 			float* mat = glm::value_ptr(mat4);
 			bgfx::setTransform(mat);
-			float color[4] = { 1.0f, 0.0f, 0.0f, 1.0f };
+			float color[4] = { 1.0f, 1.0f, 0.0f, 1.0f };
 			bgfx::setUniform(m_color, &color);
 			auto meshType = m_resourceManager->GetMeshManager().GetMeshTypes()[meshComp->meshId];
 			if (!meshType.created)

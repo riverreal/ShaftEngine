@@ -74,6 +74,9 @@
     <Filter Include="3rdparty\glfw">
       <UniqueIdentifier>{a8e6e01d-b2bc-4e24-829e-5b638fb499bc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3rdparty\stb">
+      <UniqueIdentifier>{e2749237-9983-4152-82a0-85c6d11a845e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp">
@@ -141,6 +144,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\System\Timer.cpp">
       <Filter>src\Engine\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\Graphics\TextureManager.cpp">
+      <Filter>src\Engine\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -773,6 +779,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Timer.h">
       <Filter>src\Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\Graphics\TextureManager.h">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\stb\stb_image.h">
+      <Filter>3rdparty\stb</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
