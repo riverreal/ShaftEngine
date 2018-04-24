@@ -1,4 +1,6 @@
 #include "TextureManager.h"
+#include "bx/bx.h"
+#include "bx/file.h"
 #include "bimg/bimg.h"
 #include "bimg/decode.h"
 

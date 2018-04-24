@@ -2,8 +2,12 @@
 
 #include <Shaft/Core.h>
 #include "../Engine/System/ResourceType.h"
-#include "bx/bx.h"
-#include "bx/file.h"
+
+namespace bx
+{
+	class AllocatorI;
+	class FileReaderI;
+}
 
 namespace Shaft
 {
