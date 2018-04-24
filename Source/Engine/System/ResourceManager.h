@@ -6,6 +6,7 @@ namespace Shaft
 {
 	class MeshManager;
 	class ShaderManager;
+	class TextureManager;
 
 	class ResourceManager
 	{
@@ -17,9 +18,11 @@ namespace Shaft
 
 		MeshManager& GetMeshManager();
 		ShaderManager& GetShaderManager();
+		TextureManager& GetTextureManager();
 
 	private:
 		std::unique_ptr<MeshManager> m_meshManager;
 		std::unique_ptr<ShaderManager> m_shaderManager;
+		std::unique_ptr<TextureManager> m_textureManager;
 	};
 }

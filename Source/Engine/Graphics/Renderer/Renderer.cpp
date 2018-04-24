@@ -3,6 +3,7 @@
 #include "../Engine/World.h"
 #include "../Engine/System/ResourceManager.h"
 #include "../Engine/System/MeshManager.h"
+#include "../Engine/Graphics/TextureManager.h"
 #include <bx/math.h>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
@@ -53,6 +54,9 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 	bgfx::ShaderHandle fsh = bgfx::createShader(memFsh);
 	testProgram = bgfx::createProgram(vsh, fsh, true);
 	m_color = bgfx::createUniform("u_constVec00", bgfx::UniformType::Vec4);
+	m_texAlbedo = bgfx::createUniform("t_tex00", bgfx::UniformType::Int1);
+	
+	resourceManager->GetTextureManager().LoadTexture("../../../Resource/blue.jpg");
 }
 
 void Renderer::Draw()
@@ -80,7 +84,7 @@ void Renderer::Draw()
 			glm::mat4 mat4 = transform->worldMatrix.GetMat();
 			float* mat = glm::value_ptr(mat4);
 			bgfx::setTransform(mat);
-			float color[4] = { 1.0f, 1.0f, 0.0f, 1.0f };
+			float color[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 			bgfx::setUniform(m_color, &color);
 			auto meshType = m_resourceManager->GetMeshManager().GetMeshTypes()[meshComp->meshId];
 			if (!meshType.created)
@@ -90,6 +94,8 @@ void Renderer::Draw()
 			
 			bgfx::setVertexBuffer(0, meshType.vb);
 			bgfx::setIndexBuffer(meshType.ib);
+
+			bgfx::setTexture(0, m_texAlbedo, m_resourceManager->GetTextureManager().GetTextures()[0].tex);
 
 			bgfx::setState(0
 				| BGFX_STATE_WRITE_RGB | BGFX_STATE_WRITE_A
@@ -109,5 +115,6 @@ void Renderer::Destroy()
 {
 	bgfx::destroy(testProgram);
 	bgfx::destroy(m_color);
+	bgfx::destroy(m_texAlbedo);
 	bgfx::shutdown();
 }

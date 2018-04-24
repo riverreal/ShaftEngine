@@ -3,52 +3,52 @@
 
 //Textures-----------------------------------
 #if USE_TEX_00 == 1
-	SAMPLER2D(t_tex00, TEX_00_REG_NUM - 1);
+	SAMPLER2D(t_tex00, 0);
 #endif
 #if USE_TEX_01 == 1
-	SAMPLER2D(t_tex01, TEX_01_REG_NUM - 1);
+	SAMPLER2D(t_tex01, 1);
 #endif
 #if USE_TEX_02 == 1
-	SAMPLER2D(t_tex02, TEX_02_REG_NUM - 1);
+	SAMPLER2D(t_tex02, 2);
 #endif
 #if USE_TEX_03 == 1
-	SAMPLER2D(t_tex03, TEX_03_REG_NUM - 1);
+	SAMPLER2D(t_tex03, 3);
 #endif
 #if USE_TEX_04 == 1
-	SAMPLER2D(t_tex04, TEX_04_REG_NUM - 1);
+	SAMPLER2D(t_tex04, 4);
 #endif
 #if USE_TEX_05 == 1
-	SAMPLER2D(t_tex05, TEX_05_REG_NUM - 1);
+	SAMPLER2D(t_tex05, 5);
 #endif
 #if USE_TEX_06 == 1
-	SAMPLER2D(t_tex06, TEX_06_REG_NUM - 1);
+	SAMPLER2D(t_tex06, 6);
 #endif
 #if USE_TEX_07 == 1
-	SAMPLER2D(t_tex07, TEX_07_REG_NUM - 1);
+	SAMPLER2D(t_tex07, 7);
 #endif
 #if USE_TEX_08 == 1
-	SAMPLER2D(t_tex08, TEX_08_REG_NUM - 1);
+	SAMPLER2D(t_tex08, 8);
 #endif
 #if USE_TEX_09 == 1
-	SAMPLER2D(t_tex09, TEX_09_REG_NUM - 1);
+	SAMPLER2D(t_tex09, 9);
 #endif
 #if USE_TEX_10 == 1
-	SAMPLER2D(t_tex10, TEX_10_REG_NUM - 1);
+	SAMPLER2D(t_tex10, 10);
 #endif
 #if USE_TEX_11 == 1
-	SAMPLER2D(t_tex11, TEX_11_REG_NUM - 1);
+	SAMPLER2D(t_tex11, 11);
 #endif
 #if USE_TEX_12 == 1
-	SAMPLER2D(t_tex12, TEX_12_REG_NUM - 1);
+	SAMPLER2D(t_tex12, 12);
 #endif
 #if USE_TEX_13 == 1
-	SAMPLER2D(t_tex13, TEX_13_REG_NUM - 1);
+	SAMPLER2D(t_tex13, 13);
 #endif
 #if USE_TEX_14 == 1
-	SAMPLER2D(t_tex14, TEX_14_REG_NUM - 1);
+	SAMPLER2D(t_tex14, 14);
 #endif
 #if USE_TEX_15 == 1
-	SAMPLER2D(t_tex15, TEX_15_REG_NUM - 1);
+	SAMPLER2D(t_tex15, 15);
 #endif
 
 //Vector constants

@@ -24,8 +24,8 @@ namespace Shaft
 		float posZ;
 		uint32 normal;
 		uint32 tangent;
-		int16 texU;
-		int16 texV;
+		float texU;
+		float texV;
 		static bgfx::VertexDecl declaration;
 	};
 

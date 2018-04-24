@@ -9,6 +9,11 @@ void main()
 	finalColor = u_constVec00;
 #endif
 
+#if USE_TEX_00 == 1
+	vec4 tex = texture2D(t_tex00, v_texcoord0);
+	finalColor *= tex;
+#endif
+
 #if LIGHTING_ON == 1
 #endif
 	

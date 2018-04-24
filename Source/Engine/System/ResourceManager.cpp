@@ -1,6 +1,7 @@
 #include "ResourceManager.h"
 #include "MeshManager.h"
 #include "ShaderManager.h"
+#include "../Graphics/TextureManager.h"
 
 using namespace Shaft;
 
@@ -14,9 +15,9 @@ Shaft::ResourceManager::~ResourceManager()
 
 void Shaft::ResourceManager::Initialize()
 {
-	//TODO: reserve count for mesh manager
 	m_meshManager = std::make_unique<MeshManager>();
 	m_shaderManager = std::make_unique<ShaderManager>();
+	m_textureManager = std::make_unique<TextureManager>();
 }
 
 MeshManager& Shaft::ResourceManager::GetMeshManager()
@@ -27,4 +28,9 @@ MeshManager& Shaft::ResourceManager::GetMeshManager()
 ShaderManager& Shaft::ResourceManager::GetShaderManager()
 {
 	return *m_shaderManager.get();
+}
+
+TextureManager& Shaft::ResourceManager::GetTextureManager()
+{
+	return *m_textureManager.get();
 }
