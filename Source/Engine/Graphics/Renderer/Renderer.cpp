@@ -3,6 +3,7 @@
 #include "../Engine/World.h"
 #include "../Engine/System/ResourceManager.h"
 #include "../Engine/System/MeshManager.h"
+#include "../Engine/System/ShaderManager.h"
 #include "../Engine/Graphics/TextureManager.h"
 #include <bx/math.h>
 #include <glm/gtc/quaternion.hpp>
@@ -48,15 +49,12 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x000000ff, 1.0f, 0);
 
-	const bgfx::Memory* memVsh = shaderc::compileShader(shaderc::ST_VERTEX, "../../../Source/Engine/Graphics/Shaders/UberVS.sc", "../../../Dependencies/bgfx/src");
-	bgfx::ShaderHandle vsh = bgfx::createShader(memVsh);
-	const bgfx::Memory* memFsh = shaderc::compileShader(shaderc::ST_FRAGMENT, "../../../Source/Engine/Graphics/Shaders/UberFS.sc", "../../../Dependencies/bgfx/src");
-	bgfx::ShaderHandle fsh = bgfx::createShader(memFsh);
-	testProgram = bgfx::createProgram(vsh, fsh, true);
+	auto shaderID = m_resourceManager->GetShaderManager().CreateShaderTypeRT("Default", "Include/UberVS.sc", "Include/UberFS.sc");
+	testProgram = m_resourceManager->GetShaderManager().GetShaderTypes()[shaderID].programHandle;
 	m_color = bgfx::createUniform("u_constVec00", bgfx::UniformType::Vec4);
 	m_texAlbedo = bgfx::createUniform("t_tex00", bgfx::UniformType::Int1);
 	
-	resourceManager->GetTextureManager().LoadTexture("../../../Resource/blue.jpg");
+	resourceManager->GetTextureManager().LoadTexture("../../Resource/blue.jpg");
 }
 
 void Renderer::Draw()
@@ -113,7 +111,6 @@ void Renderer::Draw()
 
 void Renderer::Destroy()
 {
-	bgfx::destroy(testProgram);
 	bgfx::destroy(m_color);
 	bgfx::destroy(m_texAlbedo);
 	bgfx::shutdown();

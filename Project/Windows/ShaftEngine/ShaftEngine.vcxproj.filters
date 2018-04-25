@@ -77,6 +77,9 @@
     <Filter Include="3rdparty\stb">
       <UniqueIdentifier>{e2749237-9983-4152-82a0-85c6d11a845e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Engine\Graphics\Shaders\Include">
+      <UniqueIdentifier>{877c75e8-a07b-42e7-b974-6c24bebc8941}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp">
@@ -147,6 +150,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\Graphics\TextureManager.cpp">
       <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\FileSystem.cpp">
+      <Filter>src\Engine\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -786,6 +792,9 @@
     <ClInclude Include="..\..\..\Dependencies\stb\stb_image.h">
       <Filter>3rdparty\stb</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\FileSystem.h">
+      <Filter>src\Engine\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Dependencies\glm\glm\gtx\associated_min_max.inl">
@@ -1121,29 +1130,23 @@
     <None Include="..\..\..\Dependencies\glm\glm\detail\type_vec4_simd.inl">
       <Filter>3rdparty\glm\detail</Filter>
     </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\fs_test.sc">
+    <None Include="..\..\..\Shaders\DefaultFK.sh">
       <Filter>src\Engine\Graphics\Shaders</Filter>
     </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\vs_test.sc">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
+    <None Include="..\..\..\Shaders\Include\bgfx_shader.sh">
+      <Filter>src\Engine\Graphics\Shaders\Include</Filter>
     </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\varying.def.sc">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
+    <None Include="..\..\..\Shaders\Include\DefaultVaryingDef.sc">
+      <Filter>src\Engine\Graphics\Shaders\Include</Filter>
     </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\DefaultFK.sh">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
+    <None Include="..\..\..\Shaders\Include\InputDefiner.sh">
+      <Filter>src\Engine\Graphics\Shaders\Include</Filter>
     </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\DefaultVaryingDef.sc">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
+    <None Include="..\..\..\Shaders\Include\UberFS.sc">
+      <Filter>src\Engine\Graphics\Shaders\Include</Filter>
     </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\InputDefiner.sh">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
-    </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\UberFS.sc">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
-    </None>
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\UberVS.sc">
-      <Filter>src\Engine\Graphics\Shaders</Filter>
+    <None Include="..\..\..\Shaders\Include\UberVS.sc">
+      <Filter>src\Engine\Graphics\Shaders\Include</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -1,12 +1,19 @@
 #include "ShaderManager.h"
+#include "FileSystem.h"
 #include <brtshaderc/brtshaderc.h>
 
 using namespace Shaft;
 
-Shaft::ShaderManager::ShaderManager()
+Shaft::ShaderManager::ShaderManager(FileSystem* fileSystem)
 	:m_idCounter(0),
-	m_includeDir("../../../Dependencies/bgfx/src")
+	m_fileSystem(fileSystem)
 {
+	//shaders will be compiled at runtime if SE_BUILD is false
+#if SE_BUILD == false
+	m_shaderPath = fileSystem->GetBasePath() + "Shaders/";
+#else
+	m_shaderPath = fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(SHADER_PACKAGE_NUM));
+#endif
 }
 
 Shaft::ShaderManager::~ShaderManager()
@@ -14,11 +21,11 @@ Shaft::ShaderManager::~ShaderManager()
 	DestroyAllShaders();
 }
 
-uint32 Shaft::ShaderManager::CreateShaderTypeRT(std::string shaderTypeName, std::string vsPath, std::string fsPath)
+uint32 Shaft::ShaderManager::CreateShaderTypeRT(std::string shaderTypeName, std::string vsFile, std::string fsFile)
 {
-	const bgfx::Memory* memVsh = shaderc::compileShader(shaderc::ST_VERTEX, vsPath.c_str(), m_includeDir.c_str());
+	const bgfx::Memory* memVsh = shaderc::compileShader(shaderc::ST_VERTEX, (m_shaderPath + vsFile).c_str(), (m_shaderPath + "Include").c_str());
 	bgfx::ShaderHandle vsh = bgfx::createShader(memVsh);
-	const bgfx::Memory* memFsh = shaderc::compileShader(shaderc::ST_FRAGMENT, fsPath.c_str(), m_includeDir.c_str());
+	const bgfx::Memory* memFsh = shaderc::compileShader(shaderc::ST_FRAGMENT, (m_shaderPath + fsFile).c_str(), (m_shaderPath + "Include").c_str());
 	bgfx::ShaderHandle fsh = bgfx::createShader(memFsh);
 
 	ShaderType shaderType;

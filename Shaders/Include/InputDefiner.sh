@@ -1,5 +1,5 @@
+#include "../DefaultFK.sh"
 #include <bgfx_shader.sh>
-#include "DefaultFK.sh"
 
 //Textures-----------------------------------
 #if USE_TEX_00 == 1

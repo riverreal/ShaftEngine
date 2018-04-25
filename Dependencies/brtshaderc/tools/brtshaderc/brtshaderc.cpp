@@ -238,9 +238,8 @@ namespace shaderc
             defines = ';' == *eol ? eol+1 : eol;
         }
 
-
         // set varyingdef
-        std::string defaultVarying = dir + "DefaultVaryingDef.sc";
+        std::string defaultVarying = std::string(includePath) + "/DefaultVaryingDef.sc";
         const char* varyingdef = varyingPath ? varyingPath : defaultVarying.c_str();
         bgfx::File attribdef(varyingdef);
         const char* parse = attribdef.getData();

@@ -72,19 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\Bin\$(Platform)\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <OutDir>$(SolutionDir)..\..\Bin\$(Configuration)-$(PlatformTarget)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\Bin\$(Platform)\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <OutDir>$(SolutionDir)..\..\Bin\$(Configuration)-$(PlatformTarget)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\Bin\$(Platform)\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <OutDir>$(SolutionDir)..\..\Bin\$(Configuration)-$(PlatformTarget)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\Bin\$(Platform)\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <OutDir>$(SolutionDir)..\..\Bin\$(Configuration)-$(PlatformTarget)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -180,6 +180,7 @@
     <ClCompile Include="..\..\..\Source\Engine\Graphics\TextureManager.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\SystemsManager.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\TransformSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\System\FileSystem.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Input\Input.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\MeshManager.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Misc\Vertex.cpp" />
@@ -374,6 +375,7 @@
     <ClInclude Include="..\..\..\Source\Engine\System\Components\IComponent.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\MeshComponent.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\FileSystem.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\Matrix.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\Quaternion.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\STween.h" />
@@ -515,14 +517,12 @@
     <None Include="..\..\..\Dependencies\glm\glm\gtx\vector_angle.inl" />
     <None Include="..\..\..\Dependencies\glm\glm\gtx\vector_query.inl" />
     <None Include="..\..\..\Dependencies\glm\glm\gtx\wrap.inl" />
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\DefaultFK.sh" />
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\DefaultVaryingDef.sc" />
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\fs_test.sc" />
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\InputDefiner.sh" />
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\UberFS.sc" />
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\UberVS.sc" />
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\varying.def.sc" />
-    <None Include="..\..\..\Source\Engine\Graphics\Shaders\vs_test.sc" />
+    <None Include="..\..\..\Shaders\DefaultFK.sh" />
+    <None Include="..\..\..\Shaders\Include\bgfx_shader.sh" />
+    <None Include="..\..\..\Shaders\Include\DefaultVaryingDef.sc" />
+    <None Include="..\..\..\Shaders\Include\InputDefiner.sh" />
+    <None Include="..\..\..\Shaders\Include\UberFS.sc" />
+    <None Include="..\..\..\Shaders\Include\UberVS.sc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Libs\assimp\assimp.vcxproj">

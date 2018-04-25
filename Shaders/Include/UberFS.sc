@@ -1,6 +1,6 @@
 $input v_wpos, v_view, v_normal, v_tangent, v_bitangent, v_texcoord0
 
-#include "InputDefiner.sh"
+#include <InputDefiner.sh>
 
 void main()
 {

@@ -5,6 +5,10 @@
 #define DEFAULT_SCREEN_HEIGHT 720
 #define ACTOR_RESERVE_COUNT 1000
 
+//File reading paths will be different
+//Set to true for build a true release build
+#define SE_BUILD false
+
 #ifdef _WIN32
 #define PLATFORM_WINDOWS 1
 #define WINDOW_TYPE_GLFW 1
