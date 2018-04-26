@@ -3,6 +3,7 @@
 #include "bx/file.h"
 #include "bimg/bimg.h"
 #include "bimg/decode.h"
+#include "../System/FileSystem.h"
 
 using namespace Shaft;
 
@@ -17,8 +18,8 @@ public:
 	}
 };
 
-Shaft::TextureManager::TextureManager()
-	:m_idCounter(0)
+Shaft::TextureManager::TextureManager(FileSystem* fileSystem)
+	:m_idCounter(0), m_fileSystem(fileSystem)
 {
 	static bx::DefaultAllocator alloc;
 	m_allocator = &alloc;
@@ -31,11 +32,14 @@ Shaft::TextureManager::~TextureManager()
 	BX_FREE(m_allocator, m_reader);
 }
 
-uint32 Shaft::TextureManager::LoadTexture(std::string fileName)
+uint32 Shaft::TextureManager::LoadTexture(std::string fileName, int32 packNum)
 {
+	std::string filepath = m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packNum));
+	filepath += fileName;
+	std::cout << m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packNum)) << std::endl;
 	for (auto& tex : m_textures)
 	{
-		if (tex.duplicationRef == fileName)
+		if (tex.duplicationRef == filepath)
 		{
 			std::cout << "Texture already registered" << std::endl;
 			return tex.id;
@@ -43,12 +47,17 @@ uint32 Shaft::TextureManager::LoadTexture(std::string fileName)
 	}
 
 	TextureResource texture;	
-	texture.duplicationRef = fileName;
+	texture.duplicationRef = filepath;
 	texture.id = m_idCounter;
 
 	uint32 size = 0;
-	void* data = LoadMem(fileName, size);
-	
+	void* data = LoadMem(filepath, size);
+	if (data == nullptr)
+	{
+		std::cout << "Texture could not be loaded: " << filepath << std::endl;
+		return 0;
+	}
+
 	bimg::ImageContainer* imageContainer = bimg::imageParse(m_allocator, data, size);
 	if (imageContainer != nullptr)
 	{
@@ -59,7 +68,7 @@ uint32 Shaft::TextureManager::LoadTexture(std::string fileName)
 
 		texture.info.width = imageContainer->m_width;
 		texture.info.height = imageContainer->m_height;
-		bgfx::setName(texture.tex, fileName.c_str());
+		bgfx::setName(texture.tex, filepath.c_str());
 	}
 
 	texture.created = true;

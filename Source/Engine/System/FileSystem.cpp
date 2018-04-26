@@ -50,5 +50,9 @@ std::string Shaft::FileSystem::GetResourcePath()
 
 std::string Shaft::FileSystem::GetPackedResourcePath(PackageNumber packNum)
 {
-	return GetResourcePath() + m_packageNames[(int32)packNum] + "/";
+	std::string path = GetResourcePath();
+	path += m_packageNames[(int32)packNum];
+	path += "/";
+
+	return path;//GetResourcePath() + m_packageNames[(int32)packNum] + "/";
 }

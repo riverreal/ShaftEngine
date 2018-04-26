@@ -5,12 +5,14 @@
 
 namespace bx
 {
-	class AllocatorI;
-	class FileReaderI;
+	struct AllocatorI;
+	struct FileReaderI;
 }
 
 namespace Shaft
 {
+	class FileSystem;
+
 	struct TextureInfo
 	{
 		int32 width;
@@ -27,10 +29,10 @@ namespace Shaft
 	class TextureManager
 	{
 	public:
-		TextureManager();
+		TextureManager(FileSystem* fileSystem);
 		~TextureManager();
 
-		uint32 LoadTexture(std::string fileName);
+		uint32 LoadTexture(std::string fileName, int32 packNum);
 		std::vector<TextureResource>& GetTextures();
 	private:
 		void* LoadMem(std::string filepath, uint32& outSize);
@@ -41,5 +43,6 @@ namespace Shaft
 		uint32 m_idCounter;
 		bx::AllocatorI* m_allocator;
 		bx::FileReaderI* m_reader;
+		FileSystem* m_fileSystem;
 	};
 }

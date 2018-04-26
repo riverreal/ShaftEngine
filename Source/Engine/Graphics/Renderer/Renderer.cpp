@@ -54,7 +54,7 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 	m_color = bgfx::createUniform("u_constVec00", bgfx::UniformType::Vec4);
 	m_texAlbedo = bgfx::createUniform("t_tex00", bgfx::UniformType::Int1);
 	
-	resourceManager->GetTextureManager().LoadTexture("../../Resource/blue.jpg");
+	resourceManager->GetTextureManager().LoadTexture("blue.jpg", 1);
 }
 
 void Renderer::Draw()
