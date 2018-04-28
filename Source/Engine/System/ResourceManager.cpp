@@ -3,6 +3,7 @@
 #include "ShaderManager.h"
 #include "FileSystem.h"
 #include "../Graphics/TextureManager.h"
+#include "../Graphics/MaterialManager.h"
 
 using namespace Shaft;
 
@@ -20,6 +21,7 @@ void Shaft::ResourceManager::Initialize()
 	m_meshManager = std::make_unique<MeshManager>();
 	m_shaderManager = std::make_unique<ShaderManager>(m_fileSystem.get());
 	m_textureManager = std::make_unique<TextureManager>(m_fileSystem.get());
+	m_materialManager = std::make_unique<MaterialManager>(m_fileSystem.get());
 }
 
 MeshManager& Shaft::ResourceManager::GetMeshManager()
@@ -40,4 +42,9 @@ TextureManager& Shaft::ResourceManager::GetTextureManager()
 FileSystem & Shaft::ResourceManager::GetFileSystem()
 {
 	return *m_fileSystem.get();
+}
+
+MaterialManager & Shaft::ResourceManager::GetMaterialManager()
+{
+	return *m_materialManager.get();
 }

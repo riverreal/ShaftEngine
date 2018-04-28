@@ -21,11 +21,14 @@ namespace Shaft
 		ShaderManager(FileSystem* fileSystem);
 		~ShaderManager();
 
-		//Compile and create shaders in realtime
-		uint32 CreateShaderTypeRT(std::string shaderTypeName, std::string vsFile, std::string fsFile);
+		//vs and fs file without extension
+		uint32 LoadShader(std::string vsFile, std::string fsFile);
+		
 		std::vector<ShaderType>& GetShaderTypes();
 
 	private:
+		//Compile and create shaders in realtime
+		uint32 CreateShaderTypeRT(std::string shaderTypeName, std::string vsFile, std::string fsFile);
 		void DestroyAllShaders();
 
 	private:

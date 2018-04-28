@@ -154,6 +154,9 @@
     <ClCompile Include="..\..\..\Source\Engine\System\FileSystem.cpp">
       <Filter>src\Engine\System</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\Graphics\MaterialManager.cpp">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Engine\Engine.h">
@@ -794,6 +797,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\FileSystem.h">
       <Filter>src\Engine\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\Graphics\MaterialManager.h">
+      <Filter>src\Engine\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

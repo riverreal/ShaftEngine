@@ -174,6 +174,7 @@
     <ClCompile Include="..\..\..\Source\Engine\Editor\ShaftEditor.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\EngineFactory.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\Graphics\MaterialManager.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Graphics\ModelBuilder.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Graphics\ShapeBuilder.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.cpp" />
@@ -364,6 +365,7 @@
     <ClInclude Include="..\..\..\Source\Engine\Editor\ShaftEditor.h" />
     <ClInclude Include="..\..\..\Source\Engine\Engine.h" />
     <ClInclude Include="..\..\..\Source\Engine\EngineFactory.h" />
+    <ClInclude Include="..\..\..\Source\Engine\Graphics\MaterialManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\Graphics\ModelBuilder.h" />
     <ClInclude Include="..\..\..\Source\Engine\Graphics\ShapeBuilder.h" />
     <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.h" />

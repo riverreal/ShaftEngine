@@ -49,7 +49,7 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x000000ff, 1.0f, 0);
 
-	auto shaderID = m_resourceManager->GetShaderManager().CreateShaderTypeRT("Default", "Include/UberVS.sc", "Include/UberFS.sc");
+	auto shaderID = m_resourceManager->GetShaderManager().LoadShader("Include/UberVS", "Include/UberFS");
 	testProgram = m_resourceManager->GetShaderManager().GetShaderTypes()[shaderID].programHandle;
 	m_color = bgfx::createUniform("u_constVec00", bgfx::UniformType::Vec4);
 	m_texAlbedo = bgfx::createUniform("t_tex00", bgfx::UniformType::Int1);

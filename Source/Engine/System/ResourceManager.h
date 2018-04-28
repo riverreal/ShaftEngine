@@ -8,6 +8,7 @@ namespace Shaft
 	class ShaderManager;
 	class TextureManager;
 	class FileSystem;
+	class MaterialManager;
 
 	class ResourceManager
 	{
@@ -21,11 +22,13 @@ namespace Shaft
 		ShaderManager& GetShaderManager();
 		TextureManager& GetTextureManager();
 		FileSystem& GetFileSystem();
+		MaterialManager& GetMaterialManager();
 
 	private:
 		std::unique_ptr<MeshManager> m_meshManager;
 		std::unique_ptr<ShaderManager> m_shaderManager;
 		std::unique_ptr<TextureManager> m_textureManager;
 		std::unique_ptr<FileSystem> m_fileSystem;
+		std::unique_ptr<MaterialManager> m_materialManager;
 	};
 }
