@@ -169,7 +169,6 @@
     <ClCompile Include="..\..\..\Dependencies\bgfx\include\imgui\scintilla.cpp" />
     <ClCompile Include="..\..\..\Dependencies\glm\glm\detail\glm.cpp" />
     <ClCompile Include="..\..\..\Source\Application.cpp" />
-    <ClCompile Include="..\..\..\Source\DebugApp.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Actor.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Editor\ShaftEditor.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp" />
@@ -570,7 +569,6 @@
     <ClInclude Include="..\..\..\Source\Engine\World.h" />
     <ClInclude Include="..\..\..\Source\Include\Shaft\Application.h" />
     <ClInclude Include="..\..\..\Source\Include\Shaft\Core.h" />
-    <ClInclude Include="..\..\..\Source\Include\Shaft\DebugApp.h" />
     <ClInclude Include="..\..\..\Source\Include\Shaft\Reflection.h" />
   </ItemGroup>
   <ItemGroup>

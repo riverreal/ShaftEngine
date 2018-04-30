@@ -7,8 +7,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\DebugMain.cpp">
+    <ClCompile Include="..\..\Source\DebugMain.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\DebugApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\DebugApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

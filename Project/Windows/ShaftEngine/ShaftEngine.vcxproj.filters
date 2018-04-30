@@ -145,9 +145,6 @@
     <ClCompile Include="..\..\..\Source\Application.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Source\DebugApp.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\System\Timer.cpp">
       <Filter>src\Engine\System</Filter>
     </ClCompile>
@@ -763,9 +760,6 @@
       <Filter>src\Engine\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Include\Shaft\Application.h">
-      <Filter>src\Include\Shaft</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Source\Include\Shaft\DebugApp.h">
       <Filter>src\Include\Shaft</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\glfw\x86\include\GLFW\glfw3.h">

@@ -1,4 +1,4 @@
-#include <Shaft/DebugApp.h>
+#include "DebugApp.h"
 
 using namespace Shaft;
 

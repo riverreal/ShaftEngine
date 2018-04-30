@@ -2,7 +2,7 @@
 
 #include <Shaft/Core.h>
 #include "Engine/System/Misc/EngineConfig.h"
-#include "../Engine/System/Misc/STween.h"
+#include "Engine/System/Misc/STween.h"
 
 namespace Shaft {
 	class Engine;

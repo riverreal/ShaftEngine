@@ -1,4 +1,4 @@
-#include <Shaft/DebugApp.h>
+#include "DebugApp.h"
 #include "Engine/EngineFactory.h"
 #include "Engine/Engine.h"
 #include "Engine/System/Window/WindowHandle.h"

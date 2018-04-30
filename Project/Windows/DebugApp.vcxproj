@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;..\..\..\Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\msgpack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -107,7 +107,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\msgpack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -123,7 +123,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\msgpack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -141,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\msgpack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -151,34 +151,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\DebugMain.cpp" />
+    <ClCompile Include="..\..\Source\DebugApp.cpp" />
+    <ClCompile Include="..\..\Source\DebugMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Libs\assimp\assimp.vcxproj">
+    <ClInclude Include="..\..\Source\DebugApp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Libs\assimp\assimp.vcxproj">
       <Project>{46404063-c93f-448a-9371-3c02b311a03e}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Libs\bgfx\bgfx.vcxproj">
+    <ProjectReference Include="Libs\bgfx\bgfx.vcxproj">
       <Project>{d23f29d1-429b-4121-abf8-411114d8bb08}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Libs\bimg\bimg.vcxproj">
+    <ProjectReference Include="Libs\bimg\bimg.vcxproj">
       <Project>{611cd704-f574-4a36-9c94-30246fa8b7a3}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Libs\bimg_decode\bimg_decode.vcxproj">
+    <ProjectReference Include="Libs\bimg_decode\bimg_decode.vcxproj">
       <Project>{1c9b4b7e-dbfa-4a59-a078-26f7b8b4fc93}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Libs\brtshaderc\brtshaderc.vcxproj">
+    <ProjectReference Include="Libs\brtshaderc\brtshaderc.vcxproj">
       <Project>{3f7c35b9-3df8-4ae4-bece-33e3e4b7c363}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Libs\bx\bx.vcxproj">
+    <ProjectReference Include="Libs\bx\bx.vcxproj">
       <Project>{3aebb6ba-7f39-477e-8c5b-0091a730c0ea}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Libs\rttr\rttr_core.vcxproj">
+    <ProjectReference Include="Libs\glfw\glfw.vcxproj">
+      <Project>{8b537b7f-195c-4795-b637-2d38173983f3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="Libs\IrrXML\IrrXML.vcxproj">
+      <Project>{1a1b0ff0-b078-46a4-847a-77c0c065e88d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="Libs\rttr\rttr_core.vcxproj">
       <Project>{d2b00d4d-c29f-3993-b383-eb175eeb8c5d}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Libs\zlib\zlib.vcxproj">
+    <ProjectReference Include="Libs\zlib\zlib.vcxproj">
       <Project>{1b50c406-2972-4f7f-8da3-7b4922218988}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\ShaftEngine\ShaftEngine.vcxproj">
+    <ProjectReference Include="ShaftEngine\ShaftEngine.vcxproj">
       <Project>{0b3660c1-b8b1-42ca-9e0d-edb461af5fe0}</Project>
     </ProjectReference>
   </ItemGroup>
