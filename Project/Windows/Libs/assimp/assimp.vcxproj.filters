@@ -8,6 +8,27 @@
     <Filter Include="include">
       <UniqueIdentifier>{4d153401-1dcc-4689-8198-414eddaa4ad1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ConvertUTF">
+      <UniqueIdentifier>{369b9976-9f18-4012-b070-aa68de22f100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="clipper">
+      <UniqueIdentifier>{7fc995d2-576e-428a-99a4-09e15b55d419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unzip">
+      <UniqueIdentifier>{15ae1111-d6e4-4299-80ef-683d324e8bb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="poly2tri">
+      <UniqueIdentifier>{0e39159d-fdcd-4b36-a90e-a06d3266f07e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="poly2tri\common">
+      <UniqueIdentifier>{bc3b8de8-9615-4bd5-9e29-cf38fe0e42a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="poly2tri\sweep">
+      <UniqueIdentifier>{db318cea-3eaf-440e-8c01-0daed096dcdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="openddl_parse">
+      <UniqueIdentifier>{41625c79-41ee-4bd3-ae77-815161fcb4ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\XMLTools.h">
@@ -682,6 +703,60 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\include\assimp\version.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\ConvertUTF\ConvertUTF.h">
+      <Filter>ConvertUTF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\clipper\clipper.hpp">
+      <Filter>clipper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\crypt.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\ioapi.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\unzip.h">
+      <Filter>unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\shapes.h">
+      <Filter>poly2tri\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\utils.h">
+      <Filter>poly2tri\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.h">
+      <Filter>poly2tri\sweep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\cdt.h">
+      <Filter>poly2tri\sweep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep.h">
+      <Filter>poly2tri\sweep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.h">
+      <Filter>poly2tri\sweep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\poly2tri.h">
+      <Filter>poly2tri</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\DDLNode.h">
+      <Filter>openddl_parse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\OpenDDLCommon.h">
+      <Filter>openddl_parse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\OpenDDLExport.h">
+      <Filter>openddl_parse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\OpenDDLParser.h">
+      <Filter>openddl_parse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\OpenDDLParserUtils.h">
+      <Filter>openddl_parse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\Value.h">
+      <Filter>openddl_parse</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\XGLLoader.cpp">
@@ -1142,6 +1217,48 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\3DSConverter.cpp">
       <Filter>scr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\ConvertUTF\ConvertUTF.c">
+      <Filter>ConvertUTF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\clipper\clipper.cpp">
+      <Filter>clipper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\unzip\ioapi.c">
+      <Filter>unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\unzip\unzip.c">
+      <Filter>unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\shapes.cc">
+      <Filter>poly2tri\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.cc">
+      <Filter>poly2tri\sweep</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\cdt.cc">
+      <Filter>poly2tri\sweep</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep.cc">
+      <Filter>poly2tri\sweep</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.cc">
+      <Filter>poly2tri\sweep</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\DDLNode.cpp">
+      <Filter>openddl_parse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLCommon.cpp">
+      <Filter>openddl_parse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLExport.cpp">
+      <Filter>openddl_parse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLParser.cpp">
+      <Filter>openddl_parse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\Value.cpp">
+      <Filter>openddl_parse</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

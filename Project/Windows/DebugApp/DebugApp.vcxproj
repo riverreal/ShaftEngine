@@ -89,7 +89,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;..\..\..\Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -150,6 +150,9 @@
     <ClCompile Include="..\..\..\Source\DebugMain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Libs\assimp\assimp.vcxproj">
+      <Project>{46404063-c93f-448a-9371-3c02b311a03e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Libs\bgfx\bgfx.vcxproj">
       <Project>{d23f29d1-429b-4121-abf8-411114d8bb08}</Project>
     </ProjectReference>
@@ -167,6 +170,9 @@
     </ProjectReference>
     <ProjectReference Include="..\Libs\rttr\rttr_core.vcxproj">
       <Project>{d2b00d4d-c29f-3993-b383-eb175eeb8c5d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\zlib\zlib.vcxproj">
+      <Project>{1b50c406-2972-4f7f-8da3-7b4922218988}</Project>
     </ProjectReference>
     <ProjectReference Include="..\ShaftEngine\ShaftEngine.vcxproj">
       <Project>{0b3660c1-b8b1-42ca-9e0d-edb461af5fe0}</Project>

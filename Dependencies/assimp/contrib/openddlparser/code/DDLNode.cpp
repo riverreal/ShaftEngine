@@ -28,7 +28,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 BEGIN_ODDLPARSER_NS
 
 DDLNode::DllNodeList DDLNode::s_allocatedNodes;
-
 template<class T>
 inline
 static void releaseDataType( T *ptr ) {

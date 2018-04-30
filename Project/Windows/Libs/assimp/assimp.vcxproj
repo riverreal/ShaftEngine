@@ -108,7 +108,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -154,6 +154,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\clipper\clipper.hpp" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\ConvertUTF\ConvertUTF.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\DDLNode.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\OpenDDLCommon.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\OpenDDLExport.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\OpenDDLParser.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\OpenDDLParserUtils.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\include\openddlparser\Value.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\shapes.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\utils.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\poly2tri.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\cdt.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\crypt.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\ioapi.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\unzip.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\include\assimp\ai_assert.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\include\assimp\anim.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\include\assimp\camera.h" />
@@ -380,6 +398,20 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\XMLTools.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\clipper\clipper.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\ConvertUTF\ConvertUTF.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\DDLNode.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLCommon.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLExport.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLParser.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\Value.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\shapes.cc" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.cc" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\cdt.cc" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep.cc" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.cc" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\unzip\ioapi.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\unzip\unzip.c" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\3DSConverter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\3DSExporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\3DSLoader.cpp" />
@@ -533,6 +565,14 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\XFileImporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\XFileParser.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\XGLLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IrrXML\IrrXML.vcxproj">
+      <Project>{1a1b0ff0-b078-46a4-847a-77c0c065e88d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\zlib\zlib.vcxproj">
+      <Project>{1b50c406-2972-4f7f-8da3-7b4922218988}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
