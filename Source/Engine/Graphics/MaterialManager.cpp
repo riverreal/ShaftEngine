@@ -14,14 +14,12 @@ Shaft::MaterialManager::~MaterialManager()
 	DestroyAllMaterials();
 }
 
-uint32 Shaft::MaterialManager::CreateMaterial(std::string filename, int32 packageNum)
+uint32 Shaft::MaterialManager::LoadMaterial(std::string filename, int32 packageNum)
 {
 	std::string path = m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packageNum));
-
-	//Open file and deserialize
-
-
 	Material mat;
+	//Open file and deserialize
+	//m_fileSystem->Deserialize(path, mat);
 	mat.id = m_idCounter;
 	m_materials.push_back(mat);
 	m_idCounter++;

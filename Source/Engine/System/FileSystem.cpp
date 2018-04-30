@@ -1,5 +1,6 @@
 #include "FileSystem.h"
 #include <fstream>
+#include <rttr/variant.h>
 
 Shaft::FileSystem::FileSystem()
 	:m_packageNames{ "package0","package1","package2","package3","package4"
@@ -43,16 +44,10 @@ std::string Shaft::FileSystem::GetBasePath()
 
 std::string Shaft::FileSystem::GetResourcePath()
 {
-	auto resourcePath = GetBasePath();
-	resourcePath += "Resource/";
-	return resourcePath;
+	return GetBasePath() + "Resource/";
 }
 
 std::string Shaft::FileSystem::GetPackedResourcePath(PackageNumber packNum)
 {
-	std::string path = GetResourcePath();
-	path += m_packageNames[(int32)packNum];
-	path += "/";
-
-	return path;//GetResourcePath() + m_packageNames[(int32)packNum] + "/";
+	return GetResourcePath() + m_packageNames[(int32)packNum] + "/";
 }

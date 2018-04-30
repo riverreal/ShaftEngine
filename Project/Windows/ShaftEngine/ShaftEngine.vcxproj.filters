@@ -80,6 +80,9 @@
     <Filter Include="src\Engine\Graphics\Shaders\Include">
       <UniqueIdentifier>{877c75e8-a07b-42e7-b974-6c24bebc8941}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3rdparty\msgpack">
+      <UniqueIdentifier>{bfe84838-643b-4f49-9ed3-e6afc28fa2d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp">
@@ -800,6 +803,504 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Graphics\MaterialManager.h">
       <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\cpp_config.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\cpp_config_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\create_object_visitor.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\create_object_visitor_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\fbuffer.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\fbuffer.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\fbuffer_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\gcc_atomic.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\gcc_atomic.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\iterator.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\iterator_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\meta.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\meta_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\null_visitor.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\null_visitor_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object_fwd.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object_fwd_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack_define.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack_template.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\parse.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\parse_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\parse_return.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\predef.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\preprocessor.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\sbuffer.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\sbuffer.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\sbuffer_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\sysdep.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\type.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack_define.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack_exception.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack_template.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\util.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\version.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\version.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\version_master.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\versioning.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\vrefbuffer.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\vrefbuffer.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\vrefbuffer_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\x3_parse.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\x3_parse_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\x3_unpack.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\x3_unpack_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zbuffer.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zbuffer.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zbuffer_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zone.h">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zone.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zone_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\cpp_config.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\cpp_config_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\fbuffer.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\fbuffer_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\iterator.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\iterator_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\meta.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\meta_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\object.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\object_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\object_fwd.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\object_fwd_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\pack.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\pack_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\parse_return.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\preprocessor.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\sbuffer.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\sbuffer_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\unpack.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\unpack_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\unpack_exception.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\version.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\versioning.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\vrefbuffer.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\vrefbuffer_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\zbuffer.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\zbuffer_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\zone.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\zone_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\detail\cpp03_zone.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\detail\cpp03_zone_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\detail\cpp11_zone.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\detail\cpp11_zone_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\adaptor_base.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\adaptor_base_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\array_ref.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\array_ref_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\bool.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\carray.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\char_ptr.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\check_container_size.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\check_container_size_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\define.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\define_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\deque.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\ext.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\ext_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\fixint.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\fixint_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\float.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\int.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\int_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\list.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\map.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\map_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\msgpack_tuple.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\msgpack_tuple_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\nil.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\nil_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\pair.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\raw.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\raw_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\set.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\size_equal_only.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\size_equal_only_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\string.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\v4raw.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\v4raw_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\vector.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\vector_bool.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\vector_char.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\vector_unsigned_char.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\tr1\unordered_map.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\tr1\unordered_set.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_define_array.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_define_array_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_define_map.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_define_map_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_msgpack_tuple.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_msgpack_tuple_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_convert_helper.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_define_array.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_define_array_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_define_map.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_define_map_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_msgpack_tuple.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_msgpack_tuple_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp17\optional.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp17\string_view.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\array.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\array_char.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\array_unsigned_char.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\forward_list.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\reference_wrapper.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\shared_ptr.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\tuple.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\unique_ptr.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\unordered_map.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\unordered_set.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\fusion.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\msgpack_variant.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\msgpack_variant_decl.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\optional.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\string_ref.hpp">
+      <Filter>3rdparty\msgpack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\string_view.hpp">
+      <Filter>3rdparty\msgpack</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
