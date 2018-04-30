@@ -7,6 +7,7 @@
 #include "Engine/System/MeshManager.h"
 #include "Engine/Graphics/ShapeBuilder.h"
 #include "Engine/Graphics/ModelBuilder.h"
+#include "Engine/System/FileSystem.h"
 #include "Engine/World.h"
 #include <thread>
 
@@ -54,6 +55,12 @@ void DebugApp::Initialize()
 	sphere2->GetTransform()->SetPosition(Vec3f(1, 0, 0));
 	sphere->AddChild(sphere2);
 
+	auto resourcePath = m_engine->GetResourceManager().GetFileSystem().GetResourcePath();
+	auto model = m_engine->GetWorld().CreateActor();
+	meshID = m_engine->GetResourceManager().GetMeshManager().CreateMeshType(ModelBuilder::CreateModel(resourcePath + "Models/Sword.obj"), "Model");
+	model->AddComponent<MeshComponent>(meshID);
+	model->GetTransform()->SetPosition(Vec3f(-1, 0, 0));
+	model->GetTransform()->SetScale(Vec3f(0.01f));
 	Animate();
 	
 	//AppInit();

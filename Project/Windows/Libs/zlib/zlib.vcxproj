@@ -18,35 +18,66 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\adler32.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\compress.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\crc32.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\deflate.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\gzclose.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\gzlib.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\gzread.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\infback.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\inffast.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\inflate.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\inftrees.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\trees.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\uncompr.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\crc32.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\deflate.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\gzguts.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\inffast.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\inffixed.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\inflate.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\inftrees.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\trees.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\zconf.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\zconf.in.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\zlib.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\zlib\zutil.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{37E64149-AE72-4B29-B4D5-45426461EEE2}</ProjectGuid>
+    <ProjectGuid>{1B50C406-2972-4F7F-8DA3-7B4922218988}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>DebugApp</RootNamespace>
+    <RootNamespace>zlib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -72,116 +103,82 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\Bin\$(Configuration)-$(PlatformTarget)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\Bin\$(Configuration)-$(PlatformTarget)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\Bin\$(Configuration)-$(PlatformTarget)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\Bin\$(Configuration)-$(PlatformTarget)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;..\..\..\Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\Source\Include;..\..\..\Dependencies\entityx\include;..\..\..\Dependencies\bx\include\compat\msvc;..\..\..\Dependencies\bx\include;..\..\..\Dependencies\bgfx\include;..\..\..\Dependencies\glfw\include\;..\..\..\Dependencies\glm\;..\..\..\Dependencies\rttr\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\Source\DebugMain.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Libs\assimp\assimp.vcxproj">
-      <Project>{46404063-c93f-448a-9371-3c02b311a03e}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Libs\bgfx\bgfx.vcxproj">
-      <Project>{d23f29d1-429b-4121-abf8-411114d8bb08}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Libs\bimg\bimg.vcxproj">
-      <Project>{611cd704-f574-4a36-9c94-30246fa8b7a3}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Libs\bimg_decode\bimg_decode.vcxproj">
-      <Project>{1c9b4b7e-dbfa-4a59-a078-26f7b8b4fc93}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Libs\brtshaderc\brtshaderc.vcxproj">
-      <Project>{3f7c35b9-3df8-4ae4-bece-33e3e4b7c363}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Libs\bx\bx.vcxproj">
-      <Project>{3aebb6ba-7f39-477e-8c5b-0091a730c0ea}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Libs\rttr\rttr_core.vcxproj">
-      <Project>{d2b00d4d-c29f-3993-b383-eb175eeb8c5d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Libs\zlib\zlib.vcxproj">
-      <Project>{1b50c406-2972-4f7f-8da3-7b4922218988}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\ShaftEngine\ShaftEngine.vcxproj">
-      <Project>{0b3660c1-b8b1-42ca-9e0d-edb461af5fe0}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
