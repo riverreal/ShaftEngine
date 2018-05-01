@@ -20,6 +20,12 @@ namespace Shaft
 		uint32 shaderType;
 		uint32 enabledTextureCount;
 		uint32 enabledConstVecCount;
+
+		template<class Archive>
+		void serialize(Archive& archive)
+		{
+			archive(shaderType, enabledTextureCount, enabledConstVecCount);
+		}
 	};
 
 	struct MaterialInstance

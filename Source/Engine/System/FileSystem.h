@@ -1,6 +1,8 @@
 #pragma once
 
 #include <Shaft/Core.h>
+#include <cereal/archives/binary.hpp>
+#include <cereal/types/memory.hpp>
 #include <fstream>
 
 #define MAX_PACKAGES 10
@@ -46,13 +48,17 @@ namespace Shaft
 
 	template<class T>
 	inline void FileSystem::Deserialize(std::string filename, T& out)
-	{		
-		
+	{
+		std::ifstream is(filename);
+		cereal::BinaryInputArchive iarchive(is);
+		iarchive(out);
 	}
 
 	template<class T>
 	inline void FileSystem::Serialize(std::string filename, const T& in)
 	{
-		
+		std::ofstream os(filename, std::ios::binary);
+		cereal::BinaryOutputArchive archive(os);
+		archive(in);
 	}
 }
