@@ -3,7 +3,6 @@
 #include <Shaft/Core.h>
 #include "../System/ResourceType.h"
 #include <array>
-#include <msgpack.hpp>
 
 namespace Shaft
 {
@@ -21,7 +20,6 @@ namespace Shaft
 		uint32 shaderType;
 		uint32 enabledTextureCount;
 		uint32 enabledConstVecCount;
-		//MSGPACK_DEFINE(shaderType, enabledTextureCount, enabledConstVecCount);
 	};
 
 	struct MaterialInstance
@@ -37,7 +35,6 @@ namespace Shaft
 		uint32 materialID;
 		std::array<uint32, MAX_MATERIAL_TEX> textures;
 		std::array<Vec3f, MAX_MATERIAL_CONST_VEC> constVec;
-		//MSGPACK_DEFINE(materialID, textures, constVec);
 	};
 
 	class MaterialManager

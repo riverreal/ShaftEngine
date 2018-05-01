@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\msgpack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\msgpack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\msgpack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -151,7 +151,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\msgpack\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -359,172 +359,6 @@
     <ClInclude Include="..\..\..\Dependencies\glm\glm\vec3.hpp" />
     <ClInclude Include="..\..\..\Dependencies\glm\glm\vec4.hpp" />
     <ClInclude Include="..\..\..\Dependencies\glm\glm\vector_relational.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\cpp_config.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\cpp_config_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\create_object_visitor.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\create_object_visitor_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\fbuffer.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\fbuffer.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\fbuffer_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\gcc_atomic.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\gcc_atomic.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\iterator.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\iterator_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\meta.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\meta_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\null_visitor.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\null_visitor_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object_fwd.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\object_fwd_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack_define.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\pack_template.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\parse.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\parse_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\parse_return.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\predef.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\preprocessor.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\sbuffer.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\sbuffer.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\sbuffer_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\sysdep.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\type.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack_define.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack_exception.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\unpack_template.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\util.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\adaptor_base.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\adaptor_base_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\array_ref.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\array_ref_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\bool.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\fusion.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\msgpack_variant.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\msgpack_variant_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\optional.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\string_ref.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\boost\string_view.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\carray.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\char_ptr.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\check_container_size.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\check_container_size_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\array.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\array_char.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\array_unsigned_char.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\forward_list.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\reference_wrapper.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\shared_ptr.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\tuple.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\unique_ptr.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\unordered_map.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp11\unordered_set.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp17\optional.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\cpp17\string_view.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\define.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\define_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\deque.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_define_array.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_define_array_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_define_map.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_define_map_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_msgpack_tuple.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp03_msgpack_tuple_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_convert_helper.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_define_array.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_define_array_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_define_map.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_define_map_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_msgpack_tuple.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\detail\cpp11_msgpack_tuple_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\ext.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\ext_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\fixint.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\fixint_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\float.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\int.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\int_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\list.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\map.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\map_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\msgpack_tuple.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\msgpack_tuple_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\nil.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\nil_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\pair.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\raw.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\raw_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\set.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\size_equal_only.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\size_equal_only_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\string.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\tr1\unordered_map.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\tr1\unordered_set.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\v4raw.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\v4raw_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\vector.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\vector_bool.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\vector_char.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\adaptor\vector_unsigned_char.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\cpp_config.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\cpp_config_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\detail\cpp03_zone.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\detail\cpp03_zone_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\detail\cpp11_zone.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\detail\cpp11_zone_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\fbuffer.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\fbuffer_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\iterator.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\iterator_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\meta.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\meta_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\object.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\object_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\object_fwd.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\object_fwd_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\pack.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\pack_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\parse_return.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\preprocessor.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\sbuffer.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\sbuffer_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\unpack.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\unpack_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\unpack_exception.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\version.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\versioning.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\vrefbuffer.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\vrefbuffer_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\zbuffer.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\zbuffer_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\zone.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\v1\zone_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\version.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\version.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\versioning.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\version_master.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\vrefbuffer.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\vrefbuffer.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\vrefbuffer_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\x3_parse.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\x3_parse_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\x3_unpack.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\x3_unpack_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zbuffer.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zbuffer.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zbuffer_decl.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zone.h" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zone.hpp" />
-    <ClInclude Include="..\..\..\Dependencies\msgpack\include\msgpack\zone_decl.hpp" />
     <ClInclude Include="..\..\..\Dependencies\stb\stb_image.h" />
     <ClInclude Include="..\..\..\Source\Engine\Actor.h" />
     <ClInclude Include="..\..\..\Source\Engine\Editor\ShaftEditor.h" />

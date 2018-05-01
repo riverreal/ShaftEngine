@@ -1,6 +1,5 @@
 #include "FileSystem.h"
 #include <fstream>
-#include <rttr/variant.h>
 
 Shaft::FileSystem::FileSystem()
 	:m_packageNames{ "package0","package1","package2","package3","package4"
