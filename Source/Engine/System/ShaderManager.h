@@ -11,7 +11,6 @@ namespace Shaft
 
 	struct ShaderType : ResourceType
 	{
-
 		bgfx::ProgramHandle programHandle;
 	};
 
@@ -22,13 +21,19 @@ namespace Shaft
 		~ShaderManager();
 
 		//vs and fs file without extension
-		uint32 LoadShader(std::string vsFile, std::string fsFile);
-		
+		uint32 LoadShader(const std::string& vsFile, const std::string& fsFile);
+		//Load from compiled shader
+		//Both vs and fs have to have the same name
+		uint32 LoadShader(const std::string& shd);
+#if !SE_BUILD
+		uint32 LoadShader(const std::string& vsFile, const std::string& fsFile, bool save);
+#endif
 		std::vector<ShaderType>& GetShaderTypes();
 
 	private:
 		//Compile and create shaders in realtime
-		uint32 CreateShaderTypeRT(std::string shaderTypeName, std::string vsFile, std::string fsFile);
+		uint32 CreateShaderTypeRT(const std::string& shaderTypeName, const std::string& vsFile, const std::string& fsFile, bool save=false);
+		uint32 CreateShaderType(const std::string& shaderTypeName, const std::string& vsFile, const std::string& fsFile);
 		void DestroyAllShaders();
 
 	private:

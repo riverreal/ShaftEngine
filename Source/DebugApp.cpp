@@ -5,8 +5,7 @@
 #include "Engine/Graphics/Renderer/Renderer.h"
 #include "Engine/System/ResourceManager.h"
 #include "Engine/System/MeshManager.h"
-#include "Engine/Graphics/ShapeBuilder.h"
-#include "Engine/Graphics/ModelBuilder.h"
+#include "Engine/Graphics/MaterialManager.h"
 #include "Engine/System/FileSystem.h"
 #include "Engine/World.h"
 #include <thread>
@@ -41,11 +40,11 @@ void DebugApp::Initialize()
 	m_engine->Initialize();
 
 	m_cube = m_engine->GetWorld().CreateActor();
-	auto meshID = m_engine->GetResourceManager().GetMeshManager().CreateMeshType(ShapeBuilder::CreateSphere(0.5f, 10, 10), "Sphere");
+	auto meshID = m_engine->GetResourceManager().GetMeshManager().LoadShape(ShapeType::Cube);
 	m_cube->AddComponent<MeshComponent>(meshID);
 
 	auto sphere = m_engine->GetWorld().CreateActor();
-	meshID = m_engine->GetResourceManager().GetMeshManager().CreateMeshType(ShapeBuilder::CreateSphere (0.5f, 10, 10), "Sphere");
+	meshID = m_engine->GetResourceManager().GetMeshManager().LoadShape(ShapeType::Sphere);
 	sphere->AddComponent<MeshComponent>(meshID);
 	sphere->GetTransform()->SetPosition(Vec3f(2, 0, 0));
 	m_cube->AddChild(sphere);
@@ -57,12 +56,12 @@ void DebugApp::Initialize()
 
 	auto resourcePath = m_engine->GetResourceManager().GetFileSystem().GetResourcePath();
 	auto model = m_engine->GetWorld().CreateActor();
-	meshID = m_engine->GetResourceManager().GetMeshManager().CreateMeshType(ModelBuilder::CreateModel(resourcePath + "Models/Sword.obj"), "Model");
-	model->AddComponent<MeshComponent>(meshID);
+	meshID = m_engine->GetResourceManager().GetMeshManager().LoadMesh("Sword.obj", 1);
+	auto meshComp = model->AddComponent<MeshComponent>(meshID);
+	meshComp->matInstanceId = m_engine->GetResourceManager().GetMaterialManager().LoadMaterialInstance("redDefault.min", 1);
 	model->GetTransform()->SetPosition(Vec3f(-1, 0, 0));
 	model->GetTransform()->SetScale(Vec3f(0.01f));
 	Animate();
-	
 	//AppInit();
 }
 
@@ -99,7 +98,7 @@ void Shaft::DebugApp::Run()
 		m_engine->GetWorld().GetActors()[1].actor->GetTransform()->SetRotation(q);
 
 		m_tween.Update(dt);
-
+		
 #if SHAFT_EDITOR_ENABLED
 		m_engine->GetEditor().Draw();
 #endif

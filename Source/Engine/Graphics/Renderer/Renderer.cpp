@@ -5,6 +5,7 @@
 #include "../Engine/System/MeshManager.h"
 #include "../Engine/System/ShaderManager.h"
 #include "../Engine/Graphics/TextureManager.h"
+#include "../Engine/Graphics/MaterialManager.h"
 #include <bx/math.h>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
@@ -13,7 +14,6 @@
 #include <glm/gtx/transform.hpp>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <brtshaderc/brtshaderc.h>
 
 using namespace Shaft;
 
@@ -48,13 +48,6 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 	bgfx::setDebug(m_debugFlags);
 
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x000000ff, 1.0f, 0);
-
-	auto shaderID = m_resourceManager->GetShaderManager().LoadShader("Include/UberVS", "Include/UberFS");
-	testProgram = m_resourceManager->GetShaderManager().GetShaderTypes()[shaderID].programHandle;
-	m_color = bgfx::createUniform("u_constVec00", bgfx::UniformType::Vec4);
-	m_texAlbedo = bgfx::createUniform("t_tex00", bgfx::UniformType::Int1);
-	
-	resourceManager->GetTextureManager().LoadTexture("blue.jpg", 1);
 }
 
 void Renderer::Draw()
@@ -72,6 +65,14 @@ void Renderer::Draw()
 
 	bgfx::touch(0);
 	
+	auto mins = m_resourceManager->GetMaterialManager().GetMaterialInstances();
+	auto mats = m_resourceManager->GetMaterialManager().GetMaterials();
+	auto constVecUni = m_resourceManager->GetMaterialManager().GetConstVecUniforms();
+	auto texUni = m_resourceManager->GetMaterialManager().GetTexUniforms();
+	auto shaders = m_resourceManager->GetShaderManager().GetShaderTypes();
+	auto meshes = m_resourceManager->GetMeshManager().GetMeshTypes();
+	auto textures = m_resourceManager->GetTextureManager().GetTextures();
+
 	for (auto& idActor : m_world->GetActors())
 	{
 		auto actor = idActor.actor.get();
@@ -79,21 +80,45 @@ void Renderer::Draw()
 		auto transform = actor->GetEntity().component<Transform>();
 		if (meshComp != nullptr && transform != nullptr)
 		{
-			glm::mat4 mat4 = transform->worldMatrix.GetMat();
-			float* mat = glm::value_ptr(mat4);
-			bgfx::setTransform(mat);
-			float color[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
-			bgfx::setUniform(m_color, &color);
-			auto meshType = m_resourceManager->GetMeshManager().GetMeshTypes()[meshComp->meshId];
+			auto meshType = meshes[meshComp->meshId];
 			if (!meshType.created)
 			{
 				continue;
 			}
-			
+
+			glm::mat4 mat4 = transform->worldMatrix.GetMat();
+			float* mat = glm::value_ptr(mat4);
+			bgfx::setTransform(mat);
+			bool interrupt = false;
+			//Texture uniforms
+			for (int32 i = 0; i < mats[mins[meshComp->matInstanceId].materialID].enabledTextureCount; ++i)
+			{
+				auto texture = textures[mins[meshComp->matInstanceId].textures[i]];
+				if (!texture.created)
+				{
+					std::cout << "Texture not created yet! Load it first before using." << std::endl;
+					bgfx::setTexture(i, texUni[i], textures[0].tex);
+				}
+				else
+				{
+					bgfx::setTexture(i, texUni[i], texture.tex);
+				}
+				
+			}
+
+			if (interrupt)
+			{
+				continue;
+			}
+
+			//Const vec uniforms
+			for (int32 i = 0; i < mats[mins[meshComp->matInstanceId].materialID].enabledConstVecCount; ++i)
+			{
+				bgfx::setUniform(constVecUni[i], (float*)&mins[meshComp->matInstanceId].constVec[i]);
+			}
+
 			bgfx::setVertexBuffer(0, meshType.vb);
 			bgfx::setIndexBuffer(meshType.ib);
-
-			bgfx::setTexture(0, m_texAlbedo, m_resourceManager->GetTextureManager().GetTextures()[0].tex);
 
 			bgfx::setState(0
 				| BGFX_STATE_WRITE_RGB | BGFX_STATE_WRITE_A
@@ -102,7 +127,7 @@ void Renderer::Draw()
 				| BGFX_STATE_PT_TRISTRIP
 			);
 
-			bgfx::submit(0, testProgram);
+			bgfx::submit(0, shaders[mats[mins[meshComp->matInstanceId].materialID].shaderType].programHandle);
 		}
 	}
 
@@ -111,7 +136,5 @@ void Renderer::Draw()
 
 void Renderer::Destroy()
 {
-	bgfx::destroy(m_color);
-	bgfx::destroy(m_texAlbedo);
 	bgfx::shutdown();
 }

@@ -3,6 +3,7 @@
 #include <Shaft/Core.h>
 #include "../System/ResourceType.h"
 #include <array>
+#include <cereal/types/array.hpp>
 
 namespace Shaft
 {
@@ -22,42 +23,62 @@ namespace Shaft
 		uint32 enabledConstVecCount;
 
 		template<class Archive>
-		void serialize(Archive& archive)
+		void serialize(Archive& ar)
 		{
-			archive(shaderType, enabledTextureCount, enabledConstVecCount);
+			ar(shaderType, enabledTextureCount, enabledConstVecCount);
 		}
 	};
 
-	struct MaterialInstance
+	struct MaterialInstance : ResourceType
 	{
 		MaterialInstance()
 			:materialID(0)
 		{
-			for (int32 i = 0; i < MAX_MATERIAL_TEX; ++i)
+			for (auto& tex : textures)
 			{
-				textures[i] = 0;
+				tex = 0;
 			}
 		}
+
 		uint32 materialID;
 		std::array<uint32, MAX_MATERIAL_TEX> textures;
-		std::array<Vec3f, MAX_MATERIAL_CONST_VEC> constVec;
+		std::array<Vec4f, MAX_MATERIAL_CONST_VEC> constVec;
+
+		template<class Archive>
+		void serialize(Archive& ar)
+		{
+			ar(materialID, textures, constVec);
+		}
 	};
 
 	class MaterialManager
 	{
+		friend class ResourceManager;
 	public:
 		MaterialManager(FileSystem* fileSystem);
 		~MaterialManager();
 
-		uint32 LoadMaterial(std::string filename, int32 packageNum);
+		void InitializeUniforms();
+
+		uint32 LoadMaterial(const std::string& filename, int32 packageNum);
+		uint32 LoadMaterial(const std::string& filepath);
+		uint32 LoadMaterialInstance(const std::string& filename, int32 packageNum);
+		uint32 LoadMaterialInstance(const std::string& filepath);
 		std::vector<Material>& GetMaterials();
+		std::vector<MaterialInstance>& GetMaterialInstances();
+		std::array<bgfx::UniformHandle, MAX_MATERIAL_CONST_VEC>& GetConstVecUniforms();
+		std::array<bgfx::UniformHandle, MAX_MATERIAL_TEX>& GetTexUniforms();
 
 	private:
 		void DestroyAllMaterials();
 
 	private:
 		std::vector<Material> m_materials;
+		std::vector<MaterialInstance> m_materialInstances;
 		uint32 m_idCounter;
+		uint32 m_instanceIdCounter;
 		FileSystem* m_fileSystem;
+		std::array<bgfx::UniformHandle, MAX_MATERIAL_CONST_VEC> m_constVecUniforms;
+		std::array<bgfx::UniformHandle, MAX_MATERIAL_TEX> m_textureUniforms;
 	};
 }

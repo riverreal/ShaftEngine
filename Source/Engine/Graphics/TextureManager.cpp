@@ -7,51 +7,58 @@
 
 using namespace Shaft;
 
-class FileReader : public bx::FileReader
-{
-	typedef bx::FileReader super;
-
-public:
-	virtual bool open(const bx::FilePath& _filePath, bx::Error* _err) override
-	{
-		return super::open(_filePath, _err);
-	}
-};
-
 Shaft::TextureManager::TextureManager(FileSystem* fileSystem)
 	:m_idCounter(0), m_fileSystem(fileSystem)
 {
 	static bx::DefaultAllocator alloc;
 	m_allocator = &alloc;
-	m_reader = BX_NEW(m_allocator, FileReader);
 }
 
 Shaft::TextureManager::~TextureManager()
 {
 	DestroyAllTextureHandles();
-	BX_FREE(m_allocator, m_reader);
 }
 
-uint32 Shaft::TextureManager::LoadTexture(std::string fileName, int32 packNum)
+uint32 Shaft::TextureManager::LoadTexture(const std::string& fileName, int32 packNum)
 {
+	if (m_textures.empty())
+	{
+		std::cout << "Textures empty. Could not find texture: " << fileName << std::endl;
+		return 0;
+	}
+
+	uint32 id;
+	bool created = false;
+	bool found = false;
 	std::string filepath = m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packNum));
 	filepath += fileName;
-	std::cout << m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packNum)) << std::endl;
 	for (auto& tex : m_textures)
 	{
-		if (tex.duplicationRef == filepath)
+		if (tex.name == filepath)
 		{
-			std::cout << "Texture already registered" << std::endl;
-			return tex.id;
+			found = true;
+			id = tex.id;
+			created = tex.created;
 		}
 	}
 
-	TextureResource texture;	
-	texture.duplicationRef = filepath;
+	if (!found)
+	{
+		std::cout << "Texture not found" << filepath << std::endl;
+		return 0;
+	}
+
+	if (created)
+	{
+		return id;
+	}
+
+	TextureResource texture;
+	texture.name = filepath;
 	texture.id = m_idCounter;
 
 	uint32 size = 0;
-	void* data = LoadMem(filepath, size);
+	void* data = m_fileSystem->LoadMem(filepath, size);
 	if (data == nullptr)
 	{
 		std::cout << "Texture could not be loaded: " << filepath << std::endl;
@@ -72,8 +79,7 @@ uint32 Shaft::TextureManager::LoadTexture(std::string fileName, int32 packNum)
 	}
 
 	texture.created = true;
-	m_textures.push_back(texture);
-	m_idCounter += 1;
+	m_textures[id] = texture;
 
 	return 0;
 }
@@ -83,31 +89,29 @@ std::vector<TextureResource>& Shaft::TextureManager::GetTextures()
 	return m_textures;
 }
 
-void * Shaft::TextureManager::LoadMem(std::string filepath, uint32 & outSize)
+void Shaft::TextureManager::InitDefaultTextures()
 {
-	if (bx::open(m_reader, filepath.c_str()))
-	{
-		uint32 size = static_cast<uint32>(bx::getSize(m_reader));
-		void* data = BX_ALLOC(m_allocator, size);
-		bx::read(m_reader, data, size);
-		bx::close(m_reader);
-
-		if (NULL != size)
-		{
-			outSize = size;
-		}
-
-		return data;
-	}
-
-	std::cout << "Failed to load image: " << filepath << std::endl;
-	return nullptr;
+	LoadTexture("0default.jpg", 1);
 }
 
 void Shaft::TextureManager::DestroyAllTextureHandles()
 {
 	for (auto& texture : m_textures)
 	{
-		bgfx::destroy(texture.tex);
+		if (texture.created)
+		{
+			bgfx::destroy(texture.tex);
+		}
 	}
+}
+
+void Shaft::TextureManager::PrepareTexture(const std::string& filepath)
+{
+	TextureResource texture;
+	texture.name = filepath;
+	std::cout << "Registered: " << filepath << std::endl;
+	texture.id = m_idCounter;
+	texture.created = false;
+	m_textures.push_back(texture);
+	m_idCounter += 1;
 }

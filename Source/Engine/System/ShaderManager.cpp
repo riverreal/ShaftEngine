@@ -21,7 +21,7 @@ Shaft::ShaderManager::~ShaderManager()
 	DestroyAllShaders();
 }
 
-uint32 Shaft::ShaderManager::LoadShader(std::string vsFile, std::string fsFile)
+uint32 Shaft::ShaderManager::LoadShader(const std::string& vsFile, const std::string& fsFile)
 {
 #if SE_BUILD == false
 	return CreateShaderTypeRT((vsFile + ":" + fsFile), vsFile + ".sc", fsFile + ".sc");
@@ -32,14 +32,26 @@ uint32 Shaft::ShaderManager::LoadShader(std::string vsFile, std::string fsFile)
 	return 0;
 }
 
-uint32 Shaft::ShaderManager::CreateShaderTypeRT(std::string shaderTypeName, std::string vsFile, std::string fsFile)
+uint32 Shaft::ShaderManager::LoadShader(const std::string & shd)
+{
+	return CreateShaderType(shd, shd + ".vs", shd + ".fs");
+}
+
+#if !SE_BUILD
+uint32 Shaft::ShaderManager::LoadShader(const std::string & vsFile, const std::string & fsFile, bool save)
+{
+	return CreateShaderTypeRT((vsFile + ":" + fsFile), vsFile + ".sc", fsFile + ".sc", save);
+}
+#endif
+
+uint32 Shaft::ShaderManager::CreateShaderTypeRT(const std::string& shaderTypeName, const std::string& vsFile, const std::string& fsFile, bool save)
 {
 	bool registered = false;
 	ShaderType* shaderType = nullptr;
 
 	for (auto& shader : m_shaderTypes)
 	{
-		if (shader.duplicationRef == shaderTypeName)
+		if (shader.name == shaderTypeName)
 		{
 			if (shader.created)
 			{
@@ -55,7 +67,7 @@ uint32 Shaft::ShaderManager::CreateShaderTypeRT(std::string shaderTypeName, std:
 	{
 		//register
 		ShaderType stInstance;
-		stInstance.duplicationRef = shaderTypeName;
+		stInstance.name = shaderTypeName;
 		stInstance.id = m_idCounter;
 		m_shaderTypes.push_back(stInstance);
 		m_idCounter++;
@@ -66,9 +78,74 @@ uint32 Shaft::ShaderManager::CreateShaderTypeRT(std::string shaderTypeName, std:
 	bgfx::ShaderHandle vsh = bgfx::createShader(memVsh);
 	const bgfx::Memory* memFsh = shaderc::compileShader(shaderc::ST_FRAGMENT, (m_shaderPath + fsFile).c_str(), (m_shaderPath + "Include").c_str());
 	bgfx::ShaderHandle fsh = bgfx::createShader(memFsh);
+	if (save)
+	{
+		auto path = m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(SHADER_PACKAGE_NUM));
+		m_fileSystem->WriteMem(path + "shader.vs", memVsh);
+		m_fileSystem->WriteMem(path + "shader.fs", memFsh);
+	}
 	shaderType->created = true;
 	shaderType->programHandle = bgfx::createProgram(vsh, fsh, true);
 	
+	return shaderType->id;
+}
+
+uint32 Shaft::ShaderManager::CreateShaderType(const std::string& shaderTypeName, const std::string& vsFile, const std::string& fsFile)
+{
+	bool registered = false;
+	ShaderType* shaderType = nullptr;
+
+	for (auto& shader : m_shaderTypes)
+	{
+		if (shader.name == shaderTypeName)
+		{
+			if (shader.created)
+			{
+				std::cout << "Shader found" << std::endl;
+				return shader.id;
+			}
+			shaderType = &shader;
+			registered = true;
+		}
+	}
+
+	if (!registered)
+	{
+		//register
+		ShaderType stInstance;
+		stInstance.name = shaderTypeName;
+		stInstance.id = m_idCounter;
+		m_shaderTypes.push_back(stInstance);
+		m_idCounter++;
+		shaderType = &m_shaderTypes[stInstance.id];
+	}
+
+	auto shaderPath = m_fileSystem->GetResourcePath();
+
+	bgfx::ShaderHandle vsh;
+	bgfx::ShaderHandle fsh;
+	{
+		uint32 size = 0;
+		auto data = m_fileSystem->LoadMem(vsFile, size);
+		const bgfx::Memory* memVsh = bgfx::alloc(size + 1);
+		bx::memCopy(memVsh->data, data, size);
+		memVsh->data[memVsh->size - 1] = '\0';
+		delete data;
+		vsh = bgfx::createShader(memVsh);
+	}
+	{
+		uint32 size = 0;
+		auto data = m_fileSystem->LoadMem(fsFile, size);
+		const bgfx::Memory* memFsh = bgfx::alloc(size + 1);
+		bx::memCopy(memFsh->data, data, size);
+		memFsh->data[memFsh->size - 1] = '\0';
+		delete data;
+		fsh = bgfx::createShader(memFsh);
+	}
+
+	shaderType->created = true;
+	shaderType->programHandle = bgfx::createProgram(vsh, fsh, true);
+
 	return shaderType->id;
 }
 
@@ -81,6 +158,9 @@ void Shaft::ShaderManager::DestroyAllShaders()
 {
 	for (auto& shader : m_shaderTypes)
 	{
-		bgfx::destroy(shader.programHandle);
+		if (shader.created)
+		{
+			bgfx::destroy(shader.programHandle);
+		}
 	}
 }

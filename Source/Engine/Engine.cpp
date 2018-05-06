@@ -14,6 +14,7 @@ Engine::Engine(EngineConfig& config)
 
 Engine::~Engine()
 {
+	m_resourceManager.reset();
 }
 
 void Engine::SetWindow(std::unique_ptr<WindowHandle> windowHandle)
@@ -44,9 +45,8 @@ void Shaft::Engine::Initialize()
 	m_world = std::make_unique<World>();
 
 	m_resourceManager = std::make_unique<ResourceManager>();
-	m_resourceManager->Initialize();
-
 	m_renderer->Initialize(m_world.get(), m_resourceManager.get());
+	m_resourceManager->Initialize();
 
 #if SHAFT_EDITOR_ENABLED
 	m_editor->Init();

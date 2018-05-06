@@ -107,6 +107,11 @@ namespace Shaft
 		float y;
 		float z;
 		float w;
+		template<class Archive>
+		void serialize(Archive& ar)
+		{
+			ar(x, y, z, w);
+		}
 	};
 
 	struct Color

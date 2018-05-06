@@ -24,8 +24,5 @@ namespace Shaft {
 		uint32 m_height;
 		uint32 m_debugFlags;
 		uint32 m_resetFlags;
-		bgfx::ProgramHandle testProgram;
-		bgfx::UniformHandle m_color;
-		bgfx::UniformHandle m_texAlbedo;
 	};
 }

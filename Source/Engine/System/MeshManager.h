@@ -6,27 +6,41 @@
 
 namespace Shaft
 {
+	class FileSystem;
+
 	struct MeshType : ResourceType
 	{
 		bgfx::VertexBufferHandle vb;
 		bgfx::IndexBufferHandle ib;
-		MeshData meshData;
+	};
+
+	enum ShapeType
+	{
+		Cube,
+		Sphere,
+		Plane
 	};
 
 	class MeshManager
 	{
+		friend class ResourceManager;
 	public:
-		MeshManager(uint32 reserveCount = 0);
+		MeshManager(FileSystem* fileSystem, uint32 reserveCount = 0);
 		~MeshManager();
 
-		//Create a static mesh type
-		uint32 CreateMeshType(MeshData mData, std::string meshName);
+		void InitPrimitiveMesh();
+		uint32 LoadMesh(const std::string& fileName, uint32 packNum);
+		uint32 LoadShape(ShapeType type);
 		std::vector<MeshType>& GetMeshTypes();
+
 	private:
 		void DestroyAllBuffers();
+		void PrepareMesh(const std::string& filepath);
 
 	private:
 		std::vector<MeshType> m_meshTypes;
 		uint32 m_idCounter;
+		uint32 m_cubeID, m_sphereID, m_planeID;
+		FileSystem* m_fileSystem;
 	};
 }

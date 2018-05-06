@@ -7,11 +7,11 @@ namespace Shaft
 	struct ResourceType
 	{
 		ResourceType() 
-			:id(-1), created(false), duplicationRef("")
+			:id(-1), created(false), name("")
 		{}
 
 		uint32 id;
 		bool created;
-		std::string duplicationRef;
+		std::string name;
 	};
 }

@@ -12,7 +12,7 @@ namespace bx
 namespace Shaft
 {
 	class FileSystem;
-
+	
 	struct TextureInfo
 	{
 		int32 width;
@@ -28,15 +28,19 @@ namespace Shaft
 
 	class TextureManager
 	{
+		friend class ResourceManager;
+
 	public:
 		TextureManager(FileSystem* fileSystem);
 		~TextureManager();
 
-		uint32 LoadTexture(std::string fileName, int32 packNum);
+		uint32 LoadTexture(const std::string& fileName, int32 packNum);
 		std::vector<TextureResource>& GetTextures();
+		void InitDefaultTextures();
+
 	private:
-		void* LoadMem(std::string filepath, uint32& outSize);
 		void DestroyAllTextureHandles();
+		void PrepareTexture(const std::string& filepath);
 
 	private:
 		std::vector<TextureResource> m_textures;

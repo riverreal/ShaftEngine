@@ -1,1 +1,1 @@
-{"tex": ["/package1/blue.jpg"], "mesh": ["/Models/Sword.obj"], "mat": []}
+{"in": {"tex": ["/package1/0default.jpg", "/package1/blue.jpg"], "mesh": ["/package1/Sword.obj"], "shd": ["/package0/0Default"], "mat": ["/package1/default.mat"], "min": ["/package1/default.min", "/package1/redDefault.min"]}}
