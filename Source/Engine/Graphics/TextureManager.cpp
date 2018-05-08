@@ -109,7 +109,6 @@ void Shaft::TextureManager::PrepareTexture(const std::string& filepath)
 {
 	TextureResource texture;
 	texture.name = filepath;
-	std::cout << "Registered: " << filepath << std::endl;
 	texture.id = m_idCounter;
 	texture.created = false;
 	m_textures.push_back(texture);

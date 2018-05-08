@@ -53,7 +53,6 @@ uint32 Shaft::MaterialManager::LoadMaterial(const std::string& filepath)
 	{
 		if (mate.name == filepath)
 		{
-			std::cout << "Material already regitered" << std::endl;
 			return mate.id;
 		}
 	}
@@ -80,7 +79,6 @@ uint32 Shaft::MaterialManager::LoadMaterialInstance(const std::string& filepath)
 	{
 		if (mate.name == filepath)
 		{
-			std::cout << "Material already regitered" << std::endl;
 			return mate.id;
 		}
 	}

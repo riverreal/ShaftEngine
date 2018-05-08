@@ -55,7 +55,6 @@ uint32 Shaft::ShaderManager::CreateShaderTypeRT(const std::string& shaderTypeNam
 		{
 			if (shader.created)
 			{
-				std::cout << "Shader found" << std::endl;
 				return shader.id;
 			}
 			shaderType = &shader;
@@ -101,7 +100,6 @@ uint32 Shaft::ShaderManager::CreateShaderType(const std::string& shaderTypeName,
 		{
 			if (shader.created)
 			{
-				std::cout << "Shader found" << std::endl;
 				return shader.id;
 			}
 			shaderType = &shader;
