@@ -71,6 +71,7 @@ namespace Shaft
 
 	private:
 		void DestroyAllMaterials();
+		void DestroyAllUniforms();
 
 	private:
 		std::vector<Material> m_materials;

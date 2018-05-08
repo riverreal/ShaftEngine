@@ -20,6 +20,7 @@ Shaft::MaterialManager::MaterialManager(FileSystem * fileSystem)
 Shaft::MaterialManager::~MaterialManager()
 {
 	DestroyAllMaterials();
+	DestroyAllUniforms();
 }
 
 void Shaft::MaterialManager::InitializeUniforms()
@@ -115,4 +116,17 @@ std::array<bgfx::UniformHandle, MAX_MATERIAL_TEX>& Shaft::MaterialManager::GetTe
 
 void Shaft::MaterialManager::DestroyAllMaterials()
 {
+}
+
+void Shaft::MaterialManager::DestroyAllUniforms()
+{
+	for (auto& uni : m_constVecUniforms)
+	{
+		bgfx::destroy(uni);
+	}
+
+	for (auto& uni : m_textureUniforms)
+	{
+		bgfx::destroy(uni);
+	}
 }

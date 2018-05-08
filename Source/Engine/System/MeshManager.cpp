@@ -112,7 +112,11 @@ void Shaft::MeshManager::DestroyAllBuffers()
 		if (meshType.created)
 		{
 			bgfx::destroy(meshType.vb);
-			bgfx::destroy(meshType.ib);
+			if (bgfx::isValid(meshType.ib))
+			{
+				bgfx::destroy(meshType.ib);
+			}
+			
 		}
 	}
 }
@@ -177,10 +181,10 @@ void Shaft::MeshManager::InitPrimitiveMesh()
 		uint16 stride = Vertex::declaration.getStride();
 		const bgfx::Memory* vertexMem = bgfx::alloc(meshData.vertices.size() * stride);
 		bx::memCopy(vertexMem->data, meshData.vertices.data(), vertexMem->size);
-		const bgfx::Memory* indexMem = bgfx::alloc(meshData.indices.size() * sizeof(uint16));
-		bx::memCopy(indexMem->data, meshData.indices.data(), indexMem->size);
+		//const bgfx::Memory* indexMem = bgfx::alloc(meshData.indices.size() * sizeof(uint16));
+		//bx::memCopy(indexMem->data, meshData.indices.data(), indexMem->size);
 		mesh.vb = bgfx::createVertexBuffer(vertexMem, Vertex::declaration);
-		mesh.ib = bgfx::createIndexBuffer(indexMem);
+		mesh.ib = BGFX_INVALID_HANDLE;//bgfx::createIndexBuffer(indexMem);
 		m_meshTypes.push_back(mesh);
 		m_idCounter++;
 	}
