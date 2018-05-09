@@ -14,7 +14,7 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 	unsigned int numberOfMeshs;
 	
 	Assimp::Importer imp;
-
+	
 	auto scene = imp.ReadFile( fileName, aiProcess_CalcTangentSpace | 
 								aiProcess_Triangulate |
 								aiProcess_GenSmoothNormals |
@@ -26,6 +26,7 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 	if (scene == NULL)
 	{
 		std::cout << "Assimp scene couldn't load: " << fileName << std::endl;
+		std::cout << imp.GetErrorString() << std::endl;
 		return data;
 	}
 

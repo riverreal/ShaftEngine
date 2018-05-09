@@ -15,7 +15,7 @@ from os.path import isfile, join
 
 #extensions
 IMAGE_EXT = ['.jpg','.png']
-MESH_EXT = ['.obj', '.fbx']
+MESH_EXT = ['.obj', '.fbx', 'glb']
 MAT_EXT = ['.mat']
 MAT_INST_EXT = ['.min']
 SHD_EXT = ['.vs']
