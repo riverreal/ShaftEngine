@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{30e0ea54-a0cf-4f46-a938-5ddaf69f0854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{f98bdf81-fced-4147-a4a4-8ad6856c9c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty">
+      <UniqueIdentifier>{46d54802-a588-4c6d-803c-31686bed776e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\asm\jump_x86_64_ms_pe_masm.asm">
+      <Filter>3rdparty</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\asm\make_x86_64_ms_pe_masm.asm">
+      <Filter>3rdparty</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include\boost_context\fcontext.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\include\ftl\atomic_counter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\include\ftl\config.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\include\ftl\fiber.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\include\ftl\task.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\include\ftl\task_scheduler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\include\ftl\thread_abstraction.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\include\ftl\typedefs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\FiberTaskingLib\include\ftl\wait_free_queue.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Dependencies\FiberTaskingLib\source\atomic_counter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\FiberTaskingLib\source\task_scheduler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\asm\jump_i386_ms_pe_masm.asm">
+      <Filter>3rdparty</Filter>
+    </MASM>
+    <MASM Include="..\..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\asm\make_i386_ms_pe_masm.asm">
+      <Filter>3rdparty</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

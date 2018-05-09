@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\FiberTaskingLib\include;$(ProjectDir)..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\FiberTaskingLib\include;$(ProjectDir)..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;WIN32;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\FiberTaskingLib\include;$(ProjectDir)..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -151,7 +151,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>VK_USE_PLATFORM_WIN32_KHR;VK_USE_PLATFORM_WIN32_KHR;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);VK_USE_PLATFORM_WIN32_KHR</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\FiberTaskingLib\include;$(ProjectDir)..\..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -542,6 +542,9 @@
     </ProjectReference>
     <ProjectReference Include="..\Libs\bx\bx.vcxproj">
       <Project>{3aebb6ba-7f39-477e-8c5b-0091a730c0ea}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\FiberTaskingLib\FiberTaskingLib.vcxproj">
+      <Project>{04fa8be5-0e0a-4be8-9156-97c0eb5bef61}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Libs\glfw\glfw.vcxproj">
       <Project>{8b537b7f-195c-4795-b637-2d38173983f3}</Project>
