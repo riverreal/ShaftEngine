@@ -6,6 +6,7 @@
 #include "Engine/System/ResourceManager.h"
 #include "Engine/System/MeshManager.h"
 #include "Engine/Graphics/MaterialManager.h"
+#include "Engine/Graphics/TextureManager.h"
 #include "Engine/System/FileSystem.h"
 #include "Engine/World.h"
 #include <thread>
@@ -56,11 +57,11 @@ void DebugApp::Initialize()
 
 	auto resourcePath = m_engine->GetResourceManager().GetFileSystem().GetResourcePath();
 	auto model = m_engine->GetWorld().CreateActor();
-	meshID = m_engine->GetResourceManager().GetMeshManager().LoadMesh("Sword.obj", 1);
+	meshID = m_engine->GetResourceManager().GetMeshManager().LoadMesh("ship.glb", 1);
 	auto meshComp = model->AddComponent<MeshComponent>(meshID);
 	meshComp->matInstanceId = m_engine->GetResourceManager().GetMaterialManager().LoadMaterialInstance("redDefault.min", 1);
 	model->GetTransform()->SetPosition(Vec3f(-1, 0, 0));
-	model->GetTransform()->SetScale(Vec3f(0.01f));
+	model->GetTransform()->SetScale(Vec3f(1.0f));
 	Animate();
 	//AppInit();
 }
@@ -96,6 +97,10 @@ void Shaft::DebugApp::Run()
 		quat = m_engine->GetWorld().GetActors()[1].actor->GetTransform()->GetRotation().GetQuat();
 		q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
 		m_engine->GetWorld().GetActors()[1].actor->GetTransform()->SetRotation(q);
+
+		quat = m_engine->GetWorld().GetActors()[3].actor->GetTransform()->GetRotation().GetQuat();
+		q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
+		m_engine->GetWorld().GetActors()[3].actor->GetTransform()->SetRotation(q);
 
 		m_tween.Update(dt);
 		

@@ -103,7 +103,6 @@ void Renderer::Draw()
 				{
 					bgfx::setTexture(i, texUni[i], texture.tex);
 				}
-				
 			}
 
 			if (interrupt)
@@ -121,10 +120,12 @@ void Renderer::Draw()
 			bgfx::setIndexBuffer(meshType.ib);
 
 			bgfx::setState(0
-				| BGFX_STATE_WRITE_RGB | BGFX_STATE_WRITE_A
-				| BGFX_STATE_WRITE_Z | BGFX_STATE_DEPTH_TEST_LESS
-				| BGFX_STATE_CULL_CW | BGFX_STATE_MSAA
-				| BGFX_STATE_PT_TRISTRIP
+				| BGFX_STATE_WRITE_RGB 
+				| BGFX_STATE_WRITE_A
+				| BGFX_STATE_WRITE_Z 
+				| BGFX_STATE_DEPTH_TEST_LESS
+				| BGFX_STATE_MSAA 
+				| (uint32)meshComp->states.culling
 			);
 
 			bgfx::submit(0, shaders[mats[mins[meshComp->matInstanceId].materialID].shaderType].programHandle);

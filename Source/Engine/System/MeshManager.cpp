@@ -65,8 +65,7 @@ uint32 Shaft::MeshManager::LoadMesh(const std::string& fileName, uint32 packNum)
 	uint16 stride = Vertex::declaration.getStride();
 	const bgfx::Memory* vertexMem = bgfx::alloc(meshData.vertices.size() * stride);
 	bx::memCopy(vertexMem->data, meshData.vertices.data(), vertexMem->size);
-
-	const bgfx::Memory* indexMem = bgfx::alloc(meshData.indices.size() * sizeof(uint16));
+	const bgfx::Memory* indexMem = bgfx::alloc(meshData.indices.size() * sizeof(meshData.indices[0]));
 	bx::memCopy(indexMem->data, meshData.indices.data(), indexMem->size);
 
 	//Vertex buffer

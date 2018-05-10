@@ -6,8 +6,7 @@ namespace Shaft
 {
 	struct Vertex
 	{
-		Vertex();
-		Vertex(float px, float py, float pz,
+		void Set(float px, float py, float pz,
 			float nx, float ny, float nz,
 			float tx, float ty, float tz,
 			float u, float v);
@@ -22,10 +21,10 @@ namespace Shaft
 		float posX;
 		float posY;
 		float posZ;
-		uint32 normal;
-		uint32 tangent;
 		float texU;
 		float texV;
+		uint32 normal;
+		uint32 tangent;
 		static bgfx::VertexDecl declaration;
 	};
 

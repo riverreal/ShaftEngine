@@ -14,14 +14,15 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 	unsigned int numberOfMeshs;
 	
 	Assimp::Importer imp;
-	
 	auto scene = imp.ReadFile( fileName, aiProcess_CalcTangentSpace | 
 								aiProcess_Triangulate |
 								aiProcess_GenSmoothNormals |
 								aiProcess_SplitLargeMeshes |
-								aiProcess_MakeLeftHanded |
 								aiProcess_SortByPType |
-								aiProcess_PreTransformVertices);
+								aiProcess_ImproveCacheLocality |
+								aiProcess_JoinIdenticalVertices |
+								aiProcess_OptimizeGraph |
+								aiProcess_OptimizeMeshes );
 
 	if (scene == NULL)
 	{
@@ -32,7 +33,6 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 
 	numberOfMeshs = scene->mNumMeshes;
 	
-
 	std::vector<Vertex> vertices;
 	std::vector<UINT> indices;
 
@@ -47,7 +47,7 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 		{
 			for (UINT j = 0; j < mesh->mNumVertices; j++)
 			{
-				Vertex v;
+				Vertex v = {};
 
 				v.SetPorsition(mesh->mVertices[j].x, mesh->mVertices[j].y, mesh->mVertices[j].z);
 				v.SetNormal(mesh->mNormals[j].x, mesh->mNormals[j].y, mesh->mNormals[j].z);
@@ -55,8 +55,8 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 
 				if (mesh->HasTextureCoords(0))
 				{
-					v.texV = mesh->mTextureCoords[0][j].x;
-					v.texU = mesh->mTextureCoords[0][j].y;
+					v.texU = (float)abs((float)mesh->mTextureCoords[0][j].x);
+					v.texV = (float)mesh->mTextureCoords[0][j].y;
 				}
 				
 				data.vertices.push_back(v);
