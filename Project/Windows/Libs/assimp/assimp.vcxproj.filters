@@ -558,6 +558,123 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\zlib\zutil.c">
       <Filter>3rdparty</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Geometry.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Material.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Postprocess.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\CInterfaceIOWrapper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\CreateAnimMesh.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\D3MFExporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\EmbedTexturesProcess.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXExporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXExportNode.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXExportProperty.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FIReader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\glTF2Exporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\glTF2Importer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\MMDImporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\MMDPmxParser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ScaleProcess.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\scene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\simd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DExporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Geometry2D.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Geometry3D.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Group.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Light.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Metadata.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Networking.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Postprocess.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Rendering.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Shape.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Texturing.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DVocabulary.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.cpp">
+      <Filter>3rdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.cpp">
+      <Filter>3rdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVectorEncoder.cpp">
+      <Filter>3rdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTools.cpp">
+      <Filter>3rdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleFans.cpp">
+      <Filter>3rdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLStream.cpp">
+      <Filter>3rdparty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\zip\src\zip.c">
+      <Filter>3rdparty</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\3DSExporter.h">
@@ -699,9 +816,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\Exceptional.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\fast_atof.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXCompileConfig.h">
@@ -1214,6 +1328,144 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\zlib\zutil.h">
       <Filter>3rdparty</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\3MFXmlTags.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Macro.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Node.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\D3MFExporter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\EmbedTexturesProcess.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXCommon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXExporter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXExportNode.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXExportProperty.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FIReader.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTF2Asset.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTF2AssetWriter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTF2Exporter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTF2Importer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDCpp14.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDImporter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDPmdParser.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDPmxParser.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDVmdParser.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ScaleProcess.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\simd.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\X3DExporter.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Macro.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Node.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcAdjacencyInfo.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcBinaryStream.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcCommon.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDVEncodeParams.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVector.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVectorEncoder.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcFIFO.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcIndexedFaceSet.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCDecoder.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCEncodeParams.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCEncoder.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTimer.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleFans.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListDecoder.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcVector.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\zip\src\miniz.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\zip\src\zip.h">
+      <Filter>3rdparty</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Dependencies\assimp\scr\BlenderDNA.inl">
@@ -1225,11 +1477,40 @@
     <None Include="..\..\..\..\Dependencies\assimp\scr\glTFAssetWriter.inl">
       <Filter>src</Filter>
     </None>
-    <None Include="..\..\..\..\Dependencies\assimp\scr\makefile.mingw">
-      <Filter>src</Filter>
-    </None>
     <None Include="..\..\..\..\Dependencies\assimp\scr\SmoothingGroups.inl">
       <Filter>src</Filter>
     </None>
+    <None Include="..\..\..\..\Dependencies\assimp\scr\cmake_install.cmake">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\assimp\scr\glTF2Asset.inl">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\assimp\scr\glTF2AssetWriter.inl">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcIndexedFaceSet.inl">
+      <Filter>3rdparty</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCDecoder.inl">
+      <Filter>3rdparty</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCEncoder.inl">
+      <Filter>3rdparty</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListDecoder.inl">
+      <Filter>3rdparty</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.inl">
+      <Filter>3rdparty</Filter>
+    </None>
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcVector.inl">
+      <Filter>3rdparty</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\Dependencies\assimp\scr\CMakeLists.txt">
+      <Filter>src</Filter>
+    </Text>
   </ItemGroup>
 </Project>

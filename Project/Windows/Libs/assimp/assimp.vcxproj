@@ -90,9 +90,9 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\unzip;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -106,9 +106,9 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\unzip;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -123,9 +123,9 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\unzip;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -142,9 +142,9 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\unzip;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -164,10 +164,16 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\clipper\clipper.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\ConvertUTF\ConvertUTF.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVectorEncoder.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTools.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleFans.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\DDLNode.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLCommon.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLExport.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLParser.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\OpenDDLStream.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\openddlparser\code\Value.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\shapes.cc" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\advancing_front.cc" />
@@ -176,6 +182,7 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\sweep\sweep_context.cc" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\unzip\ioapi.c" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\unzip\unzip.c" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\zip\src\zip.c" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\zlib\adler32.c" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\zlib\compress.c" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\contrib\zlib\crc32.c" />
@@ -195,6 +202,10 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\3DSExporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\3DSLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ACLoader.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Geometry.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Material.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Postprocess.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ASELoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ASEParser.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\AssbinExporter.cpp" />
@@ -215,13 +226,16 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\BVHLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\C4DImporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\CalcTangentsProcess.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\CInterfaceIOWrapper.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\COBLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ColladaExporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ColladaLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ColladaParser.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ComputeUVMappingProcess.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ConvertToLHProcess.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\CreateAnimMesh.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\CSMLoader.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\D3MFExporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\D3MFImporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\D3MFOpcPackage.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\DeboneProcess.cpp" />
@@ -229,6 +243,7 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\DefaultIOSystem.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\DefaultLogger.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\DXFLoader.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\EmbedTexturesProcess.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\Exporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXAnimation.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXBinaryTokenizer.cpp" />
@@ -236,6 +251,9 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXDeformer.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXDocument.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXDocumentUtil.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXExporter.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXExportNode.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXExportProperty.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXImporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXMaterial.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FBXMeshGeometry.cpp" />
@@ -248,9 +266,12 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FindDegenerates.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FindInstancesProcess.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FindInvalidDataProcess.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FIReader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\FixNormalsStep.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\GenFaceNormalsProcess.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\GenVertexNormalsProcess.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\glTF2Exporter.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\glTF2Importer.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\glTFExporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\glTFImporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\HMPLoader.cpp" />
@@ -285,6 +306,8 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\MDCLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\MDLLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\MDLMaterialLoader.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\MMDImporter.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\MMDPmxParser.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\MS3DLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\NDOLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\NFFLoader.cpp" />
@@ -316,10 +339,13 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\RemoveComments.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\RemoveRedundantMaterials.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\RemoveVCProcess.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ScaleProcess.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\scene.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\SceneCombiner.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ScenePreprocessor.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\SGSpatialSort.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\SIBImporter.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\simd.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\SkeletonMeshBuilder.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\SMDLoader.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\SortByPTypeProcess.cpp" />
@@ -341,6 +367,19 @@
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\ValidateDataStructure.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\Version.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\VertexTriangleAdjacency.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DExporter.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Geometry2D.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Geometry3D.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Group.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Light.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Metadata.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Networking.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Postprocess.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Rendering.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Shape.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Texturing.cpp" />
+    <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\X3DVocabulary.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\XFileExporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\XFileImporter.cpp" />
     <ClCompile Include="..\..\..\..\Dependencies\assimp\scr\XFileParser.cpp" />
@@ -351,6 +390,24 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\ConvertUTF\ConvertUTF.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\irrXML\CXMLReaderImpl.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\irrXML\heapsort.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcAdjacencyInfo.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcBinaryStream.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcCommon.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDVEncodeParams.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVector.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcDynamicVectorEncoder.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcFIFO.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcIndexedFaceSet.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCDecoder.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCEncodeParams.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCEncoder.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTimer.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleFans.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListDecoder.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcVector.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\shapes.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\common\utils.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\poly2tri\poly2tri\poly2tri.h" />
@@ -361,6 +418,8 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\crypt.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\ioapi.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\unzip\unzip.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\zip\src\miniz.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\zip\src\zip.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\zlib\crc32.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\zlib\deflate.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\contrib\zlib\gzguts.h" />
@@ -376,7 +435,11 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\3DSExporter.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\3DSHelper.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\3DSLoader.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\3MFXmlTags.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ACLoader.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter.hpp" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Macro.hpp" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\AMFImporter_Node.hpp" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ASELoader.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ASEParser.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\AssbinExporter.h" />
@@ -410,6 +473,7 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ComputeUVMappingProcess.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ConvertToLHProcess.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\CSMLoader.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\D3MFExporter.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\D3MFImporter.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\D3MFOpcPackage.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\DeboneProcess.h" />
@@ -419,12 +483,16 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\Defines.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\DXFHelper.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\DXFLoader.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\EmbedTexturesProcess.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\Exceptional.h" />
-    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\fast_atof.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXCommon.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXCompileConfig.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXConverter.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXDocument.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXDocumentUtil.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXExporter.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXExportNode.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXExportProperty.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXImporter.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXImportSettings.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FBXMeshGeometry.h" />
@@ -437,10 +505,15 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FindDegenerates.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FindInstancesProcess.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FindInvalidDataProcess.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FIReader.hpp" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\FixNormalsStep.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\GenericProperty.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\GenFaceNormalsProcess.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\GenVertexNormalsProcess.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTF2Asset.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTF2AssetWriter.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTF2Exporter.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTF2Importer.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTFAsset.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTFAssetWriter.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\glTFExporter.h" />
@@ -486,6 +559,11 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MDLFileData.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MDLLoader.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MemoryIOWrapper.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDCpp14.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDImporter.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDPmdParser.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDPmxParser.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MMDVmdParser.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\MS3DLoader.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\NDOLoader.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\NFFLoader.h" />
@@ -524,11 +602,13 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\RemoveComments.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\RemoveRedundantMaterials.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\RemoveVCProcess.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ScaleProcess.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\SceneCombiner.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ScenePreprocessor.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\ScenePrivate.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\SGSpatialSort.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\SIBImporter.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\simd.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\SkeletonMeshBuilder.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\SMDLoader.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\SmoothingGroups.h" />
@@ -559,6 +639,10 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\Vertex.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\VertexTriangleAdjacency.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\Win32DebugLogStream.h" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\X3DExporter.hpp" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter.hpp" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Macro.hpp" />
+    <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\X3DImporter_Node.hpp" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\XFileExporter.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\XFileHelper.h" />
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\XFileImporter.h" />
@@ -567,11 +651,22 @@
     <ClInclude Include="..\..\..\..\Dependencies\assimp\scr\XMLTools.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcIndexedFaceSet.inl" />
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCDecoder.inl" />
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcSC3DMCEncoder.inl" />
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListDecoder.inl" />
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.inl" />
+    <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcVector.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\BlenderDNA.inl" />
+    <None Include="..\..\..\..\Dependencies\assimp\scr\cmake_install.cmake" />
+    <None Include="..\..\..\..\Dependencies\assimp\scr\glTF2Asset.inl" />
+    <None Include="..\..\..\..\Dependencies\assimp\scr\glTF2AssetWriter.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\glTFAsset.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\glTFAssetWriter.inl" />
-    <None Include="..\..\..\..\Dependencies\assimp\scr\makefile.mingw" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\SmoothingGroups.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\Dependencies\assimp\scr\CMakeLists.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

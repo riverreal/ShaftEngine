@@ -46,7 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "STEPFileReader.h"
 #include "STEPFileEncoding.h"
 #include "TinyFormatter.h"
-#include "fast_atof.h"
+#include "assimp/fast_atof.h"
 #include <memory>
 
 

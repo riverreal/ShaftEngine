@@ -42,7 +42,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @brief STEP character handling, string unescaping
  */
 #include "STEPFileEncoding.h"
-#include "fast_atof.h"
+#include "assimp/fast_atof.h"
 
 #include "../contrib/ConvertUTF/ConvertUTF.h"
 #include <memory>

@@ -7,6 +7,8 @@
 
 #ifndef ZCONF_H
 #define ZCONF_H
+/* #undef Z_PREFIX */
+/* #undef Z_HAVE_UNISTD_H */
 
 /*
  * If you *really* need a unique prefix for all types and library functions,
@@ -277,6 +279,7 @@
  the default memory requirements from 256K to 128K, compile with
      make CFLAGS="-O -DMAX_WBITS=14 -DMAX_MEM_LEVEL=7"
  Of course this will generally degrade compression (there's no free lunch).
+
    The memory requirements for inflate are (in bytes) 1 << windowBits
  that is, 32K for windowBits=15 (default value) plus about 7 kilobytes
  for small objects.

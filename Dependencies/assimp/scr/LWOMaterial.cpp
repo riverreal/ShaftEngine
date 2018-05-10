@@ -3,7 +3,9 @@
 Open Asset Import Library (assimp)
 ---------------------------------------------------------------------------
 
-Copyright (c) 2006-2016, assimp team
+Copyright (c) 2006-2018, assimp team
+
+
 
 All rights reserved.
 
@@ -47,7 +49,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // internal headers
 #include "LWOLoader.h"
-#include "ByteSwapper.h"
+#include <assimp/ByteSwapper.h>
 
 
 using namespace Assimp;
@@ -72,7 +74,7 @@ inline aiTextureMapMode GetMapMode(LWO::Texture::Wrap in)
             return aiTextureMapMode_Mirror;
 
         case LWO::Texture::RESET:
-            DefaultLogger::get()->warn("LWO2: Unsupported texture map mode: RESET");
+            ASSIMP_LOG_WARN("LWO2: Unsupported texture map mode: RESET");
 
             // fall though here
         case LWO::Texture::EDGE:
@@ -115,7 +117,7 @@ bool LWOImporter::HandleTextures(aiMaterial* pcMat, const TextureList& in, aiTex
                 mapping = aiTextureMapping_BOX;
                 break;
             case LWO::Texture::FrontProjection:
-                DefaultLogger::get()->error("LWO2: Unsupported texture mapping: FrontProjection");
+                ASSIMP_LOG_ERROR("LWO2: Unsupported texture mapping: FrontProjection");
                 mapping = aiTextureMapping_OTHER;
                 break;
             case LWO::Texture::UV:
@@ -141,13 +143,13 @@ bool LWOImporter::HandleTextures(aiMaterial* pcMat, const TextureList& in, aiTex
             aiVector3D v;
             switch (texture.majorAxis) {
                 case Texture::AXIS_X:
-                    v = aiVector3D(1.f,0.f,0.f);
+                    v = aiVector3D(1.0,0.0,0.0);
                     break;
                 case Texture::AXIS_Y:
-                    v = aiVector3D(0.f,1.f,0.f);
+                    v = aiVector3D(0.0,1.0,0.0);
                     break;
                 default: // case Texture::AXIS_Z:
-                    v = aiVector3D(0.f,0.f,1.f);
+                    v = aiVector3D(0.0,0.0,1.0);
                     break;
             }
 
@@ -159,10 +161,10 @@ bool LWOImporter::HandleTextures(aiMaterial* pcMat, const TextureList& in, aiTex
                 trafo.mScaling.x = texture.wrapAmountW;
                 trafo.mScaling.y = texture.wrapAmountH;
 
-                static_assert(sizeof(aiUVTransform)/sizeof(float) == 5, "sizeof(aiUVTransform)/sizeof(float) == 5");
+                static_assert(sizeof(aiUVTransform)/sizeof(ai_real) == 5, "sizeof(aiUVTransform)/sizeof(ai_real) == 5");
                 pcMat->AddProperty(&trafo,1,AI_MATKEY_UVTRANSFORM(type,cur));
             }
-            DefaultLogger::get()->debug("LWO2: Setting up non-UV mapping");
+            ASSIMP_LOG_DEBUG("LWO2: Setting up non-UV mapping");
         }
 
         // The older LWOB format does not use indirect references to clips.
@@ -179,7 +181,7 @@ bool LWOImporter::HandleTextures(aiMaterial* pcMat, const TextureList& in, aiTex
 
             }
             if (candidate == end)   {
-                DefaultLogger::get()->error("LWO2: Clip index is out of bounds");
+                ASSIMP_LOG_ERROR("LWO2: Clip index is out of bounds");
                 temp = 0;
 
                 // fixme: apparently some LWO files shipping with Doom3 don't
@@ -192,7 +194,7 @@ bool LWOImporter::HandleTextures(aiMaterial* pcMat, const TextureList& in, aiTex
             }
             else {
                 if (Clip::UNSUPPORTED == (*candidate).type) {
-                    DefaultLogger::get()->error("LWO2: Clip type is not supported");
+                    ASSIMP_LOG_ERROR("LWO2: Clip type is not supported");
                     continue;
                 }
                 AdjustTexturePath((*candidate).path);
@@ -210,7 +212,7 @@ bool LWOImporter::HandleTextures(aiMaterial* pcMat, const TextureList& in, aiTex
         {
             std::string ss = texture.mFileName;
             if (!ss.length()) {
-                DefaultLogger::get()->error("LWOB: Empty file name");
+                ASSIMP_LOG_WARN("LWOB: Empty file name");
                 continue;
             }
             AdjustTexturePath(ss);
@@ -244,7 +246,7 @@ bool LWOImporter::HandleTextures(aiMaterial* pcMat, const TextureList& in, aiTex
 
             default:
                 temp = (unsigned int)aiTextureOp_Multiply;
-                DefaultLogger::get()->warn("LWO2: Unsupported texture blend mode: alpha or displacement");
+                ASSIMP_LOG_WARN("LWO2: Unsupported texture blend mode: alpha or displacement");
 
         }
         // Setup texture operation
@@ -286,17 +288,17 @@ void LWOImporter::ConvertMaterial(const LWO::Surface& surf,aiMaterial* pcMat)
     {
         float fGloss;
         if (mIsLWO2)    {
-            fGloss = std::pow( surf.mGlossiness*10.0f+2.0f, 2.0f);
+            fGloss = std::pow( surf.mGlossiness*ai_real( 10.0 )+ ai_real( 2.0 ), ai_real( 2.0 ) );
         }
         else
         {
-            if (16.0f >= surf.mGlossiness)
-                fGloss = 6.0f;
-            else if (64.0f >= surf.mGlossiness)
-                fGloss = 20.0f;
-            else if (256.0f >= surf.mGlossiness)
-                fGloss = 50.0f;
-            else fGloss = 80.0f;
+            if (16.0 >= surf.mGlossiness)
+                fGloss = 6.0;
+            else if (64.0 >= surf.mGlossiness)
+                fGloss = 20.0;
+            else if (256.0 >= surf.mGlossiness)
+                fGloss = 50.0;
+            else fGloss = 80.0;
         }
 
         pcMat->AddProperty(&surf.mSpecularValue,1,AI_MATKEY_SHININESS_STRENGTH);
@@ -306,17 +308,17 @@ void LWOImporter::ConvertMaterial(const LWO::Surface& surf,aiMaterial* pcMat)
     else m = aiShadingMode_Gouraud;
 
     // specular color
-    aiColor3D clr = lerp( aiColor3D(1.f,1.f,1.f), surf.mColor, surf.mColorHighlights );
+    aiColor3D clr = lerp( aiColor3D(1.0,1.0,1.0), surf.mColor, surf.mColorHighlights );
     pcMat->AddProperty(&clr,1,AI_MATKEY_COLOR_SPECULAR);
     pcMat->AddProperty(&surf.mSpecularValue,1,AI_MATKEY_SHININESS_STRENGTH);
 
     // emissive color
     // luminosity is not really the same but it affects the surface in a similar way. Some scaling looks good.
-    clr.g = clr.b = clr.r = surf.mLuminosity*0.8f;
+    clr.g = clr.b = clr.r = surf.mLuminosity*ai_real( 0.8 );
     pcMat->AddProperty<aiColor3D>(&clr,1,AI_MATKEY_COLOR_EMISSIVE);
 
     // opacity ... either additive or default-blended, please
-    if (0.f != surf.mAdditiveTransparency)  {
+    if (0.0 != surf.mAdditiveTransparency)  {
 
         const int add = aiBlendMode_Additive;
         pcMat->AddProperty(&surf.mAdditiveTransparency,1,AI_MATKEY_OPACITY);
@@ -345,29 +347,29 @@ void LWOImporter::ConvertMaterial(const LWO::Surface& surf,aiMaterial* pcMat)
     // the surface and  search for a name which we know ...
     for (const auto &shader : surf.mShaders)   {
         if (shader.functionName == "LW_SuperCelShader" || shader.functionName == "AH_CelShader")  {
-            DefaultLogger::get()->info("LWO2: Mapping LW_SuperCelShader/AH_CelShader to aiShadingMode_Toon");
+            ASSIMP_LOG_INFO("LWO2: Mapping LW_SuperCelShader/AH_CelShader to aiShadingMode_Toon");
 
             m = aiShadingMode_Toon;
             break;
         }
         else if (shader.functionName == "LW_RealFresnel" || shader.functionName == "LW_FastFresnel")  {
-            DefaultLogger::get()->info("LWO2: Mapping LW_RealFresnel/LW_FastFresnel to aiShadingMode_Fresnel");
+            ASSIMP_LOG_INFO("LWO2: Mapping LW_RealFresnel/LW_FastFresnel to aiShadingMode_Fresnel");
 
             m = aiShadingMode_Fresnel;
             break;
         }
         else
         {
-            DefaultLogger::get()->warn("LWO2: Unknown surface shader: " + shader.functionName);
+            ASSIMP_LOG_WARN_F("LWO2: Unknown surface shader: ", shader.functionName);
         }
     }
-    if (surf.mMaximumSmoothAngle <= 0.0f)
+    if (surf.mMaximumSmoothAngle <= 0.0)
         m = aiShadingMode_Flat;
     pcMat->AddProperty((int*)&m,1,AI_MATKEY_SHADING_MODEL);
 
     // (the diffuse value is just a scaling factor)
     // If a diffuse texture is set, we set this value to 1.0
-    clr = (b && false ? aiColor3D(1.f,1.f,1.f) : surf.mColor);
+    clr = (b && false ? aiColor3D(1.0,1.0,1.0) : surf.mColor);
     clr.r *= surf.mDiffuseValue;
     clr.g *= surf.mDiffuseValue;
     clr.b *= surf.mDiffuseValue;
@@ -396,7 +398,7 @@ char LWOImporter::FindUVChannels(LWO::TextureList& list,
             }
             else {
                 // channel mismatch. need to duplicate the material.
-                DefaultLogger::get()->warn("LWO: Channel mismatch, would need to duplicate surface [design bug]");
+                ASSIMP_LOG_WARN("LWO: Channel mismatch, would need to duplicate surface [design bug]");
 
                 // TODO
             }
@@ -427,7 +429,7 @@ void LWOImporter::FindUVChannels(LWO::Surface& surf,
 
                     if (extra >= AI_MAX_NUMBER_OF_TEXTURECOORDS) {
 
-                        DefaultLogger::get()->error("LWO: Maximum number of UV channels for "
+                        ASSIMP_LOG_ERROR("LWO: Maximum number of UV channels for "
                             "this mesh reached. Skipping channel \'" + uv.name + "\'");
 
                     }
@@ -454,7 +456,7 @@ void LWOImporter::FindUVChannels(LWO::Surface& surf,
                             ++extra;
                             out[next++] = i;
                         }
-                        // B�h ... seems not to be used at all. Push to end if enough space is available.
+                        // Bah ... seems not to be used at all. Push to end if enough space is available.
                         else {
                             out[extra++] = i;
                             ++num_extra;
@@ -482,7 +484,7 @@ void LWOImporter::FindVCChannels(const LWO::Surface& surf, LWO::SortedRep& sorte
         const LWO::VColorChannel& vc = layer.mVColorChannels[i];
 
         if (surf.mVCMap == vc.name) {
-            // The vertex color map is explicitely requested by the surface so we need to take special care of it
+            // The vertex color map is explicitly requested by the surface so we need to take special care of it
             for (unsigned int a = 0; a < std::min(next,AI_MAX_NUMBER_OF_COLOR_SETS-1u); ++a) {
                 out[a+1] = out[a];
             }
@@ -497,10 +499,10 @@ void LWOImporter::FindVCChannels(const LWO::Surface& surf, LWO::SortedRep& sorte
                 for (unsigned int n = 0; n < face.mNumIndices; ++n) {
                     unsigned int idx = face.mIndices[n];
 
-                    if (vc.abAssigned[idx] && ((aiColor4D*)&vc.rawData[0])[idx] != aiColor4D(0.f,0.f,0.f,1.f)) {
+                    if (vc.abAssigned[idx] && ((aiColor4D*)&vc.rawData[0])[idx] != aiColor4D(0.0,0.0,0.0,1.0)) {
                         if (next >= AI_MAX_NUMBER_OF_COLOR_SETS) {
 
-                            DefaultLogger::get()->error("LWO: Maximum number of vertex color channels for "
+                            ASSIMP_LOG_ERROR("LWO: Maximum number of vertex color channels for "
                                 "this mesh reached. Skipping channel \'" + vc.name + "\'");
 
                         }
@@ -565,7 +567,7 @@ void LWOImporter::LoadLWO2ImageMap(unsigned int size, LWO::Texture& tex )
 void LWOImporter::LoadLWO2Procedural(unsigned int /*size*/, LWO::Texture& tex )
 {
     // --- not supported at the moment
-    DefaultLogger::get()->error("LWO2: Found procedural texture, this is not supported");
+    ASSIMP_LOG_ERROR("LWO2: Found procedural texture, this is not supported");
     tex.bCanUse = false;
 }
 
@@ -573,7 +575,7 @@ void LWOImporter::LoadLWO2Procedural(unsigned int /*size*/, LWO::Texture& tex )
 void LWOImporter::LoadLWO2Gradient(unsigned int /*size*/, LWO::Texture& tex  )
 {
     // --- not supported at the moment
-    DefaultLogger::get()->error("LWO2: Found gradient texture, this is not supported");
+    ASSIMP_LOG_ERROR("LWO2: Found gradient texture, this is not supported");
     tex.bCanUse = false;
 }
 
@@ -588,7 +590,7 @@ void LWOImporter::LoadLWO2TextureHeader(unsigned int size, LWO::Texture& tex )
     // we could crash later if this is an empty string ...
     if (!tex.ordinal.length())
     {
-        DefaultLogger::get()->error("LWO2: Ill-formed SURF.BLOK ordinal string");
+        ASSIMP_LOG_ERROR("LWO2: Ill-formed SURF.BLOK ordinal string");
         tex.ordinal = "\x00";
     }
     while (true)
@@ -660,7 +662,7 @@ void LWOImporter::LoadLWO2TextureBlock(LE_NCONST IFF::SubChunkHeader* head, unsi
     case AI_LWO_REFL:
         listRef = &surf.mReflectionTextures;break;
     default:
-        DefaultLogger::get()->warn("LWO2: Encountered unknown texture type");
+        ASSIMP_LOG_WARN("LWO2: Encountered unknown texture type");
         return;
     }
 
@@ -689,7 +691,7 @@ void LWOImporter::LoadLWO2ShaderBlock(LE_NCONST IFF::SubChunkHeader* /*head*/, u
     // we could crash later if this is an empty string ...
     if (!shader.ordinal.length())
     {
-        DefaultLogger::get()->error("LWO2: Ill-formed SURF.BLOK ordinal string");
+        ASSIMP_LOG_ERROR("LWO2: Ill-formed SURF.BLOK ordinal string");
         shader.ordinal = "\x00";
     }
 
@@ -748,7 +750,7 @@ void LWOImporter::LoadLWO2Surface(unsigned int size)
             }
         }
         if (derived.size())
-            DefaultLogger::get()->warn("LWO2: Unable to find source surface: " + derived);
+            ASSIMP_LOG_WARN("LWO2: Unable to find source surface: " + derived);
     }
 
     while (true)
@@ -851,7 +853,7 @@ void LWOImporter::LoadLWO2Surface(unsigned int size)
         case AI_LWO_SMAN:
             {
                 AI_LWO_VALIDATE_CHUNK_LENGTH(head.length,SMAN,4);
-                surf.mMaximumSmoothAngle = fabs( GetF4() );
+                surf.mMaximumSmoothAngle = std::fabs( GetF4() );
                 break;
             }
             // vertex color channel to be applied to the surface
@@ -884,7 +886,7 @@ void LWOImporter::LoadLWO2Surface(unsigned int size)
                     break;
 
                 default:
-                    DefaultLogger::get()->warn("LWO2: Found an unsupported surface BLOK");
+                    ASSIMP_LOG_WARN("LWO2: Found an unsupported surface BLOK");
                 };
 
                 break;
