@@ -21,7 +21,7 @@ void Shaft::ResourceManager::Initialize()
 	m_meshManager = std::make_unique<MeshManager>(m_fileSystem.get());
 	m_shaderManager = std::make_unique<ShaderManager>(m_fileSystem.get());
 	m_textureManager = std::make_unique<TextureManager>(m_fileSystem.get());
-	m_materialManager = std::make_unique<MaterialManager>(m_fileSystem.get());
+	m_materialManager = std::make_unique<MaterialManager>(m_fileSystem.get(), m_textureManager.get());
 	m_meshManager->InitPrimitiveMesh();
 #if SE_BUILD
 	

@@ -1,11 +1,12 @@
 #include "MaterialManager.h"
 #include "../System/ShaderManager.h"
 #include "../System/FileSystem.h"
+#include "TextureManager.h"
 
 using namespace Shaft;
 
-Shaft::MaterialManager::MaterialManager(FileSystem * fileSystem)
-	:m_fileSystem(fileSystem), m_idCounter(0), m_instanceIdCounter(0)
+Shaft::MaterialManager::MaterialManager(FileSystem * fileSystem, TextureManager* texManager)
+	:m_fileSystem(fileSystem), m_idCounter(0), m_instanceIdCounter(0), m_textureManager(texManager)
 {
 	for (auto& uniform : m_constVecUniforms)
 	{
@@ -89,6 +90,15 @@ uint32 Shaft::MaterialManager::LoadMaterialInstance(const std::string& filepath)
 	m_fileSystem->Deserialize(filepath, mat);
 	m_materialInstances.push_back(mat);
 	m_instanceIdCounter += 1;
+	
+	for (auto texID : mat.textures)
+	{
+		if (texID != 0)
+		{
+			m_textureManager->LoadTexture(texID);
+		}
+	}
+
 	return mat.id;
 }
 

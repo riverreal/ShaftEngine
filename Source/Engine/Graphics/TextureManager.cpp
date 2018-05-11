@@ -84,6 +84,36 @@ uint32 Shaft::TextureManager::LoadTexture(const std::string& fileName, int32 pac
 	return 0;
 }
 
+void Shaft::TextureManager::LoadTexture(uint32 id)
+{
+	auto& tex = m_textures[id];
+	if (tex.created == false)
+	{
+		uint32 size = 0;
+		void* data = m_fileSystem->LoadMem(tex.name, size);
+		if (data == nullptr)
+		{
+			std::cout << "Texture could not be loaded: " << tex.name << std::endl;
+			return;
+		}
+
+		bimg::ImageContainer* imageContainer = bimg::imageParse(m_allocator, data, size);
+		if (imageContainer != nullptr)
+		{
+			const bgfx::Memory* mem = bgfx::makeRef(imageContainer->m_data, imageContainer->m_size);
+			tex.tex = bgfx::createTexture2D(imageContainer->m_width, imageContainer->m_height,
+				1 < imageContainer->m_numMips, imageContainer->m_numLayers,
+				bgfx::TextureFormat::Enum(imageContainer->m_format), 0, mem);
+
+			tex.info.width = imageContainer->m_width;
+			tex.info.height = imageContainer->m_height;
+			bgfx::setName(tex.tex, tex.name.c_str());
+		}
+
+		tex.created = true;
+	}
+}
+
 std::vector<TextureResource>& Shaft::TextureManager::GetTextures()
 {
 	return m_textures;

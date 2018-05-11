@@ -35,6 +35,7 @@ namespace Shaft
 		~TextureManager();
 
 		uint32 LoadTexture(const std::string& fileName, int32 packNum);
+		void LoadTexture(uint32 id);
 		std::vector<TextureResource>& GetTextures();
 		void InitDefaultTextures();
 

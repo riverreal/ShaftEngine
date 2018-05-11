@@ -8,6 +8,7 @@
 namespace Shaft
 {
 	class FileSystem;
+	class TextureManager;
 	struct ShaderType;
 
 	const int32 MAX_MATERIAL_TEX = 16;
@@ -55,7 +56,7 @@ namespace Shaft
 	{
 		friend class ResourceManager;
 	public:
-		MaterialManager(FileSystem* fileSystem);
+		MaterialManager(FileSystem* fileSystem, TextureManager* texManager);
 		~MaterialManager();
 
 		void InitializeUniforms();
@@ -79,6 +80,7 @@ namespace Shaft
 		uint32 m_idCounter;
 		uint32 m_instanceIdCounter;
 		FileSystem* m_fileSystem;
+		TextureManager* m_textureManager;
 		std::array<bgfx::UniformHandle, MAX_MATERIAL_CONST_VEC> m_constVecUniforms;
 		std::array<bgfx::UniformHandle, MAX_MATERIAL_TEX> m_textureUniforms;
 	};
