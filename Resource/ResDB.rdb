@@ -1,1 +1,1 @@
-{"in": {"tex": ["/package1/0default.jpg"], "mesh": ["/package1/ship.glb"], "shd": ["/package0/0Default"], "mat": ["/package1/default.mat"], "min": ["/package1/default.min", "/package1/redDefault.min"]}}
+{"in": {"tex": ["/package1/0default.jpg", "/package1/shipAlbedo.png"], "mesh": ["/package1/shipImp.obj", "/package1/ship.glb"], "shd": ["/package0/0Default"], "mat": ["/package1/default.mat"], "min": ["/package1/default.min", "/package1/redDefault.min", "/package1/ship.min"]}}

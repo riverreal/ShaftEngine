@@ -59,7 +59,7 @@ void DebugApp::Initialize()
 	auto model = m_engine->GetWorld().CreateActor();
 	meshID = m_engine->GetResourceManager().GetMeshManager().LoadMesh("ship.glb", 1);
 	auto meshComp = model->AddComponent<MeshComponent>(meshID);
-	meshComp->matInstanceId = m_engine->GetResourceManager().GetMaterialManager().LoadMaterialInstance("redDefault.min", 1);
+	meshComp->matInstanceId = m_engine->GetResourceManager().GetMaterialManager().LoadMaterialInstance("ship.min", 1);
 	model->GetTransform()->SetPosition(Vec3f(-1, 0, 0));
 	model->GetTransform()->SetScale(Vec3f(1.0f));
 	Animate();

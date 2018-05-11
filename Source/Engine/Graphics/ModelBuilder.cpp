@@ -16,6 +16,7 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 	Assimp::Importer imp;
 	auto scene = imp.ReadFile( fileName, aiProcess_CalcTangentSpace | 
 								aiProcess_Triangulate |
+								aiProcess_FlipUVs |
 								aiProcess_GenSmoothNormals |
 								aiProcess_SplitLargeMeshes |
 								aiProcess_SortByPType |
@@ -55,7 +56,7 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 
 				if (mesh->HasTextureCoords(0))
 				{
-					v.texU = (float)abs((float)mesh->mTextureCoords[0][j].x);
+					v.texU = (float)mesh->mTextureCoords[0][j].x;
 					v.texV = (float)mesh->mTextureCoords[0][j].y;
 				}
 				
