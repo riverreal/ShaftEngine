@@ -14,7 +14,6 @@ Project/Windows/Libs/assimp/*
 Project/Windows/Libs/glfw/*
 Project/Windows/Libs/IrrXML/*
 Project/Windows/Libs/zlib/*
-Project/Windows/Libs/FiberTaskingLib/*
 Project/Windows/DebugApp/*
 !Project/Windows/DebugApp/*.vcxproj
 !Project/Windows/DebugApp/*.vcxproj.filters
@@ -24,3 +23,5 @@ Project/Windows/DebugApp/*
 !Project/Windows/ShaftEngine/ShaftEngine.vcxproj.filters
 !Project/Windows/Libs/*/*.vcxproj
 !Project/Windows/Libs/*/*.vcxproj.filters
+
+

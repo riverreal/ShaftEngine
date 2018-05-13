@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;..\..\Dependencies\FiberTaskingLib\include;..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -107,7 +107,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;..\..\Dependencies\FiberTaskingLib\include;..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -123,7 +123,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;..\..\Dependencies\FiberTaskingLib\include;..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -141,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;..\..\Dependencies\FiberTaskingLib\include;..\..\Dependencies\FiberTaskingLib\3rdparties\boost_context\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -175,9 +175,6 @@
     </ProjectReference>
     <ProjectReference Include="Libs\bx\bx.vcxproj">
       <Project>{3aebb6ba-7f39-477e-8c5b-0091a730c0ea}</Project>
-    </ProjectReference>
-    <ProjectReference Include="Libs\FiberTaskingLib\FiberTaskingLib.vcxproj">
-      <Project>{04fa8be5-0e0a-4be8-9156-97c0eb5bef61}</Project>
     </ProjectReference>
     <ProjectReference Include="Libs\glfw\glfw.vcxproj">
       <Project>{8b537b7f-195c-4795-b637-2d38173983f3}</Project>
