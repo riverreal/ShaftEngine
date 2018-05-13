@@ -9,8 +9,8 @@ namespace Shaft
 	enum class CullingType : uint32
 	{
 		NoCull = 0,
-		Backface = BGFX_STATE_CULL_CCW,
-		Frontface = BGFX_STATE_CULL_CW
+		Backface = static_cast<uint32>(BGFX_STATE_CULL_CCW),
+		Frontface = static_cast<uint32>(BGFX_STATE_CULL_CW)
 	};
 
 	struct States
