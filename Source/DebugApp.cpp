@@ -10,6 +10,7 @@
 #include "Engine/System/FileSystem.h"
 #include "Engine/World.h"
 #include <thread>
+#include <async++.h>
 
 using namespace Shaft;
 
@@ -90,19 +91,30 @@ void Shaft::DebugApp::Run()
 
 		//AppRun();
 		glm::quat quat = m_engine->GetWorld().GetActors()[0].actor->GetTransform()->GetRotation().GetQuat();
-		Quaternion q;
-		q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
-		m_engine->GetWorld().GetActors()[0].actor->GetTransform()->SetRotation(q);
+		auto task1 = async::spawn([&] {
+			Quaternion q;
+			q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
+			m_engine->GetWorld().GetActors()[0].actor->GetTransform()->SetRotation(q);
+		});
 
-		quat = m_engine->GetWorld().GetActors()[1].actor->GetTransform()->GetRotation().GetQuat();
-		q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
-		m_engine->GetWorld().GetActors()[1].actor->GetTransform()->SetRotation(q);
+		auto task2 = async::spawn([&] {
+			Quaternion q;
+			q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
+			m_engine->GetWorld().GetActors()[1].actor->GetTransform()->SetRotation(q);
+		});
 
-		quat = m_engine->GetWorld().GetActors()[3].actor->GetTransform()->GetRotation().GetQuat();
-		q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
-		m_engine->GetWorld().GetActors()[3].actor->GetTransform()->SetRotation(q);
+		auto task3 = async::spawn([&] {
+			Quaternion q;
+			q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
+			m_engine->GetWorld().GetActors()[3].actor->GetTransform()->SetRotation(q);
+		});
 
-		m_tween.Update(dt);
+		auto task4 = async::spawn([&] {
+			m_tween.Update(dt);
+		});
+
+		auto taskEnd = async::when_all(task1, task2, task3, task4);
+		taskEnd.get();
 		
 #if SHAFT_EDITOR_ENABLED
 		m_engine->GetEditor().Draw();

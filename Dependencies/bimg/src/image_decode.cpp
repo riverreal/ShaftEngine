@@ -17,10 +17,12 @@ BX_PRAGMA_DIAGNOSTIC_IGNORED_MSVC(4505) // warning C4505: 'tinyexr::miniz::def_r
 #if BX_PLATFORM_EMSCRIPTEN
 #	include <compat/ctype.h>
 #endif // BX_PLATFORM_EMSCRIPTEN
+/*
 #define MINIZ_NO_ARCHIVE_APIS
 #define MINIZ_NO_STDIO
 #define TINYEXR_IMPLEMENTATION
 #include <tinyexr/tinyexr.h>
+*/
 BX_PRAGMA_DIAGNOSTIC_POP()
 
 BX_PRAGMA_DIAGNOSTIC_PUSH();
@@ -315,7 +317,7 @@ namespace bimg
 
 		return output;
 	}
-
+	/*
 	static ImageContainer* imageParseTinyExr(bx::AllocatorI* _allocator, const void* _data, uint32_t _size, bx::Error* _err)
 	{
 		BX_ERROR_SCOPE(_err);
@@ -501,7 +503,7 @@ namespace bimg
 
 		return output;
 	}
-
+	*/
 	static ImageContainer* imageParseStbImage(bx::AllocatorI* _allocator, const void* _data, uint32_t _size, bx::Error* _err)
 	{
 		BX_ERROR_SCOPE(_err);
@@ -700,7 +702,7 @@ namespace bimg
 		input = NULL == input ? imageParsePvr3    (_allocator, _data, _size, _err) : input;
 		input = NULL == input ? imageParseGnf     (_allocator, _data, _size, _err) : input;
 		input = NULL == input ? imageParseLodePng (_allocator, _data, _size, _err) : input;
-		input = NULL == input ? imageParseTinyExr (_allocator, _data, _size, _err) : input;
+		//input = NULL == input ? imageParseTinyExr (_allocator, _data, _size, _err) : input;
 		input = NULL == input ? imageParseJpeg    (_allocator, _data, _size, _err) : input;
 		input = NULL == input ? imageParseStbImage(_allocator, _data, _size, _err) : input;
 

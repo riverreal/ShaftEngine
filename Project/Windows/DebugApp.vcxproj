@@ -91,9 +91,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LIBASYNC_STATIC;TINYEXR_USE_MINIZ;LIBASYNC_STATICWIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;..\..\Dependencies\asyncplusplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -105,9 +105,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LIBASYNC_STATIC;TINYEXR_USE_MINIZ;LIBASYNC_STATIC_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;..\..\Dependencies\asyncplusplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -121,9 +121,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LIBASYNC_STATIC;TINYEXR_USE_MINIZ;LIBASYNC_STATICWIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;..\..\Dependencies\asyncplusplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -139,9 +139,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LIBASYNC_STATIC;TINYEXR_USE_MINIZ;LIBASYNC_STATICNDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Source\Include;..\..\Dependencies\entityx\include;..\..\Dependencies\bx\include\compat\msvc;..\..\Dependencies\bx\include;..\..\Dependencies\bgfx\include;..\..\Dependencies\glfw\include\;..\..\Dependencies\glm\;..\..\Dependencies\rttr\include\;..\..\Dependencies\assimp\include;..\..\Dependencies\cereal\include;..\..\Dependencies\asyncplusplus\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

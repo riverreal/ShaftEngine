@@ -74,11 +74,14 @@
     <Filter Include="3rdparty\glfw">
       <UniqueIdentifier>{a8e6e01d-b2bc-4e24-829e-5b638fb499bc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3rdparty\stb">
-      <UniqueIdentifier>{e2749237-9983-4152-82a0-85c6d11a845e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Engine\Graphics\Shaders\Include">
       <UniqueIdentifier>{877c75e8-a07b-42e7-b974-6c24bebc8941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\asyncplusplus">
+      <UniqueIdentifier>{f664d1f1-ac29-420f-ac2b-cc2d74e7d0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdparty\asyncplusplus\include">
+      <UniqueIdentifier>{d6a67ac4-b7d0-464d-8063-e6b8fdd0b2be}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +156,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Source\Engine\Graphics\MaterialManager.cpp">
       <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\asyncplusplus\src\scheduler.cpp">
+      <Filter>3rdparty\asyncplusplus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\asyncplusplus\src\threadpool_scheduler.cpp">
+      <Filter>3rdparty\asyncplusplus</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -786,14 +795,74 @@
     <ClInclude Include="..\..\..\Source\Engine\Graphics\TextureManager.h">
       <Filter>src\Engine\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Dependencies\stb\stb_image.h">
-      <Filter>3rdparty\stb</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\FileSystem.h">
       <Filter>src\Engine\System</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\Graphics\MaterialManager.h">
       <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\src\fifo_queue.h">
+      <Filter>3rdparty\asyncplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\src\internal.h">
+      <Filter>3rdparty\asyncplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\src\singleton.h">
+      <Filter>3rdparty\asyncplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\src\task_wait_event.h">
+      <Filter>3rdparty\asyncplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\src\work_steal_queue.h">
+      <Filter>3rdparty\asyncplusplus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\aligned_alloc.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\cancel.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\continuation_vector.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\parallel_for.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\parallel_invoke.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\parallel_reduce.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\partitioner.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\range.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\ref_count.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\scheduler.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\scheduler_fwd.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\task.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\task_base.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\traits.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\when_all_any.h">
+      <Filter>3rdparty\asyncplusplus\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
