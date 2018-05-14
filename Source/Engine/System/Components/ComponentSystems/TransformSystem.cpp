@@ -28,9 +28,7 @@ void Shaft::TransformSystem::Update()
 
 void Shaft::TransformSystem::UpdateMatrix()
 {
-	//Update local matrix first
 	LocalMatrixPass();
-	//Then the world matrix if needed
 	WorldMatrixPass();
 }
 
@@ -127,13 +125,14 @@ void Shaft::TransformSystem::WorldMatrixPass()
 
 			transform->isDirty = true;
 			glm::mat4 parentMatrix = transform->GetParent()->worldMatrix.GetMat();
+			/*
 			glm::vec3 sca, pos, skew;
 			glm::quat rot;
 			glm::vec4 pers;
 			glm::decompose(parentMatrix, sca, rot, pos, skew, pers);
 			rot = glm::inverse(rot);
 			parentMatrix = glm::translate(glm::mat4(), pos) * glm::toMat4(rot);
-
+			*/
 			glm::mat4 localMatrix = transform->localMatrix.GetMat();
 			transform->worldMatrix.SetMat(parentMatrix * localMatrix);
 

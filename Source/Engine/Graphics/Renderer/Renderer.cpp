@@ -80,7 +80,7 @@ void Renderer::Draw()
 		auto transform = actor->GetEntity().component<Transform>();
 		if (meshComp != nullptr && transform != nullptr)
 		{
-			auto meshType = meshes[meshComp->meshId];
+			auto& meshType = meshes[meshComp->meshId];
 			if (!meshType.created)
 			{
 				continue;
@@ -93,7 +93,7 @@ void Renderer::Draw()
 			//Texture uniforms
 			for (uint32 i = 0; i < mats[mins[meshComp->matInstanceId].materialID].enabledTextureCount; ++i)
 			{
-				auto texture = textures[mins[meshComp->matInstanceId].textures[i]];
+				auto& texture = textures[mins[meshComp->matInstanceId].textures[i]];
 				if (!texture.created)
 				{
 					std::cout << "Texture not created yet! Load it first before using." << std::endl;
