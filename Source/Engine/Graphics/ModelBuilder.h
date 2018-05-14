@@ -10,7 +10,7 @@ namespace Shaft
 	class ModelBuilder
 	{
 	public:
-		static MeshData CreateModel(std::string fileName);
+		static MeshData CreateModel(const eastl::string& fileName);
 
 	private:
 

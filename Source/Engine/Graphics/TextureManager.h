@@ -34,17 +34,17 @@ namespace Shaft
 		TextureManager(FileSystem* fileSystem);
 		~TextureManager();
 
-		uint32 LoadTexture(const std::string& fileName, int32 packNum);
+		uint32 LoadTexture(const eastl::string& fileName, int32 packNum);
 		void LoadTexture(uint32 id);
-		std::vector<TextureResource>& GetTextures();
+		eastl::vector<TextureResource>& GetTextures();
 		void InitDefaultTextures();
 
 	private:
 		void DestroyAllTextureHandles();
-		void PrepareTexture(const std::string& filepath);
+		void PrepareTexture(const eastl::string& filepath);
 
 	private:
-		std::vector<TextureResource> m_textures;
+		eastl::vector<TextureResource> m_textures;
 		uint32 m_idCounter;
 		bx::AllocatorI* m_allocator;
 		bx::FileReaderI* m_reader;

@@ -13,10 +13,10 @@ namespace Shaft
 	public:
 		Actor(EngineEntity entity, World* world);
 		~Actor();
-		void SetName(const std::string& name);
-		const std::string& GetName() const;
+		void SetName(const eastl::string& name);
+		const eastl::string& GetName() const;
 		void AddChild(Actor* child);
-		const std::vector<Actor*>& GetChilren() const;
+		const eastl::vector<Actor*>& GetChilren() const;
 		Actor* GetParent();
 		void SetParent(Actor* parent);
 		void Destroy();
@@ -40,8 +40,8 @@ namespace Shaft
 		World* m_world;
 		EngineEntity m_entity;
 		Actor* m_parent;
-		std::vector<Actor*> m_children;
-		std::string m_name;
+		eastl::vector<Actor*> m_children;
+		eastl::string m_name;
 		bool m_active;
 		Transform* m_transform;
 	};
@@ -49,6 +49,6 @@ namespace Shaft
 	template<typename C, typename ...Args>
 	inline C * Actor::AddComponent(Args && ... args)
 	{
-		return m_entity.assign<C>(std::forward<Args>(args)...);
+		return m_entity.assign<C>(eastl::forward<Args>(args)...);
 	}
 }

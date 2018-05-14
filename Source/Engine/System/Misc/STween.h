@@ -29,8 +29,8 @@ SOFTWARE.
 #pragma once
 
 //These can easily be replaced with custom libraries instead of STL
-#include <vector> //std::vector
-#include <functional> //std::function
+#include <EASTL/vector.h>
+#include <EASTL/functional.h>
 
 namespace STween
 {
@@ -87,9 +87,9 @@ public:
 	float duration;
 	EasingFunction easing;
 	float timeCounter;
-	std::function<void()> finishCallback;
-	std::function<void(T&)> stepCallback;
-	std::vector<TweenData<T>> endTween;
+	eastl::function<void()> finishCallback;
+	eastl::function<void(T&)> stepCallback;
+	eastl::vector<TweenData<T>> endTween;
 };
 
 // Main class
@@ -120,11 +120,11 @@ public:
 	STween& Time(float sec);
 	// Sets a callback once the tween is finished
 	// *Optional
-	STween& OnFinish(std::function<void()> endCallback);
+	STween& OnFinish(eastl::function<void()> endCallback);
 	// Sets a callback for each frame the value is changing
 	// Use this method as a setter if From() argument is const
 	// *Optional
-	STween& OnStep(std::function<void(T&)> callabck);
+	STween& OnStep(eastl::function<void(T&)> callabck);
 	// Chains another tween after this one ends
 	// *Optional
 	STween& Chain(STween<T>* chain);
@@ -141,22 +141,22 @@ public:
 	// Helper function in case it is needed
 	// Normally used with AddTweens()
 	// a.AddTweens(b.GetTweens());
-	std::vector<TweenData<T>> GetTweens();
+	eastl::vector<TweenData<T>> GetTweens();
 	// Resets the STween object
 	void ReleaseTweens();
 	// Adds all the tweens from the container
 	// Helper function in case it is needed
 	// Normally used with GetTweens()
 	// a.AddTweens(b.GetTweens());
-	void AddTweens(std::vector<TweenData<T>> tweens);
+	void AddTweens(eastl::vector<TweenData<T>> tweens);
 	// Processes every running tween
 	// deltaTime used for frame-rate independent tweening
 	void Update(float deltaTime);
 	// Adds a single TweenData
 	// Helper function in case it is needed
 	void AddTween(TweenData<T> STween);
-private:
-	T Linear(float position, T start, T end);
+//private:
+	static T Linear(float position, T start, T end);
 	T QuadIn(float position, T start, T end);
 	T QuadOut(float position, T start, T end);
 	T QuadInOut(float position, T start, T end);
@@ -172,7 +172,7 @@ private:
 
 private:
 	int m_lastTweenIndex;
-	std::vector<TweenData<T>> m_tweenVec;
+	eastl::vector<TweenData<T>> m_tweenVec;
 };
 
 template<class T>STween<T>::STween()
@@ -197,7 +197,7 @@ template<class T>STween<T>& STween<T>::From(T* initVal)
 	tween.initialCpy = *initVal;
 	tween.duration = 0;
 	tween.timeCounter = 0;
-	tween.endTween = std::vector<TweenData<T>>();
+	tween.endTween = eastl::vector<TweenData<T>>();
 
 	m_tweenVec.push_back(tween);
 
@@ -216,7 +216,7 @@ template<class T>STween<T>& STween<T>::From(T initVal)
 	tween.initialCpy = initVal;
 	tween.duration = 0;
 	tween.timeCounter = 0;
-	tween.endTween = std::vector<TweenData<T>>();
+	tween.endTween = eastl::vector<TweenData<T>>();
 
 	m_tweenVec.push_back(tween);
 
@@ -241,8 +241,8 @@ template<class T>STween<T>& STween<T>::Time(float sec)
 
 template<class T> void STween<T>::Update(float deltaTime)
 {
-	std::vector<TweenData<T>> tweensToAdd;
-	std::vector<int> tweensToDelete;
+	eastl::vector<TweenData<T>> tweensToAdd;
+	eastl::vector<int> tweensToDelete;
 	
 	int counter = 0;
 	for (auto &tween : m_tweenVec)
@@ -369,7 +369,7 @@ template<class T> void STween<T>::Update(float deltaTime)
 	for (auto it = tweensToDelete.rbegin(); it != tweensToDelete.rend(); ++it)
 	{
 		auto oldIt = m_tweenVec.begin() + *it;
-		*oldIt = std::move(m_tweenVec.back());
+		*oldIt = eastl::move(m_tweenVec.back());
 		m_tweenVec.pop_back();
 		m_lastTweenIndex--;
 	}
@@ -380,14 +380,14 @@ template<class T> void STween<T>::Update(float deltaTime)
 	}
 }
 
-template<class T>STween<T>& STween<T>::OnFinish(std::function<void()> endCallback)
+template<class T>STween<T>& STween<T>::OnFinish(eastl::function<void()> endCallback)
 {
 	m_tweenVec[m_lastTweenIndex].finishCallback = endCallback;
 
 	return *this;
 }
 
-template<class T>STween<T>& STween<T>::OnStep(std::function<void(T&)> callback)
+template<class T>STween<T>& STween<T>::OnStep(eastl::function<void(T&)> callback)
 {
 
 	m_tweenVec[m_lastTweenIndex].stepCallback = callback;
@@ -416,7 +416,7 @@ template<class T>STween<T>& STween<T>::Easing(EasingFunction easingType)
 	return *this;
 }
 
-template<class T>std::vector<TweenData<T>> STween<T>::GetTweens()
+template<class T>eastl::vector<TweenData<T>> STween<T>::GetTweens()
 {
 	return m_tweenVec;
 }
@@ -428,7 +428,7 @@ template<class T>void STween<T>::AddTween(TweenData<T> STween)
 	m_lastTweenIndex++;
 }
 
-template<class T>void STween<T>::AddTweens(std::vector<TweenData<T>> tweens)
+template<class T>void STween<T>::AddTweens(eastl::vector<TweenData<T>> tweens)
 {
 	for (auto &STween : tweens)
 	{

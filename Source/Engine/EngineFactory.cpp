@@ -23,23 +23,23 @@ EngineFactory::~EngineFactory()
 {
 }
 
-std::unique_ptr<Engine> EngineFactory::CreateEngine(EngineConfig & config)
+eastl::unique_ptr<Engine> EngineFactory::CreateEngine(EngineConfig & config)
 {
 	ResolveBuildTarget(config);
 
-	std::unique_ptr<Engine> engine = std::make_unique<Engine>(config);
+	eastl::unique_ptr<Engine> engine = eastl::make_unique<Engine>(config);
 	
 	//--------Renderer---------------------------
-	std::unique_ptr<Renderer> renderer = std::make_unique<Renderer>(config.renderConfig);
-	engine->SetRenderer(std::move(renderer));
+	eastl::unique_ptr<Renderer> renderer = eastl::make_unique<Renderer>(config.renderConfig);
+	engine->SetRenderer(eastl::move(renderer));
 
 	//--------Window-----------------------------
-	std::unique_ptr<WindowHandle> windowHandle = std::make_unique<GLFWWindowHandle>(config.windowConfig);
-	engine->SetWindow(std::move(windowHandle));
+	eastl::unique_ptr<WindowHandle> windowHandle = eastl::make_unique<GLFWWindowHandle>(config.windowConfig);
+	engine->SetWindow(eastl::move(windowHandle));
 
 #if SHAFT_EDITOR_ENABLED
-	std::unique_ptr<ShaftEditor> editor = std::make_unique<ShaftEditor>(config);
-	engine->SetEditor(std::move(editor));
+	eastl::unique_ptr<ShaftEditor> editor = eastl::make_unique<ShaftEditor>(config);
+	engine->SetEditor(eastl::move(editor));
 #endif
 
 	return engine;

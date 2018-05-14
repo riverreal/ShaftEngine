@@ -17,41 +17,41 @@ Shaft::ResourceManager::~ResourceManager()
 
 void Shaft::ResourceManager::Initialize()
 {
-	m_fileSystem = std::make_unique<FileSystem>();
-	m_meshManager = std::make_unique<MeshManager>(m_fileSystem.get());
-	m_shaderManager = std::make_unique<ShaderManager>(m_fileSystem.get());
-	m_textureManager = std::make_unique<TextureManager>(m_fileSystem.get());
-	m_materialManager = std::make_unique<MaterialManager>(m_fileSystem.get(), m_textureManager.get());
+	m_fileSystem = eastl::make_unique<FileSystem>();
+	m_meshManager = eastl::make_unique<MeshManager>(m_fileSystem.get());
+	m_shaderManager = eastl::make_unique<ShaderManager>(m_fileSystem.get());
+	m_textureManager = eastl::make_unique<TextureManager>(m_fileSystem.get());
+	m_materialManager = eastl::make_unique<MaterialManager>(m_fileSystem.get(), m_textureManager.get());
 	m_meshManager->InitPrimitiveMesh();
 #if SE_BUILD
 	
 #else
 	ResDB resDB;
 	m_fileSystem->DeserializeJson(m_fileSystem->GetResourcePath() + "ResDB.rdb", resDB);
-	std::string resPath = m_fileSystem->GetResourcePath().substr(0, m_fileSystem->GetResourcePath().size() - 1);
+	eastl::string resPath = m_fileSystem->GetResourcePath().substr(0, m_fileSystem->GetResourcePath().size() - 1);
 	for (auto& texPath : resDB.tex)
 	{
-		m_textureManager->PrepareTexture(resPath + texPath);
+		m_textureManager->PrepareTexture(resPath + texPath.c_str());
 	}
 
 	for (auto& meshPath : resDB.mesh)
 	{
-		m_meshManager->PrepareMesh(resPath + meshPath);
+		m_meshManager->PrepareMesh(resPath + meshPath.c_str());
 	}
 
 	for (auto& shaderPath : resDB.shd)
 	{
-		m_shaderManager->LoadShader(resPath + shaderPath);
+		m_shaderManager->LoadShader(resPath + shaderPath.c_str());
 	}
 
 	for (auto& matPath : resDB.mat)
 	{
-		m_materialManager->LoadMaterial(resPath + matPath);
+		m_materialManager->LoadMaterial(resPath + matPath.c_str());
 	}
 
 	for (auto& minPath : resDB.min)
 	{
-		m_materialManager->LoadMaterialInstance(resPath + minPath);
+		m_materialManager->LoadMaterialInstance(resPath + minPath.c_str());
 	}
 #endif
 

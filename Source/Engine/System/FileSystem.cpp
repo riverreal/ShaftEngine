@@ -7,7 +7,7 @@ Shaft::FileSystem::FileSystem()
 	:m_packageNames{ "package0","package1","package2","package3","package4"
 			,"package5" ,"package6" ,"package7" ,"package8" ,"package9" }
 {
-	std::string projectPath;
+	eastl::string projectPath;
 #if SE_BUILD == false
 	projectPath = "../../";
 #else
@@ -28,10 +28,10 @@ Shaft::FileSystem::~FileSystem()
 	BX_FREE(m_allocator, m_fileReader);
 }
 
-void Shaft::FileSystem::OpenProject(std::string& path)
+void Shaft::FileSystem::OpenProject(eastl::string& path)
 {
 #if SE_BUILD == false
-	std::ofstream stream(path + "FSP.sep");
+	std::ofstream stream((path + "FSP.sep").c_str());
 	stream << "File System Project";
 #else
 
@@ -39,7 +39,7 @@ void Shaft::FileSystem::OpenProject(std::string& path)
 	m_projectPath = path;
 }
 
-void * Shaft::FileSystem::LoadMem(const std::string& filepath, uint32 & outSize)
+void * Shaft::FileSystem::LoadMem(const eastl::string& filepath, uint32 & outSize)
 {
 	if (bx::open(m_fileReader, filepath.c_str()))
 	{
@@ -56,13 +56,13 @@ void * Shaft::FileSystem::LoadMem(const std::string& filepath, uint32 & outSize)
 		return data;
 	}
 
-	std::cout << "Failed to load to memory: " << filepath << std::endl;
+	std::cout << "Failed to load to memory: " << filepath.c_str() << std::endl;
 	return nullptr;
 }
 
-std::string Shaft::FileSystem::GetBasePath()
+eastl::string Shaft::FileSystem::GetBasePath()
 {
-	std::string basePath;
+	eastl::string basePath;
 #if SE_BUILD == false
 	basePath = m_projectPath;
 #else
@@ -71,20 +71,20 @@ std::string Shaft::FileSystem::GetBasePath()
 	return basePath;
 }
 
-std::string Shaft::FileSystem::GetResourcePath()
+eastl::string Shaft::FileSystem::GetResourcePath()
 {
 	return GetBasePath() + "Resource/";
 }
 
-std::string Shaft::FileSystem::GetPackedResourcePath(PackageNumber packNum)
+eastl::string Shaft::FileSystem::GetPackedResourcePath(PackageNumber packNum)
 {
 	return GetResourcePath() + m_packageNames[(int32)packNum] + "/";
 }
 
-void Shaft::FileSystem::WriteMem(const std::string& filepath, const bgfx::Memory* mem)
+void Shaft::FileSystem::WriteMem(const eastl::string& filepath, const bgfx::Memory* mem)
 {
-	std::cout << filepath << std::endl;
-	std::ofstream os(filepath, std::fstream::binary | std::fstream::out);
+	std::cout << filepath.c_str() << std::endl;
+	std::ofstream os(filepath.c_str(), std::fstream::binary | std::fstream::out);
 	os.write((char*)mem->data, mem->size);
 	os.close();
 	bx::write(m_fileWriter, mem->data, mem->size);

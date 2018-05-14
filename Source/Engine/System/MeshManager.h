@@ -29,16 +29,16 @@ namespace Shaft
 		~MeshManager();
 
 		void InitPrimitiveMesh();
-		uint32 LoadMesh(const std::string& fileName, uint32 packNum);
+		uint32 LoadMesh(const eastl::string& fileName, uint32 packNum);
 		uint32 LoadShape(ShapeType type);
-		std::vector<MeshType>& GetMeshTypes();
+		eastl::vector<MeshType>& GetMeshTypes();
 
 	private:
 		void DestroyAllBuffers();
-		void PrepareMesh(const std::string& filepath);
+		void PrepareMesh(const eastl::string& filepath);
 
 	private:
-		std::vector<MeshType> m_meshTypes;
+		eastl::vector<MeshType> m_meshTypes;
 		uint32 m_idCounter;
 		uint32 m_cubeID, m_sphereID, m_planeID;
 		FileSystem* m_fileSystem;

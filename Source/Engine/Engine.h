@@ -22,11 +22,11 @@ namespace Shaft {
 		~Engine();
 		//Has to be called after window and renderer are set
 		void Initialize();
-		void SetWindow(std::unique_ptr<WindowHandle> windowHandle);
-		void SetRenderer(std::unique_ptr<Renderer> renderer);
+		void SetWindow(eastl::unique_ptr<WindowHandle> windowHandle);
+		void SetRenderer(eastl::unique_ptr<Renderer> renderer);
 		
 #if SHAFT_EDITOR_ENABLED
-		void SetEditor(std::unique_ptr<ShaftEditor> editor);
+		void SetEditor(eastl::unique_ptr<ShaftEditor> editor);
 		ShaftEditor& GetEditor();
 #endif
 
@@ -38,16 +38,16 @@ namespace Shaft {
 		ResourceManager& GetResourceManager();
 
 	private:
-		std::unique_ptr<WindowHandle> m_window;
-		std::unique_ptr<Renderer> m_renderer;
-		std::unique_ptr<World> m_world;
-		std::unique_ptr<ResourceManager> m_resourceManager;
+		eastl::unique_ptr<WindowHandle> m_window;
+		eastl::unique_ptr<Renderer> m_renderer;
+		eastl::unique_ptr<World> m_world;
+		eastl::unique_ptr<ResourceManager> m_resourceManager;
 		Input m_input;
 		Timer m_timer;
 		EngineConfig& m_engineConfig;
 
 #if SHAFT_EDITOR_ENABLED
-		std::unique_ptr<ShaftEditor> m_editor;
+		eastl::unique_ptr<ShaftEditor> m_editor;
 #endif
 	};
 }

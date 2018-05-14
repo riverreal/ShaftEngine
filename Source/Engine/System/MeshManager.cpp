@@ -22,7 +22,7 @@ Shaft::MeshManager::~MeshManager()
 	DestroyAllBuffers();
 }
 
-uint32 Shaft::MeshManager::LoadMesh(const std::string& fileName, uint32 packNum)
+uint32 Shaft::MeshManager::LoadMesh(const eastl::string& fileName, uint32 packNum)
 {
 	if (m_meshTypes.empty())
 	{
@@ -33,11 +33,11 @@ uint32 Shaft::MeshManager::LoadMesh(const std::string& fileName, uint32 packNum)
 	uint32 id = 0;
 	bool created = false;
 	bool found = false;
-	std::string filepath = m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packNum));
+	eastl::string filepath = m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packNum));
 	filepath += fileName;
 	for (auto& mesh : m_meshTypes)
 	{
-		if (mesh.name == filepath)
+		if (mesh.name == filepath.c_str())
 		{
 			created = mesh.created;
 			id = mesh.id;
@@ -57,7 +57,7 @@ uint32 Shaft::MeshManager::LoadMesh(const std::string& fileName, uint32 packNum)
 	}
 
 	MeshType meshType;
-	meshType.name = filepath;
+	meshType.name = filepath.c_str();
 	meshType.id = id;
 
 	auto meshData = ModelBuilder::CreateModel(filepath);
@@ -99,7 +99,7 @@ uint32 Shaft::MeshManager::LoadShape(ShapeType type)
 	return m_cubeID;
 }
 
-std::vector<MeshType>& Shaft::MeshManager::GetMeshTypes()
+eastl::vector<MeshType>& Shaft::MeshManager::GetMeshTypes()
 {
 	return m_meshTypes;
 }
@@ -120,11 +120,11 @@ void Shaft::MeshManager::DestroyAllBuffers()
 	}
 }
 
-void Shaft::MeshManager::PrepareMesh(const std::string & filepath)
+void Shaft::MeshManager::PrepareMesh(const eastl::string & filepath)
 {
 	MeshType mesh;
 	mesh.created = false;
-	mesh.name = filepath;
+	mesh.name = filepath.c_str();
 	mesh.id = m_idCounter;
 	m_idCounter++;
 	m_meshTypes.push_back(mesh);

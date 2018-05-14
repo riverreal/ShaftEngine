@@ -16,12 +16,12 @@ Shaft::Actor::~Actor()
 {
 }
 
-void Shaft::Actor::SetName(const std::string& name)
+void Shaft::Actor::SetName(const eastl::string& name)
 {
 	m_name = name;
 }
 
-const std::string & Shaft::Actor::GetName() const
+const eastl::string & Shaft::Actor::GetName() const
 {
 	return m_name;
 }
@@ -38,7 +38,7 @@ void Shaft::Actor::AddChild(Actor * child)
 
 void Shaft::Actor::RemoveChild(Actor * child)
 {
-	auto toRemove = std::find_if(m_children.begin(), m_children.end(), [&](Actor* actor) {
+	auto toRemove = eastl::find_if(m_children.begin(), m_children.end(), [&](Actor* actor) {
 		return actor->GetEntity().id().id() == child->GetEntity().id().id();
 	});
 
@@ -48,14 +48,14 @@ void Shaft::Actor::RemoveChild(Actor * child)
 	}
 	else
 	{
-		auto i = std::distance(m_children.begin(), toRemove);
+		auto i = eastl::distance(m_children.begin(), toRemove);
 		m_children[i]->GetTransform()->SetParent(nullptr);
 		m_children[i]->SetParentPtr(nullptr);
 		m_children.erase(toRemove);
 	}
 }
 
-const std::vector<Actor*>& Shaft::Actor::GetChilren() const
+const eastl::vector<Actor*>& Shaft::Actor::GetChilren() const
 {
 	return m_children;
 }

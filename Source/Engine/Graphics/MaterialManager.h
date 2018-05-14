@@ -61,27 +61,27 @@ namespace Shaft
 
 		void InitializeUniforms();
 
-		uint32 LoadMaterial(const std::string& filename, int32 packageNum);
-		uint32 LoadMaterial(const std::string& filepath);
-		uint32 LoadMaterialInstance(const std::string& filename, int32 packageNum);
-		uint32 LoadMaterialInstance(const std::string& filepath);
-		std::vector<Material>& GetMaterials();
-		std::vector<MaterialInstance>& GetMaterialInstances();
-		std::array<bgfx::UniformHandle, MAX_MATERIAL_CONST_VEC>& GetConstVecUniforms();
-		std::array<bgfx::UniformHandle, MAX_MATERIAL_TEX>& GetTexUniforms();
+		uint32 LoadMaterial(const eastl::string& filename, int32 packageNum);
+		uint32 LoadMaterial(const eastl::string& filepath);
+		uint32 LoadMaterialInstance(const eastl::string& filename, int32 packageNum);
+		uint32 LoadMaterialInstance(const eastl::string& filepath);
+		eastl::vector<Material>& GetMaterials();
+		eastl::vector<MaterialInstance>& GetMaterialInstances();
+		eastl::array<bgfx::UniformHandle, MAX_MATERIAL_CONST_VEC>& GetConstVecUniforms();
+		eastl::array<bgfx::UniformHandle, MAX_MATERIAL_TEX>& GetTexUniforms();
 
 	private:
 		void DestroyAllMaterials();
 		void DestroyAllUniforms();
 
 	private:
-		std::vector<Material> m_materials;
-		std::vector<MaterialInstance> m_materialInstances;
+		eastl::vector<Material> m_materials;
+		eastl::vector<MaterialInstance> m_materialInstances;
 		uint32 m_idCounter;
 		uint32 m_instanceIdCounter;
 		FileSystem* m_fileSystem;
 		TextureManager* m_textureManager;
-		std::array<bgfx::UniformHandle, MAX_MATERIAL_CONST_VEC> m_constVecUniforms;
-		std::array<bgfx::UniformHandle, MAX_MATERIAL_TEX> m_textureUniforms;
+		eastl::array<bgfx::UniformHandle, MAX_MATERIAL_CONST_VEC> m_constVecUniforms;
+		eastl::array<bgfx::UniformHandle, MAX_MATERIAL_TEX> m_textureUniforms;
 	};
 }

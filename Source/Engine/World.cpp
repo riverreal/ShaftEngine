@@ -4,7 +4,7 @@
 using namespace Shaft;
 
 Shaft::World::World()
-	:m_systemsManager(std::make_unique<SystemsManager>(&m_entities))
+	:m_systemsManager(eastl::make_unique<SystemsManager>(&m_entities))
 {
 	m_actors.reserve(ACTOR_RESERVE_COUNT);
 }
@@ -18,7 +18,7 @@ void Shaft::World::Update(float deltaTime)
 	m_systemsManager->UpdateSystems(deltaTime);
 }
 
-const std::vector<IDActor>& Shaft::World::GetActors()
+const eastl::vector<IDActor>& Shaft::World::GetActors()
 {
 	return m_actors;
 }
@@ -47,7 +47,7 @@ void Shaft::World::RemoveActor(Actor* actor)
 	uint64 id = actor->GetEntity().id().id();
 	actor->GetEntity().destroy();
 
-	auto toRemove = std::find_if(m_actors.begin(), m_actors.end(), [id](IDActor& idActor) {
+	auto toRemove = eastl::find_if(m_actors.begin(), m_actors.end(), [id](IDActor& idActor) {
 		return idActor.id == id;
 	});
 

@@ -19,7 +19,7 @@ namespace Shaft {
 		virtual void AppRun() = 0;
 
 	protected:
-		std::unique_ptr<Engine> m_engine;
+		eastl::unique_ptr<Engine> m_engine;
 
 	private:
 		EngineConfig m_engineConfig;

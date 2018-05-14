@@ -19,22 +19,22 @@ Shaft::TextureManager::~TextureManager()
 	DestroyAllTextureHandles();
 }
 
-uint32 Shaft::TextureManager::LoadTexture(const std::string& fileName, int32 packNum)
+uint32 Shaft::TextureManager::LoadTexture(const eastl::string& fileName, int32 packNum)
 {
 	if (m_textures.empty())
 	{
-		std::cout << "Textures empty. Could not find texture: " << fileName << std::endl;
+		std::cout << "Textures empty. Could not find texture: " << fileName.c_str() << std::endl;
 		return 0;
 	}
 
 	uint32 id;
 	bool created = false;
 	bool found = false;
-	std::string filepath = m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packNum));
+	eastl::string filepath = m_fileSystem->GetPackedResourcePath(FileSystem::PackageNumber(packNum));
 	filepath += fileName;
 	for (auto& tex : m_textures)
 	{
-		if (tex.name == filepath)
+		if (tex.name.c_str() == filepath)
 		{
 			found = true;
 			id = tex.id;
@@ -44,7 +44,7 @@ uint32 Shaft::TextureManager::LoadTexture(const std::string& fileName, int32 pac
 
 	if (!found)
 	{
-		std::cout << "Texture not found" << filepath << std::endl;
+		std::cout << "Texture not found" << filepath.c_str() << std::endl;
 		return 0;
 	}
 
@@ -54,14 +54,14 @@ uint32 Shaft::TextureManager::LoadTexture(const std::string& fileName, int32 pac
 	}
 
 	TextureResource texture;
-	texture.name = filepath;
+	texture.name = filepath.c_str();
 	texture.id = m_idCounter;
 
 	uint32 size = 0;
 	void* data = m_fileSystem->LoadMem(filepath, size);
 	if (data == nullptr)
 	{
-		std::cout << "Texture could not be loaded: " << filepath << std::endl;
+		std::cout << "Texture could not be loaded: " << filepath.c_str() << std::endl;
 		return 0;
 	}
 
@@ -90,10 +90,10 @@ void Shaft::TextureManager::LoadTexture(uint32 id)
 	if (tex.created == false)
 	{
 		uint32 size = 0;
-		void* data = m_fileSystem->LoadMem(tex.name, size);
+		void* data = m_fileSystem->LoadMem(tex.name.c_str(), size);
 		if (data == nullptr)
 		{
-			std::cout << "Texture could not be loaded: " << tex.name << std::endl;
+			std::cout << "Texture could not be loaded: " << tex.name.c_str() << std::endl;
 			return;
 		}
 
@@ -114,7 +114,7 @@ void Shaft::TextureManager::LoadTexture(uint32 id)
 	}
 }
 
-std::vector<TextureResource>& Shaft::TextureManager::GetTextures()
+eastl::vector<TextureResource>& Shaft::TextureManager::GetTextures()
 {
 	return m_textures;
 }
@@ -135,10 +135,10 @@ void Shaft::TextureManager::DestroyAllTextureHandles()
 	}
 }
 
-void Shaft::TextureManager::PrepareTexture(const std::string& filepath)
+void Shaft::TextureManager::PrepareTexture(const eastl::string& filepath)
 {
 	TextureResource texture;
-	texture.name = filepath;
+	texture.name = filepath.c_str();
 	texture.id = m_idCounter;
 	texture.created = false;
 	m_textures.push_back(texture);

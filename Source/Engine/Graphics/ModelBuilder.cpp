@@ -4,7 +4,7 @@
 
 using namespace Shaft;
 
-MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
+MeshData Shaft::ModelBuilder::CreateModel(const eastl::string& fileName)
 {
 	MeshData data;
 	
@@ -14,7 +14,7 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 	unsigned int numberOfMeshs;
 	
 	Assimp::Importer imp;
-	auto scene = imp.ReadFile( fileName, aiProcess_CalcTangentSpace | 
+	auto scene = imp.ReadFile( fileName.c_str(), aiProcess_CalcTangentSpace | 
 								aiProcess_Triangulate |
 								aiProcess_FlipUVs |
 								aiProcess_GenSmoothNormals |
@@ -27,15 +27,15 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 
 	if (scene == NULL)
 	{
-		std::cout << "Assimp scene couldn't load: " << fileName << std::endl;
+		std::cout << "Assimp scene couldn't load: " << fileName.c_str() << std::endl;
 		std::cout << imp.GetErrorString() << std::endl;
 		return data;
 	}
 
 	numberOfMeshs = scene->mNumMeshes;
 	
-	std::vector<Vertex> vertices;
-	std::vector<uint32> indices;
+	eastl::vector<Vertex> vertices;
+	eastl::vector<uint32> indices;
 
 	uint32 vertexCount = 0;
 	uint32 indexCount = 0;

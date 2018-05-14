@@ -17,20 +17,20 @@ Engine::~Engine()
 	m_resourceManager.reset();
 }
 
-void Engine::SetWindow(std::unique_ptr<WindowHandle> windowHandle)
+void Engine::SetWindow(eastl::unique_ptr<WindowHandle> windowHandle)
 {
-	m_window = std::move(windowHandle);
+	m_window = eastl::move(windowHandle);
 }
 
-void Shaft::Engine::SetRenderer(std::unique_ptr<Renderer> renderer)
+void Shaft::Engine::SetRenderer(eastl::unique_ptr<Renderer> renderer)
 {
-	m_renderer = std::move(renderer);
+	m_renderer = eastl::move(renderer);
 }
 
 #if SHAFT_EDITOR_ENABLED
-void Shaft::Engine::SetEditor(std::unique_ptr<ShaftEditor> editor)
+void Shaft::Engine::SetEditor(eastl::unique_ptr<ShaftEditor> editor)
 {
-	m_editor = std::move(editor);
+	m_editor = eastl::move(editor);
 }
 ShaftEditor& Shaft::Engine::GetEditor()
 {
@@ -42,9 +42,9 @@ void Shaft::Engine::Initialize()
 	m_window->Initialize();
 	m_window->BindInput(&m_input);
 
-	m_world = std::make_unique<World>();
+	m_world = eastl::make_unique<World>();
 
-	m_resourceManager = std::make_unique<ResourceManager>();
+	m_resourceManager = eastl::make_unique<ResourceManager>();
 	m_renderer->Initialize(m_world.get(), m_resourceManager.get());
 	m_resourceManager->Initialize();
 

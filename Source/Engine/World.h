@@ -9,7 +9,7 @@ namespace Shaft
 
 	struct IDActor {
 		uint32 id;
-		std::unique_ptr<Actor> actor;
+		eastl::unique_ptr<Actor> actor;
 	};
 
 	class World
@@ -20,7 +20,7 @@ namespace Shaft
 
 		void Update(float deltaTime);
 
-		const std::vector<IDActor>& GetActors();
+		const eastl::vector<IDActor>& GetActors();
 		Actor* CreateActor();
 
 		template <typename T>
@@ -30,19 +30,18 @@ namespace Shaft
 		void RemoveAllActors();
 
 	private:
-		std::vector<IDActor> m_actors;
+		eastl::vector<IDActor> m_actors;
 		EngineEntityManager m_entities;
-		std::unique_ptr<SystemsManager> m_systemsManager;
+		eastl::unique_ptr<SystemsManager> m_systemsManager;
 	};
 
 	template <typename T>
 	T* World::CreateActor()
 	{
 		IDActor idActor;
-		idActor.actor = std::make_unique<T>(m_entities.create(), this);
+		idActor.actor = eastl::make_unique<T>(m_entities.create(), this);
 		idActor.id = static_cast<uint32>(idActor.actor.get()->GetEntity().id().id());
-		m_actors.push_back(std::move(idActor));
-		//m_actors.emplace_back(std::move(idActor));
+		m_actors.push_back(eastl::move(idActor));
 
 		return m_actors.back().actor.get();
 	}

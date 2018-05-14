@@ -16,6 +16,6 @@ namespace Shaft
 		void UpdateSystems(float deltaTime);
 
 	private:
-		std::unique_ptr<TransformSystem> m_transformSystem;
+		eastl::unique_ptr<TransformSystem> m_transformSystem;
 	};
 }

@@ -21,24 +21,24 @@ namespace Shaft
 		~ShaderManager();
 
 		//vs and fs file without extension
-		uint32 LoadShader(const std::string& vsFile, const std::string& fsFile);
+		uint32 LoadShader(const eastl::string& vsFile, const eastl::string& fsFile);
 		//Load from compiled shader
 		//Both vs and fs have to have the same name
-		uint32 LoadShader(const std::string& shd);
+		uint32 LoadShader(const eastl::string& shd);
 #if !SE_BUILD
-		uint32 LoadShader(const std::string& vsFile, const std::string& fsFile, bool save);
+		uint32 LoadShader(const eastl::string& vsFile, const eastl::string& fsFile, bool save);
 #endif
-		std::vector<ShaderType>& GetShaderTypes();
+		eastl::vector<ShaderType>& GetShaderTypes();
 
 	private:
 		//Compile and create shaders in realtime
-		uint32 CreateShaderTypeRT(const std::string& shaderTypeName, const std::string& vsFile, const std::string& fsFile, bool save=false);
-		uint32 CreateShaderType(const std::string& shaderTypeName, const std::string& vsFile, const std::string& fsFile);
+		uint32 CreateShaderTypeRT(const eastl::string& shaderTypeName, const eastl::string& vsFile, const eastl::string& fsFile, bool save=false);
+		uint32 CreateShaderType(const eastl::string& shaderTypeName, const eastl::string& vsFile, const eastl::string& fsFile);
 		void DestroyAllShaders();
 
 	private:
-		std::string m_shaderPath;
-		std::vector<ShaderType> m_shaderTypes;
+		eastl::string m_shaderPath;
+		eastl::vector<ShaderType> m_shaderTypes;
 		uint32 m_idCounter;
 		FileSystem* m_fileSystem;
 	};

@@ -11,6 +11,7 @@
 #include "Engine/World.h"
 #include <thread>
 #include <async++.h>
+#include <EASTL/vector.h>
 
 using namespace Shaft;
 

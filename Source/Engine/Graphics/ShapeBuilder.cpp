@@ -410,12 +410,12 @@ void Shaft::ShapeBuilder::BuildCylinderTopCap(MeshData& inOut, float bottomRadiu
 		float v = z / height + 0.5f;
 
 		inOut.vertices.push_back(Vertex());
-		inOut.vertices._Mylast()->Set(x, y, z, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, u, v);
+		inOut.vertices.back().Set(x, y, z, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, u, v);
 	}
 
 	// Cap center vertex.
 	inOut.vertices.push_back(Vertex());
-	inOut.vertices._Mylast()->Set(0.0f, y, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.5f, 0.5f);
+	inOut.vertices.back().Set(0.0f, y, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.5f, 0.5f);
 
 	// Index of center vertex.
 	uint32 centerIndex = (uint32)inOut.vertices.size() - 1;
@@ -446,12 +446,12 @@ void Shaft::ShapeBuilder::BuildCylinderBottomCap(MeshData& inOut, float bottomRa
 		float v = z / height + 0.5f;
 
 		inOut.vertices.push_back(Vertex());
-		inOut.vertices._Mylast()->Set(x, y, z, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f, 0.0f, u, v);
+		inOut.vertices.back().Set(x, y, z, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f, 0.0f, u, v);
 	}
 
 	// Cap center vertex.
 	inOut.vertices.push_back(Vertex());
-	inOut.vertices._Mylast()->Set(0.0f, y, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.5f, 0.5f);
+	inOut.vertices.back().Set(0.0f, y, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.5f, 0.5f);
 
 	// Cache the index of center vertex.
 	uint32 centerIndex = (uint32)inOut.vertices.size() - 1;

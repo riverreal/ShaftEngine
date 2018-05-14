@@ -21,7 +21,7 @@ Shaft::ShaderManager::~ShaderManager()
 	DestroyAllShaders();
 }
 
-uint32 Shaft::ShaderManager::LoadShader(const std::string& vsFile, const std::string& fsFile)
+uint32 Shaft::ShaderManager::LoadShader(const eastl::string& vsFile, const eastl::string& fsFile)
 {
 #if SE_BUILD == false
 	return CreateShaderTypeRT((vsFile + ":" + fsFile), vsFile + ".sc", fsFile + ".sc");
@@ -32,26 +32,26 @@ uint32 Shaft::ShaderManager::LoadShader(const std::string& vsFile, const std::st
 	return 0;
 }
 
-uint32 Shaft::ShaderManager::LoadShader(const std::string & shd)
+uint32 Shaft::ShaderManager::LoadShader(const eastl::string & shd)
 {
 	return CreateShaderType(shd, shd + ".vs", shd + ".fs");
 }
 
 #if !SE_BUILD
-uint32 Shaft::ShaderManager::LoadShader(const std::string & vsFile, const std::string & fsFile, bool save)
+uint32 Shaft::ShaderManager::LoadShader(const eastl::string & vsFile, const eastl::string & fsFile, bool save)
 {
 	return CreateShaderTypeRT((vsFile + ":" + fsFile), vsFile + ".sc", fsFile + ".sc", save);
 }
 #endif
 
-uint32 Shaft::ShaderManager::CreateShaderTypeRT(const std::string& shaderTypeName, const std::string& vsFile, const std::string& fsFile, bool save)
+uint32 Shaft::ShaderManager::CreateShaderTypeRT(const eastl::string& shaderTypeName, const eastl::string& vsFile, const eastl::string& fsFile, bool save)
 {
 	bool registered = false;
 	ShaderType* shaderType = nullptr;
 
 	for (auto& shader : m_shaderTypes)
 	{
-		if (shader.name == shaderTypeName)
+		if (shader.name == shaderTypeName.c_str())
 		{
 			if (shader.created)
 			{
@@ -66,7 +66,7 @@ uint32 Shaft::ShaderManager::CreateShaderTypeRT(const std::string& shaderTypeNam
 	{
 		//register
 		ShaderType stInstance;
-		stInstance.name = shaderTypeName;
+		stInstance.name = shaderTypeName.c_str();
 		stInstance.id = m_idCounter;
 		m_shaderTypes.push_back(stInstance);
 		m_idCounter++;
@@ -89,14 +89,14 @@ uint32 Shaft::ShaderManager::CreateShaderTypeRT(const std::string& shaderTypeNam
 	return shaderType->id;
 }
 
-uint32 Shaft::ShaderManager::CreateShaderType(const std::string& shaderTypeName, const std::string& vsFile, const std::string& fsFile)
+uint32 Shaft::ShaderManager::CreateShaderType(const eastl::string& shaderTypeName, const eastl::string& vsFile, const eastl::string& fsFile)
 {
 	bool registered = false;
 	ShaderType* shaderType = nullptr;
 
 	for (auto& shader : m_shaderTypes)
 	{
-		if (shader.name == shaderTypeName)
+		if (shader.name == shaderTypeName.c_str())
 		{
 			if (shader.created)
 			{
@@ -111,7 +111,7 @@ uint32 Shaft::ShaderManager::CreateShaderType(const std::string& shaderTypeName,
 	{
 		//register
 		ShaderType stInstance;
-		stInstance.name = shaderTypeName;
+		stInstance.name = shaderTypeName.c_str();
 		stInstance.id = m_idCounter;
 		m_shaderTypes.push_back(stInstance);
 		m_idCounter++;
@@ -147,7 +147,7 @@ uint32 Shaft::ShaderManager::CreateShaderType(const std::string& shaderTypeName,
 	return shaderType->id;
 }
 
-std::vector<ShaderType>& Shaft::ShaderManager::GetShaderTypes()
+eastl::vector<ShaderType>& Shaft::ShaderManager::GetShaderTypes()
 {
 	return m_shaderTypes;
 }

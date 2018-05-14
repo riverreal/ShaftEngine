@@ -83,6 +83,9 @@
     <Filter Include="3rdparty\asyncplusplus\include">
       <UniqueIdentifier>{d6a67ac4-b7d0-464d-8063-e6b8fdd0b2be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3rdparty\EASTL">
+      <UniqueIdentifier>{9aaecc4a-f89f-4b9e-b3ca-93811aab6f1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Source\Engine\Engine.cpp">
@@ -162,6 +165,39 @@
     </ClCompile>
     <ClCompile Include="..\..\..\Dependencies\asyncplusplus\src\threadpool_scheduler.cpp">
       <Filter>3rdparty\asyncplusplus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\allocator_eastl.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\assert.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\fixed_pool.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\hashtable.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\intrusive_list.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\numeric_limits.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\red_black_tree.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\string.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\thread_support.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\EAMemory.cpp">
+      <Filter>3rdparty\EASTL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Dependencies\EASTL\source\EASprintf.cpp">
+      <Filter>3rdparty\EASTL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

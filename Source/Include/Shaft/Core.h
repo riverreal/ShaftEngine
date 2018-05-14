@@ -23,13 +23,16 @@
 
 //Standard
 #include <iostream>
-#include <functional>
-#include <vector>
-#include <string>
-#include <algorithm>
 #include <fstream>
-#include <set>
-#include <memory>
+
+//EASTL
+#include <EASTL/functional.h>
+#include <EASTL/vector.h>
+#include <EASTL/string.h>
+#include <EASTL/algorithm.h>
+#include <EASTL/memory.h>
+#include <EASTL/unique_ptr.h>
+#include <EASTL/array.h>
 
 //Library
 #include <entityx/entityx.hh>

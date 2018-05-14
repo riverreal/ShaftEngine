@@ -30,7 +30,7 @@ namespace Shaft
 
 	struct MeshData
 	{
-		std::vector<Vertex> vertices;
-		std::vector<uint16> indices;
+		eastl::vector<Vertex> vertices;
+		eastl::vector<uint16> indices;
 	};
 }

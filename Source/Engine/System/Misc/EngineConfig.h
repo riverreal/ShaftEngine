@@ -71,7 +71,7 @@ namespace Shaft
 
 	struct AppInfo
 	{
-		std::string appName;
+		eastl::string appName;
 		Version appVersion;
 	};
 
@@ -100,7 +100,7 @@ namespace Shaft
 
 		uint32 width;
 		uint32 height;
-		std::string engineName;
+		eastl::string engineName;
 		bool isValidationEnabled;
 		RendererType rendererType;
 		AppInfo appInfo;

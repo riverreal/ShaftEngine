@@ -41,10 +41,10 @@ namespace Shaft
 		MaterialManager& GetMaterialManager();
 
 	private:
-		std::unique_ptr<MeshManager> m_meshManager;
-		std::unique_ptr<ShaderManager> m_shaderManager;
-		std::unique_ptr<TextureManager> m_textureManager;
-		std::unique_ptr<FileSystem> m_fileSystem;
-		std::unique_ptr<MaterialManager> m_materialManager;
+		eastl::unique_ptr<MeshManager> m_meshManager;
+		eastl::unique_ptr<ShaderManager> m_shaderManager;
+		eastl::unique_ptr<TextureManager> m_textureManager;
+		eastl::unique_ptr<FileSystem> m_fileSystem;
+		eastl::unique_ptr<MaterialManager> m_materialManager;
 	};
 }
