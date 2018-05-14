@@ -90,7 +90,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\unzip;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
@@ -106,7 +106,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\unzip;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF</AdditionalIncludeDirectories>
     </ClCompile>
@@ -123,7 +123,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\unzip;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF</AdditionalIncludeDirectories>
     </ClCompile>
@@ -142,7 +142,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPENDDL_NO_USE_CPP11;ASSIMP_BUILD_NO_C4D_IMPORTER;ASSIMP_IMPORTER_GLTF_USE_OPEN3DGC=1;ASSIMP_BUILD_DLL_EXPORT;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;OPENDDLPARSER_BUILD;ASSIMP_BUILD_NO_X_IMPORTER;ASSIMP_BUILD_NO_AMF_IMPORTER;ASSIMP_BUILD_NO_PLY_IMPORTER;ASSIMP_BUILD_NO_ASE_IMPORTER;ASSIMP_BUILD_NO_HMP_IMPORTER;ASSIMP_BUILD_NO_IRR_IMPORTER;ASSIMP_BUILD_NO_IRRMESH_IMPORTER;ASSIMP_BUILD_NO_IFC_IMPORTER;ASSIMP_BUILD_NO_COLLADA_IMPORTER;ASSIMP_BUILD_NO_3MF_IMPORTER;ASSIMP_BUILD_NO_XGL_IMPORTER;ASSIMP_BUILD_NO_OGRE_IMPORTER;ASSIMP_BUILD_NO_X3D_IMPORTER;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\Dependencies\assimp\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\zlib;$(ProjectDir)..\..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\rapidjson\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\unzip;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\irrXML;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\openddlparser\include;$(ProjectDir)..\..\..\..\Dependencies\assimp\contrib\ConvertUTF</AdditionalIncludeDirectories>
     </ClCompile>
@@ -154,9 +154,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IrrXML\IrrXML.vcxproj">
-      <Project>{1a1b0ff0-b078-46a4-847a-77c0c065e88d}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\zlib\zlib.vcxproj">
       <Project>{1b50c406-2972-4f7f-8da3-7b4922218988}</Project>
     </ProjectReference>
@@ -658,15 +655,11 @@
     <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcTriangleListEncoder.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcVector.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\BlenderDNA.inl" />
-    <None Include="..\..\..\..\Dependencies\assimp\scr\cmake_install.cmake" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\glTF2Asset.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\glTF2AssetWriter.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\glTFAsset.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\glTFAssetWriter.inl" />
     <None Include="..\..\..\..\Dependencies\assimp\scr\SmoothingGroups.inl" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\Dependencies\assimp\scr\CMakeLists.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

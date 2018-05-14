@@ -1480,9 +1480,6 @@
     <None Include="..\..\..\..\Dependencies\assimp\scr\SmoothingGroups.inl">
       <Filter>src</Filter>
     </None>
-    <None Include="..\..\..\..\Dependencies\assimp\scr\cmake_install.cmake">
-      <Filter>src</Filter>
-    </None>
     <None Include="..\..\..\..\Dependencies\assimp\scr\glTF2Asset.inl">
       <Filter>src</Filter>
     </None>
@@ -1507,10 +1504,5 @@
     <None Include="..\..\..\..\Dependencies\assimp\contrib\Open3DGC\o3dgcVector.inl">
       <Filter>3rdparty</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\Dependencies\assimp\scr\CMakeLists.txt">
-      <Filter>src</Filter>
-    </Text>
   </ItemGroup>
 </Project>
