@@ -91,7 +91,7 @@ void Renderer::Draw()
 			bgfx::setTransform(mat);
 			bool interrupt = false;
 			//Texture uniforms
-			for (int32 i = 0; i < mats[mins[meshComp->matInstanceId].materialID].enabledTextureCount; ++i)
+			for (uint32 i = 0; i < mats[mins[meshComp->matInstanceId].materialID].enabledTextureCount; ++i)
 			{
 				auto texture = textures[mins[meshComp->matInstanceId].textures[i]];
 				if (!texture.created)
@@ -111,7 +111,7 @@ void Renderer::Draw()
 			}
 
 			//Const vec uniforms
-			for (int32 i = 0; i < mats[mins[meshComp->matInstanceId].materialID].enabledConstVecCount; ++i)
+			for (uint32 i = 0; i < mats[mins[meshComp->matInstanceId].materialID].enabledConstVecCount; ++i)
 			{
 				bgfx::setUniform(constVecUni[i], (float*)&mins[meshComp->matInstanceId].constVec[i]);
 			}

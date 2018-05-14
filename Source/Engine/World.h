@@ -40,7 +40,7 @@ namespace Shaft
 	{
 		IDActor idActor;
 		idActor.actor = std::make_unique<T>(m_entities.create(), this);
-		idActor.id = idActor.actor.get()->GetEntity().id().id();
+		idActor.id = static_cast<uint32>(idActor.actor.get()->GetEntity().id().id());
 		m_actors.push_back(std::move(idActor));
 		//m_actors.emplace_back(std::move(idActor));
 

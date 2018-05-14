@@ -35,18 +35,18 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 	numberOfMeshs = scene->mNumMeshes;
 	
 	std::vector<Vertex> vertices;
-	std::vector<UINT> indices;
+	std::vector<uint32> indices;
 
-	UINT vertexCount = 0;
-	UINT indexCount = 0;
+	uint32 vertexCount = 0;
+	uint32 indexCount = 0;
 	
-	for (UINT i = 0; i < numberOfMeshs; i++)
+	for (uint32 i = 0; i < numberOfMeshs; i++)
 	{
 		auto mesh = scene->mMeshes[i];
 		
 		if (mesh)
 		{
-			for (UINT j = 0; j < mesh->mNumVertices; j++)
+			for (uint32 j = 0; j < mesh->mNumVertices; j++)
 			{
 				Vertex v = {};
 
@@ -63,9 +63,9 @@ MeshData Shaft::ModelBuilder::CreateModel(std::string fileName)
 				data.vertices.push_back(v);
 			}
 
-			for (UINT c = 0; c < mesh->mNumFaces; c++)
+			for (uint32 c = 0; c < mesh->mNumFaces; c++)
 			{
-				for (UINT e = 0; e < mesh->mFaces[c].mNumIndices; e++)
+				for (uint32 e = 0; e < mesh->mFaces[c].mNumIndices; e++)
 				{
 					data.indices.push_back(mesh->mFaces[c].mIndices[e]);
 				}

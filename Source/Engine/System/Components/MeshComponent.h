@@ -6,11 +6,11 @@ namespace Shaft
 {
 	struct MeshType;
 
-	enum class CullingType : uint32
+	enum class CullingType : uint64
 	{
 		NoCull = 0,
-		Backface = static_cast<uint32>(BGFX_STATE_CULL_CCW),
-		Frontface = static_cast<uint32>(BGFX_STATE_CULL_CW)
+		Backface = static_cast<uint64>(BGFX_STATE_CULL_CCW),
+		Frontface = static_cast<uint64>(BGFX_STATE_CULL_CW)
 	};
 
 	struct States

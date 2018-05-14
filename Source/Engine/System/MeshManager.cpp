@@ -63,9 +63,9 @@ uint32 Shaft::MeshManager::LoadMesh(const std::string& fileName, uint32 packNum)
 	auto meshData = ModelBuilder::CreateModel(filepath);
 
 	uint16 stride = Vertex::declaration.getStride();
-	const bgfx::Memory* vertexMem = bgfx::alloc(meshData.vertices.size() * stride);
+	const bgfx::Memory* vertexMem = bgfx::alloc(static_cast<uint32>(meshData.vertices.size()) * stride);
 	bx::memCopy(vertexMem->data, meshData.vertices.data(), vertexMem->size);
-	const bgfx::Memory* indexMem = bgfx::alloc(meshData.indices.size() * sizeof(meshData.indices[0]));
+	const bgfx::Memory* indexMem = bgfx::alloc(static_cast<uint32>(meshData.indices.size()) * static_cast<uint32>(sizeof(meshData.indices[0])));
 	bx::memCopy(indexMem->data, meshData.indices.data(), indexMem->size);
 
 	//Vertex buffer
@@ -142,9 +142,9 @@ void Shaft::MeshManager::InitPrimitiveMesh()
 		m_cubeID = m_idCounter;
 		auto meshData = ShapeBuilder::CreateCube(1.0f, 1.0f, 1.0f);
 		uint16 stride = Vertex::declaration.getStride();
-		const bgfx::Memory* vertexMem = bgfx::alloc(meshData.vertices.size() * stride);
+		const bgfx::Memory* vertexMem = bgfx::alloc(static_cast<uint32>(meshData.vertices.size()) * stride);
 		bx::memCopy(vertexMem->data, meshData.vertices.data(), vertexMem->size);
-		const bgfx::Memory* indexMem = bgfx::alloc(meshData.indices.size() * sizeof(uint16));
+		const bgfx::Memory* indexMem = bgfx::alloc(static_cast<uint32>(meshData.indices.size()) * static_cast<uint32>(sizeof(uint16)));
 		bx::memCopy(indexMem->data, meshData.indices.data(), indexMem->size);
 		mesh.vb = bgfx::createVertexBuffer(vertexMem, Vertex::declaration);
 		mesh.ib = bgfx::createIndexBuffer(indexMem);
@@ -160,9 +160,9 @@ void Shaft::MeshManager::InitPrimitiveMesh()
 		m_sphereID = m_idCounter;
 		auto meshData = ShapeBuilder::CreateSphere(0.5f, 12, 12);
 		uint16 stride = Vertex::declaration.getStride();
-		const bgfx::Memory* vertexMem = bgfx::alloc(meshData.vertices.size() * stride);
+		const bgfx::Memory* vertexMem = bgfx::alloc(static_cast<uint32>(meshData.vertices.size()) * stride);
 		bx::memCopy(vertexMem->data, meshData.vertices.data(), vertexMem->size);
-		const bgfx::Memory* indexMem = bgfx::alloc(meshData.indices.size() * sizeof(uint16));
+		const bgfx::Memory* indexMem = bgfx::alloc(static_cast<uint32>(meshData.indices.size()) * sizeof(uint16));
 		bx::memCopy(indexMem->data, meshData.indices.data(), indexMem->size);
 		mesh.vb = bgfx::createVertexBuffer(vertexMem, Vertex::declaration);
 		mesh.ib = bgfx::createIndexBuffer(indexMem);
@@ -178,7 +178,7 @@ void Shaft::MeshManager::InitPrimitiveMesh()
 		m_planeID = m_idCounter;
 		auto meshData = ShapeBuilder::CreatePlane(1.0f, 1.0f, 1, 1);
 		uint16 stride = Vertex::declaration.getStride();
-		const bgfx::Memory* vertexMem = bgfx::alloc(meshData.vertices.size() * stride);
+		const bgfx::Memory* vertexMem = bgfx::alloc(static_cast<uint32>(meshData.vertices.size()) * stride);
 		bx::memCopy(vertexMem->data, meshData.vertices.data(), vertexMem->size);
 		//const bgfx::Memory* indexMem = bgfx::alloc(meshData.indices.size() * sizeof(uint16));
 		//bx::memCopy(indexMem->data, meshData.indices.data(), indexMem->size);

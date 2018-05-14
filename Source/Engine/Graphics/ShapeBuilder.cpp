@@ -6,7 +6,7 @@ MeshData Shaft::ShapeBuilder::CreateCube(float width, float height, float depth)
 {
 	MeshData meshData;
 	
-	float w2 = 0.5*width;
+	float w2 = 0.5f*width;
 	float h2 = 0.5f*height;
 	float d2 = 0.5f*depth;
 
@@ -81,8 +81,8 @@ MeshData Shaft::ShapeBuilder::CreateSphere(float radius, uint32 sliceCount, uint
 
 	meshData.vertices.push_back(topVertex);
 
-	float phiStep = PI / stackCount;
-	float thetaStep = 2.0f*PI / sliceCount;
+	float phiStep = static_cast<float>(PI) / stackCount;
+	float thetaStep = 2.0f*static_cast<float>(PI) / sliceCount;
 
 	for (uint32 i = 1; i <= stackCount - 1; ++i)
 	{
@@ -111,8 +111,8 @@ MeshData Shaft::ShapeBuilder::CreateSphere(float radius, uint32 sliceCount, uint
 			v.SetTangent(tangent.x, tangent.y, tangent.z);
 			v.SetNormal(normal.x, normal.y, normal.z);
 
-			v.texU = theta / PI;
-			v.texV = phi / PI;
+			v.texU = theta / static_cast<float>(PI);
+			v.texV = phi / static_cast<float>(PI);
 
 			meshData.vertices.push_back(v);
 		}
@@ -177,7 +177,7 @@ MeshData Shaft::ShapeBuilder::CreateCylinder(float bottomRadius, float topRadius
 		float r = bottomRadius + i * radiusStep;
 
 		// vertices of ring
-		float dTheta = 2.0f*PI / sliceCount;
+		float dTheta = 2.0f*static_cast<float>(PI) / sliceCount;
 		for (uint32 j = 0; j <= sliceCount; ++j)
 		{
 			Vertex vertex;
@@ -340,7 +340,7 @@ void Shaft::ShapeBuilder::Subdivide(MeshData& inOut)
 	// *-----*-----*
 	// v0    m2     v2
 
-	uint32 numTris = inputCopy.indices.size() / 3;
+	uint32 numTris = static_cast<uint32>(inputCopy.indices.size()) / 3;
 
 	for (uint32 i = 0; i < numTris; ++i)
 	{
@@ -396,7 +396,7 @@ void Shaft::ShapeBuilder::BuildCylinderTopCap(MeshData& inOut, float bottomRadiu
 	uint32 baseIndex = (uint32)inOut.vertices.size();
 
 	float y = 0.5f*height;
-	float dTheta = 2.0f*PI / sliceCount;
+	float dTheta = 2.0f*static_cast<float>(PI) / sliceCount;
 
 	// Duplicate cap ring vertices because the texture coordinates and normals differ.
 	for (uint32 i = 0; i <= sliceCount; ++i)
@@ -434,7 +434,7 @@ void Shaft::ShapeBuilder::BuildCylinderBottomCap(MeshData& inOut, float bottomRa
 	float y = -0.5f*height;
 
 	// vertices of ring
-	float dTheta = 2.0f*PI / sliceCount;
+	float dTheta = 2.0f*static_cast<float>(PI) / sliceCount;
 	for (uint32 i = 0; i <= sliceCount; ++i)
 	{
 		float x = bottomRadius * cosf(i*dTheta);
