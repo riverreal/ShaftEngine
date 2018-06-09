@@ -24,6 +24,7 @@
 //Standard
 #include <iostream>
 #include <fstream>
+#include <typeindex>
 
 //EASTL
 #include <EASTL/functional.h>
@@ -33,6 +34,7 @@
 #include <EASTL/memory.h>
 #include <EASTL/unique_ptr.h>
 #include <EASTL/array.h>
+#include <EASTL/unordered_map.h>
 
 //Library
 #include <entityx/entityx.hh>

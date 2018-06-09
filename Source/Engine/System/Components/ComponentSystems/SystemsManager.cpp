@@ -1,8 +1,10 @@
 #include "SystemsManager.h"
 #include "TransformSystem.h"
+#include "ScriptableSystem.h"
 
-Shaft::SystemsManager::SystemsManager(EngineEntityManager * eManager)
-	:m_transformSystem(eastl::make_unique<TransformSystem>(eManager))
+Shaft::SystemsManager::SystemsManager(EngineEntityManager* eManager)
+	:m_transformSystem(eastl::make_unique<TransformSystem>(eManager)),
+	m_scriptableSystem(eastl::make_unique<ScriptableSystem>(eManager))
 {
 }
 
@@ -18,4 +20,15 @@ void Shaft::SystemsManager::InitializeSystems()
 void Shaft::SystemsManager::UpdateSystems(float deltaTime)
 {
 	m_transformSystem.get()->Update();
+	m_scriptableSystem.get()->UpdateScripts(deltaTime);
+}
+
+void Shaft::SystemsManager::DelayedUpdate(float deltaTime)
+{
+	m_scriptableSystem.get()->DelayedUpdateScripts(deltaTime);
+}
+
+void Shaft::SystemsManager::FixedUpdate(float deltaTime)
+{
+	m_scriptableSystem.get()->FixedUpdateScripts(deltaTime);
 }

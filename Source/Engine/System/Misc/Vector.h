@@ -37,6 +37,38 @@ namespace Shaft
 			:x(xyz), y(xyz), z(xyz)
 		{};
 
+		inline Vec3f operator* (const float scalar) const
+		{
+			return Vec3f(x*scalar, y*scalar, z*scalar);
+		}
+
+		inline Vec3f operator/ (const float scalar) const
+		{
+			return Vec3f(x / scalar, y / scalar, z / scalar);
+		}
+
+		inline Vec3f operator+ (const Vec3f& sum) const
+		{
+			return Vec3f(x + sum.x, y + sum.y, z + sum.z);
+		}
+
+		inline Vec3f operator- (const Vec3f& sum) const
+		{
+			return Vec3f(x - sum.x, y - sum.y, z - sum.z);
+		}
+
+		inline bool operator== (const Vec3f& comp) const
+		{
+			return (x == comp.x && y == comp.y && z == comp.z);
+		}
+
+		inline bool operator!= (const Vec3f& comp) const
+		{
+			return !(*this == comp);
+		}
+
+
+
 		Vec3f FastNormalize() const
 		{
 			float lengSqr = x * x + y * y + z * z;
@@ -82,6 +114,11 @@ namespace Shaft
 			product += z * d.z;
 
 			return product;
+		}
+
+		static Vec3f Zero()
+		{
+			return Vec3f(0, 0, 0);
 		}
 
 		float x;

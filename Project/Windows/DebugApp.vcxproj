@@ -173,6 +173,9 @@
     <ProjectReference Include="Libs\brtshaderc\brtshaderc.vcxproj">
       <Project>{3f7c35b9-3df8-4ae4-bece-33e3e4b7c363}</Project>
     </ProjectReference>
+    <ProjectReference Include="Libs\bullet\bullet.vcxproj">
+      <Project>{57dba020-04cb-46c9-9233-fcaedeb5634c}</Project>
+    </ProjectReference>
     <ProjectReference Include="Libs\bx\bx.vcxproj">
       <Project>{3aebb6ba-7f39-477e-8c5b-0091a730c0ea}</Project>
     </ProjectReference>

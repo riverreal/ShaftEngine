@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>LIBASYNC_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\asyncplusplus\include;$(ProjectDir)..\..\..\Dependencies\EASTL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\asyncplusplus\include;$(ProjectDir)..\..\..\Dependencies\EASTL\include;$(ProjectDir)..\..\..\Dependencies\bullet3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>LIBASYNC_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\asyncplusplus\include;$(ProjectDir)..\..\..\Dependencies\EASTL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\asyncplusplus\include;$(ProjectDir)..\..\..\Dependencies\EASTL\include;$(ProjectDir)..\..\..\Dependencies\bullet3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>LIBASYNC_STATIC;LIBASYNC_NO_EXCEPTIONS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\asyncplusplus\include;$(ProjectDir)..\..\..\Dependencies\EASTL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\asyncplusplus\include;$(ProjectDir)..\..\..\Dependencies\EASTL\include;$(ProjectDir)..\..\..\Dependencies\bullet3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -151,7 +151,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>LIBASYNC_STATIC;LIBASYNC_NO_EXCEPTIONS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\asyncplusplus\include;$(ProjectDir)..\..\..\Dependencies\EASTL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\Dependencies\glm\;$(ProjectDir)..\..\..\Dependencies\glfw\include\;$(ProjectDir)..\..\..\Dependencies\bx\include\compat\msvc;$(ProjectDir)..\..\..\Dependencies\bx\include;$(ProjectDir)..\..\..\Dependencies\bimg\include;$(ProjectDir)..\..\..\Dependencies\bgfx\include;$(ProjectDir)..\..\..\Dependencies\bgfx\3rdparty;$(ProjectDir)..\..\..\Dependencies\rttr\include;$(ProjectDir)..\..\..\Dependencies\entityx\include;$(ProjectDir)..\..\..\Source\Include;$(ProjectDir)..\..\..\Dependencies\brtshaderc\tools;$(ProjectDir)..\..\..\Dependencies\assimp\include;$(ProjectDir)..\..\..\Dependencies\cereal\include;$(ProjectDir)..\..\..\Dependencies\asyncplusplus\include;$(ProjectDir)..\..\..\Dependencies\EASTL\include;$(ProjectDir)..\..\..\Dependencies\bullet3\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -191,6 +191,7 @@
     <ClCompile Include="..\..\..\Source\Engine\Graphics\ShapeBuilder.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\Graphics\TextureManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\ScriptableSystem.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\SystemsManager.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\TransformSystem.cpp" />
     <ClCompile Include="..\..\..\Source\Engine\System\FileSystem.cpp" />
@@ -403,11 +404,16 @@
     <ClInclude Include="..\..\..\Source\Engine\Graphics\Renderer\Renderer.h" />
     <ClInclude Include="..\..\..\Source\Engine\Graphics\TextureManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\Meta\EngineMeta.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\BaseCollider.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\BoxCollider.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Components.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\ComponentSystems\ScriptableSystem.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\ComponentSystems\SystemsManager.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\ComponentSystems\TransformSystem.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\IComponent.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\MeshComponent.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\Scriptable.h" />
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\ScriptableComponent.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Components\Transform.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\FileSystem.h" />
     <ClInclude Include="..\..\..\Source\Engine\System\Misc\Matrix.h" />
@@ -572,6 +578,9 @@
     </ProjectReference>
     <ProjectReference Include="..\Libs\brtshaderc\brtshaderc.vcxproj">
       <Project>{3f7c35b9-3df8-4ae4-bece-33e3e4b7c363}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\bullet\bullet.vcxproj">
+      <Project>{57dba020-04cb-46c9-9233-fcaedeb5634c}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Libs\bx\bx.vcxproj">
       <Project>{3aebb6ba-7f39-477e-8c5b-0091a730c0ea}</Project>

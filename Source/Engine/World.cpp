@@ -11,11 +11,18 @@ Shaft::World::World()
 
 Shaft::World::~World()
 {
+	RemoveAllActors();
 }
 
 void Shaft::World::Update(float deltaTime)
 {
 	m_systemsManager->UpdateSystems(deltaTime);
+	m_systemsManager->DelayedUpdate(deltaTime);
+}
+
+void Shaft::World::FixedUpdate(float deltaTime)
+{
+	m_systemsManager->FixedUpdate(deltaTime);
 }
 
 const eastl::vector<IDActor>& Shaft::World::GetActors()

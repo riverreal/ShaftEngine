@@ -8,7 +8,13 @@
 
 using namespace Shaft;
 
+const float FIXED_TIMESTEP = 0.02f;
+
 Application::Application()
+	:m_materialManager(nullptr),
+	m_textureManager(nullptr),
+	m_meshManager(nullptr),
+	m_fileSystem(nullptr)
 {
 }
 
@@ -28,12 +34,17 @@ void Application::Initialize()
 	m_engineConfig.renderConfig.engineName = "Shaft Engine";
 	m_engineConfig.engineVersion = m_engineConfig.renderConfig.engineVersion = Version(0, 0, 1);
 
-	EngineFactory engineFactory;
+	OnInitialize();
 
+	EngineFactory engineFactory;
 	m_engine = engineFactory.CreateEngine(m_engineConfig);
 	m_engine->Initialize();
 
-	AppInit();
+	m_world = &m_engine->GetWorld();
+	m_materialManager = &m_engine->GetResourceManager().GetMaterialManager();
+	m_meshManager = &m_engine->GetResourceManager().GetMeshManager();
+	m_textureManager = &m_engine->GetResourceManager().GetTextureManager();
+	m_fileSystem = &m_engine->GetResourceManager().GetFileSystem();
 
 	m_engine->GetTimer().TimeStart();
 }
@@ -41,22 +52,27 @@ void Application::Initialize()
 void Shaft::Application::Run()
 {
 	FPSConfig& fpsConfig = m_engineConfig.renderConfig.fpsConfig;
+	float acc = 0.0f;
 
 	while (!m_engine->GetWindow().CloseWindow())
 	{
 		float dt = m_engine->GetTimer().GetDeltaTime();
 		m_engine->GetTimer().Tick();
 		m_engine->GetWindow().PollEvents();
+		acc += dt;
+		
+		while (acc >= FIXED_TIMESTEP)
+		{
+			m_engine->GetWorld().FixedUpdate(FIXED_TIMESTEP);
+			acc -= FIXED_TIMESTEP;
+		}
 
+		Frame();
 		m_engine->GetWorld().Update(dt);
-
-		AppRun();
 
 #if SHAFT_EDITOR_ENABLED
 		m_engine->GetEditor().Draw();
 #endif
-
-		//Draw will automatically set correct frame time if vsync is on
 		m_engine->GetRenderer().Draw();
 
 		if (!fpsConfig.vsync && fpsConfig.capFPS)

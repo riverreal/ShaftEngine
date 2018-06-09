@@ -199,6 +199,9 @@
     <ClCompile Include="..\..\..\Dependencies\EASTL\source\EASprintf.cpp">
       <Filter>3rdparty\EASTL</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\ScriptableSystem.cpp">
+      <Filter>src\Engine\System\Components\ComponentSystems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Engine\Engine.h">
@@ -899,6 +902,21 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Dependencies\asyncplusplus\include\async++\when_all_any.h">
       <Filter>3rdparty\asyncplusplus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\ScriptableComponent.h">
+      <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\Scriptable.h">
+      <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\ComponentSystems\ScriptableSystem.h">
+      <Filter>src\Engine\System\Components\ComponentSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\BaseCollider.h">
+      <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\BoxCollider.h">
+      <Filter>src\Engine\System\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

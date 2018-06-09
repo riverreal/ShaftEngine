@@ -14,6 +14,7 @@ Project/Windows/Libs/assimp/*
 Project/Windows/Libs/glfw/*
 Project/Windows/Libs/IrrXML/*
 Project/Windows/Libs/zlib/*
+Project/Windows/Libs/bullet/*
 Project/Windows/DebugApp/*
 !Project/Windows/DebugApp/*.vcxproj
 !Project/Windows/DebugApp/*.vcxproj.filters

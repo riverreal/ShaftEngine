@@ -7,7 +7,10 @@ Shaft::Actor::Actor(EngineEntity entity, World* world)
 	:m_parent(nullptr),
 	m_entity(entity),
 	m_world(world),
-	m_name("MyActor")
+	m_name("MyActor"),
+	m_scripted(false),
+	m_scriptableComp(nullptr),
+	m_transform(nullptr)
 {
 	m_transform = entity.assign<Transform>();
 }

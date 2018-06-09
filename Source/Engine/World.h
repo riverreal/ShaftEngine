@@ -19,6 +19,7 @@ namespace Shaft
 		~World();
 
 		void Update(float deltaTime);
+		void FixedUpdate(float deltaTime);
 
 		const eastl::vector<IDActor>& GetActors();
 		Actor* CreateActor();

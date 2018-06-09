@@ -5,6 +5,7 @@
 namespace Shaft
 {
 	class TransformSystem;
+	class ScriptableSystem;
 
 	class SystemsManager
 	{
@@ -14,8 +15,10 @@ namespace Shaft
 
 		void InitializeSystems();
 		void UpdateSystems(float deltaTime);
-
+		void DelayedUpdate(float deltaTime);
+		void FixedUpdate(float deltaTime);
 	private:
 		eastl::unique_ptr<TransformSystem> m_transformSystem;
+		eastl::unique_ptr<ScriptableSystem> m_scriptableSystem;
 	};
 }
