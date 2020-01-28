@@ -44,6 +44,7 @@ void DebugApp::Initialize()
 
 	m_cube = m_engine->GetWorld().CreateActor();
 	auto meshID = m_engine->GetResourceManager().GetMeshManager().LoadShape(ShapeType::Cube);
+	m_cube->AddComponent<BillboardComponent>();
 	m_cube->AddComponent<MeshComponent>(meshID);
 
 	auto sphere = m_engine->GetWorld().CreateActor();
@@ -58,13 +59,19 @@ void DebugApp::Initialize()
 	sphere->AddChild(sphere2);
 
 	auto resourcePath = m_engine->GetResourceManager().GetFileSystem().GetResourcePath();
-	auto model = m_engine->GetWorld().CreateActor();
-	meshID = m_engine->GetResourceManager().GetMeshManager().LoadMesh("ship.glb", 1);
-	auto meshComp = model->AddComponent<MeshComponent>(meshID);
-	meshComp->matInstanceId = m_engine->GetResourceManager().GetMaterialManager().LoadMaterialInstance("ship.min", 1);
-	model->GetTransform()->SetPosition(Vec3f(-1, 0, 0));
-	model->GetTransform()->SetScale(Vec3f(1.0f));
-	Animate();
+	 auto model = m_engine->GetWorld().CreateActor();
+	 meshID = m_engine->GetResourceManager().GetMeshManager().LoadMesh("ship.glb", 1);
+	 auto meshComp = model->AddComponent<MeshComponent>(meshID);
+	 meshComp->matInstanceId = m_engine->GetResourceManager().GetMaterialManager().LoadMaterialInstance("ship.min", 1);
+	 model->GetTransform()->SetPosition(Vec3f(-5, 0, 0));
+	 model->GetTransform()->SetScale(Vec3f(1.0f));
+	 model->SetActive(false);
+	//Animate();
+
+	auto cam = m_engine->GetWorld().CreateActor();
+	auto camComp = cam->AddComponent<CameraComponent>();
+	cam->GetTransform()->SetPosition(Vec3f(2.0f, 0, -10.0f));
+	m_engine->GetWorld().SetMainCamera(cam);
 	//AppInit();
 }
 
@@ -90,18 +97,51 @@ void Shaft::DebugApp::Run()
 		
 		m_engine->GetWorld().Update(dt);
 
+		auto pos = m_engine->GetWorld().GetMainCamera()->GetTransform()->GetPosition();
+		auto rot = m_engine->GetWorld().GetMainCamera()->GetTransform()->GetRotation();
+
+		if(m_engine->GetInput().GetKeyState().keys[KeyState::Key::D])
+		{	
+			pos.x += 2.0f * dt;
+		}
+		if(m_engine->GetInput().GetKeyState().keys[KeyState::Key::A])
+		{	
+			pos.x -= 2.0f * dt;
+		}
+		if (m_engine->GetInput().GetKeyState().keys[KeyState::Key::W])
+		{
+			pos.z += 2.0f * dt;
+		}
+		if (m_engine->GetInput().GetKeyState().keys[KeyState::Key::S])
+		{
+			pos.z -= 2.0f * dt;
+		}
+		if (m_engine->GetInput().GetKeyState().keys[KeyState::Key::Q])
+		{
+			auto q = rot.GetQuat();
+			rot.SetQuat(glm::rotate(q, 1.0f * dt, glm::vec3(0, 1, 0)));
+		}
+		if (m_engine->GetInput().GetKeyState().keys[KeyState::Key::E])
+		{
+			auto q = rot.GetQuat();
+			rot.SetQuat(glm::rotate(q, -1.0f * dt, glm::vec3(0, 1, 0)));
+		}
+
+		m_engine->GetWorld().GetMainCamera()->GetTransform()->SetRotation(rot);
+		m_engine->GetWorld().GetMainCamera()->GetTransform()->SetPosition(pos);
+
 		//AppRun();
 		glm::quat quat = m_engine->GetWorld().GetActors()[0].actor->GetTransform()->GetRotation().GetQuat();
 		
 		Quaternion q;
 		q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
-		m_engine->GetWorld().GetActors()[0].actor->GetTransform()->SetRotation(q);
+		m_cube->GetTransform()->SetRotation(q);
 
 		q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
-		m_engine->GetWorld().GetActors()[1].actor->GetTransform()->SetRotation(q);
+		//m_engine->GetWorld().GetActors()[1].actor->GetTransform()->SetRotation(q);
 
 		q.SetQuat(glm::rotate(quat, 1.0f * dt, glm::vec3(0, 1, 0)));
-		m_engine->GetWorld().GetActors()[3].actor->GetTransform()->SetRotation(q);
+		//m_engine->GetWorld().GetActors()[3].actor->GetTransform()->SetRotation(q);
 
 		m_tween.Update(dt);
 		

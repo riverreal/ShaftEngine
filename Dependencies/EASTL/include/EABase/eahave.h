@@ -461,6 +461,7 @@
 	#endif
 #endif
 
+#define EA_HAVE_CPP11_INITIALIZER_LIST 1
 // #include <initializer_list> 
 #if !defined(EA_HAVE_CPP11_INITIALIZER_LIST) && !defined(EA_NO_HAVE_CPP11_INITIALIZER_LIST)
 	#if defined(EA_HAVE_DINKUMWARE_CPP_LIBRARY) && (_CPPLIB_VER >= 520) && !defined(EA_COMPILER_NO_INITIALIZER_LISTS) // Dinkumware. VS2010+

@@ -52,15 +52,26 @@ void Renderer::Initialize(World* world, ResourceManager* resourceManager)
 
 void Renderer::Draw()
 {
-	float at[3] = { 0.0f, 0.0f, 0.0f };
-	float eye[3] = { 0.0f, 0.0f, -10.0f };
- 	float view[16];
-	bx::mtxLookAt(view, eye, at);
+	auto cam = m_world->GetMainCamera();
 
-	float proj[16];
-	bx::mtxProj(proj, 60.0f, float(m_width) / float(m_height), 0.1f, 1000.0f, bgfx::getCaps()->homogeneousDepth);
+	if(cam == nullptr)
+	{
+		float at[3] = { 0.0f, 0.0f, 0.0f };
+		float eye[3] = { 0.0f, 0.0f, -10.0f };
+		float view[16];
+		bx::mtxLookAt(view, eye, at);
 
-	bgfx::setViewTransform(0, view, proj);
+		float proj[16];
+		bx::mtxProj(proj, 60.0f, float(m_width) / float(m_height), 0.1f, 1000.0f, bgfx::getCaps()->homogeneousDepth);
+		bgfx::setViewTransform(0, view, proj);
+	}
+	else
+	{
+		auto camComp = cam->GetEntity().component<CameraComponent>();
+
+		bgfx::setViewTransform(0, (float*)&camComp->viewMatrix, (float*)&camComp->projMatrix);
+	}
+	
 	bgfx::setViewRect(0, 0, 0, m_width, m_height);
 
 	bgfx::touch(0);

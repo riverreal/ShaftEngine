@@ -1,10 +1,13 @@
 #include "World.h"
 #include "System/Components/ComponentSystems/SystemsManager.h"
+#include "System/Misc/EngineConfig.h"
 
 using namespace Shaft;
 
-Shaft::World::World()
-	:m_systemsManager(eastl::make_unique<SystemsManager>(&m_entities))
+Shaft::World::World(EngineConfig& conf)
+	:m_systemsManager(eastl::make_unique<SystemsManager>(&m_entities, this)),
+	m_engineConfig(conf),
+	m_mainCamera(nullptr)
 {
 	m_actors.reserve(ACTOR_RESERVE_COUNT);
 }
@@ -12,6 +15,11 @@ Shaft::World::World()
 Shaft::World::~World()
 {
 	RemoveAllActors();
+}
+
+void World::Initialize()
+{
+	m_systemsManager->InitializeSystems(m_engineConfig);
 }
 
 void Shaft::World::Update(float deltaTime)
@@ -77,4 +85,14 @@ void Shaft::World::RemoveAllActors()
 	}
 
 	m_actors.clear();
+}
+
+void World::SetMainCamera(Actor* cam)
+{
+	m_mainCamera = cam;
+}
+
+Actor* World::GetMainCamera()
+{
+	return m_mainCamera;
 }

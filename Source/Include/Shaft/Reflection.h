@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../../Engine/System/Misc/ReflectionRegistration.h"
+
+#ifdef RTTT_ENABLED
+
 #include "rttr/array_range.h"
 #include "rttr/constructor.h"
 #include "rttr/destructor.h"
@@ -9,7 +13,6 @@
 #include "rttr/registration.h"
 #include "rttr/rttr_cast.h"
 #include "rttr/type.h"
-#include "../../Engine/System/Misc/ReflectionRegistration.h"
 
 #define CAT_IMPL_(a, b) a##b
 #define CAT_(a, b) CAT_IMPL_(a, b)
@@ -52,3 +55,11 @@ namespace refl_detail
 #define REFLECT(cls) \
 	template<> \
 	void rttr_auto_register_reflection_function_t(cls)()
+
+#else
+
+#define RELFECT_INLINE(cls)
+#define REFLECT_EXTERN(cls)
+#define REFLECT(cls)
+
+#endif

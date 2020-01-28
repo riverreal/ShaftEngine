@@ -111,7 +111,7 @@ void Shaft::GLFWWindowHandle::KeyCB(GLFWwindow* window, int32 key, int32_t scanc
 
 	KeyState::Key _key = (KeyState::Key)GlfwKeyToShaftKey(key);
 
-	sm_input->GetKeyState().keys[_key] = action == GLFW_PRESS;
+	sm_input->GetKeyState().keys[_key] = action == GLFW_PRESS || action == GLFW_REPEAT;
 }
 
 

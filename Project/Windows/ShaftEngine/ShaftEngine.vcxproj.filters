@@ -202,6 +202,12 @@
     <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\ScriptableSystem.cpp">
       <Filter>src\Engine\System\Components\ComponentSystems</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\BillboardSystem.cpp">
+      <Filter>src\Engine\System\Components\ComponentSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Engine\System\Components\ComponentSystems\CameraSystem.cpp">
+      <Filter>src\Engine\System\Components\ComponentSystems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Source\Engine\Engine.h">
@@ -917,6 +923,18 @@
     </ClInclude>
     <ClInclude Include="..\..\..\Source\Engine\System\Components\BoxCollider.h">
       <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\BillboardComponent.h">
+      <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\ComponentSystems\BillboardSystem.h">
+      <Filter>src\Engine\System\Components\ComponentSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\CameraComponent.h">
+      <Filter>src\Engine\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Engine\System\Components\ComponentSystems\CameraSystem.h">
+      <Filter>src\Engine\System\Components\ComponentSystems</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

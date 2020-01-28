@@ -1,13 +1,13 @@
 #pragma once
 
 #include <Shaft/Reflection.h>
-#include <msgpack.hpp>
+//#include <msgpack.hpp>
 #include "../Actor.h"
 #include "../Graphics/MaterialManager.h"
 
 namespace Shaft
 {
-	REFLECT_INLINE(Actor)
+	/*REFLECT_INLINE(Actor)
 	{
 		rttr::registration::class_<Actor>("Actor")
 			.property("name", &Actor::GetName, &Actor::SetName);
@@ -27,5 +27,5 @@ namespace Shaft
 			.property("materialID", &MaterialInstance::materialID)
 			.property("textures", &MaterialInstance::textures)
 			.property("constVec", &MaterialInstance::constVec);
-	}
+	}*/
 }

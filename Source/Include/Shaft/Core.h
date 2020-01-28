@@ -3,7 +3,7 @@
 #define SHAFT_EDITOR_ENABLED true
 #define DEFAULT_SCREEN_WIDTH 1280
 #define DEFAULT_SCREEN_HEIGHT 720
-#define ACTOR_RESERVE_COUNT 1000
+#define ACTOR_RESERVE_COUNT 20000
 
 //File reading paths will be different
 //Set to true for build a true release build

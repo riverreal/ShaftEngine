@@ -42,11 +42,12 @@ void Shaft::Engine::Initialize()
 	m_window->Initialize();
 	m_window->BindInput(&m_input);
 
-	m_world = eastl::make_unique<World>();
+	m_world = eastl::make_unique<World>(m_engineConfig);
 
 	m_resourceManager = eastl::make_unique<ResourceManager>();
 	m_renderer->Initialize(m_world.get(), m_resourceManager.get());
 	m_resourceManager->Initialize();
+	m_world->Initialize();
 
 #if SHAFT_EDITOR_ENABLED
 	m_editor->Init();

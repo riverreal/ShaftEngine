@@ -1,5 +1,7 @@
 #pragma once
 
+#ifdef RTTT_ENABLED
+
 #include "rttr/registration_friend.h"
 #include "rttr/rttr_enable.h"
 
@@ -16,3 +18,10 @@
 
 #define REFLECTABLE(cls) RTTR_REGISTRATION_FRIEND_NON_INTRUSIVE(cls)
 #define REFLECTABLEV(...) EXPAND(REFLECTABLE_VIRTUAL_IMPL(__VA_ARGS__))
+
+#else
+#define RTTR_REGISTRATION_FRIEND_NON_INTRUSIVE
+#define REFLECTABLE_VIRTUAL_IMP
+#define REFLECTABLE(cls)
+#define RELFECTABLEV(...)
+#endif

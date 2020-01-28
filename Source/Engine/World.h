@@ -6,6 +6,7 @@
 namespace Shaft
 {
 	class SystemsManager;
+	struct EngineConfig;
 
 	struct IDActor {
 		uint32 id;
@@ -15,9 +16,10 @@ namespace Shaft
 	class World
 	{
 	public:
-		World();
+		World(EngineConfig& conf);
 		~World();
 
+		void Initialize();
 		void Update(float deltaTime);
 		void FixedUpdate(float deltaTime);
 
@@ -30,10 +32,15 @@ namespace Shaft
 
 		void RemoveAllActors();
 
+		void SetMainCamera(Actor* camera);
+		Actor* GetMainCamera();
+
 	private:
+		Actor* m_mainCamera;
 		eastl::vector<IDActor> m_actors;
 		EngineEntityManager m_entities;
 		eastl::unique_ptr<SystemsManager> m_systemsManager;
+		EngineConfig& m_engineConfig;
 	};
 
 	template <typename T>
